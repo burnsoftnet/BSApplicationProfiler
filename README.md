@@ -8,7 +8,7 @@ This application will help gather all that information while you are using it no
 Worried about not being able to gather this information when you are using  your application while disconnected from the office?  Don’t be, the agent will see that it cannot connect to the main database and it will continue on using the local database the dump the data in there, once you are able to connect to the office and the agent can connect to the main database, it will dump the information that is the local database to the main database. 
 <br/>
 <b>UPDATES:<b> <br/>
-<li>
-<ul>3/8/2017 - Working on Web Interface to read the data.</ul>
-<ul>2/15/2017 - Agent functions are up and running</ul>
-</li>
+<ul>
+<li>3/8/2017 - Working on Web Interface to read the data.</li>
+<li>2/15/2017 - Agent functions are up and running</li>
+</ul>
