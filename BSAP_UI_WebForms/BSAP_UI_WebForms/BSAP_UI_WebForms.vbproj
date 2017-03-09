@@ -66,6 +66,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -196,6 +197,7 @@
     <Content Include="controls\Application_Agents.ascx" />
     <Content Include="controls\Application_List.ascx" />
     <Content Include="controls\Application_Sessions.ascx" />
+    <Content Include="controls\Session_Details.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -280,6 +282,13 @@
     </Compile>
     <Compile Include="controls\Application_Sessions.ascx.vb">
       <DependentUpon>Application_Sessions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Session_Details.ascx.designer.vb">
+      <DependentUpon>Session_Details.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Session_Details.ascx.vb">
+      <DependentUpon>Session_Details.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">
