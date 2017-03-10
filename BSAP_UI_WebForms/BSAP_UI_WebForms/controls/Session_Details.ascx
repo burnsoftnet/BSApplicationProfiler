@@ -19,6 +19,9 @@
     .auto-style6 {
         width: 84%;
     }
+    .auto-style7 {
+        text-align: center;
+    }
 </style>
 <p>
     <br />
@@ -44,7 +47,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style4">Command Line:</td>
+            <td class="auto-style4"><strong>Command Line:</strong></td>
             <td colspan="3">
                 <asp:Label ID="lblCommandLine" runat="server"></asp:Label>
             </td>
@@ -57,10 +60,10 @@
 <br />
 <table align="center" class="auto-style1">
     <tr>
-        <td>
+        <td class="auto-style7">
             <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1">
                 <series>
-                    <asp:Series ChartType="Line" Name="Series1" XValueMember="dt_time" YValueMembers="cpu">
+                    <asp:Series ChartType="SplineArea" Name="Series1" XValueMember="dt_time" YValueMembers="cpu">
                     </asp:Series>
                 </series>
                 <chartareas>
@@ -69,7 +72,7 @@
                 </chartareas>
             </asp:Chart>
         </td>
-        <td>
+        <td class="auto-style7">
             <asp:Chart ID="Chart2" runat="server" DataSourceID="SqlDataSource1">
                 <series>
                     <asp:Series Name="Series1" XValueMember="dt_time" YValueMembers="memoryused">
@@ -83,10 +86,10 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td class="auto-style7">
             <asp:Chart ID="Chart3" runat="server" DataSourceID="SqlDataSource1">
                 <series>
-                    <asp:Series ChartType="Line" Name="Series1" XValueMember="dt_time" YValueMembers="handles">
+                    <asp:Series ChartType="Area" Name="Series1" XValueMember="dt_time" YValueMembers="handles">
                     </asp:Series>
                 </series>
                 <chartareas>
@@ -95,10 +98,10 @@
                 </chartareas>
             </asp:Chart>
         </td>
-        <td>
+        <td class="auto-style7">
             <asp:Chart ID="Chart4" runat="server" DataSourceID="SqlDataSource1">
                 <series>
-                    <asp:Series ChartType="Line" Name="Series1" XValueMember="dt_time" YValueMembers="threads">
+                    <asp:Series ChartType="Area" Name="Series1" XValueMember="dt_time" YValueMembers="threads">
                     </asp:Series>
                 </series>
                 <chartareas>
@@ -112,10 +115,12 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
-</table>
-<br />
-
-<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="auto-style7" colspan="2">
 
 
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="Vertical">
@@ -137,6 +142,18 @@
     <SortedDescendingCellStyle BackColor="#CAC9C9" />
     <SortedDescendingHeaderStyle BackColor="#383838" />
 </asp:GridView>
+
+
+
+        </td>
+    </tr>
+</table>
+<br />
+
+<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
+
+
+
 
 
 

@@ -9,6 +9,7 @@ Worried about not being able to gather this information when you are using  your
 <br/>
 <b>UPDATES:</b> <br/>
 <ul>
+<li>3/10/2017 - Updated Web Interface to be able to view the session details by session.</li>
 <li>3/8/2017 - Working on Web Interface to read the data.</li>
 <li>2/15/2017 - Agent functions are up and running</li>
 </ul>

@@ -14,6 +14,9 @@
         <asp:BoundField DataField="sessionend" HeaderText="Session End" SortExpression="sessionend" HtmlEncode="false" >
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
+        <asp:BoundField DataField="haslogs" HeaderText="Has Log Files" SortExpression="haslogs" HtmlEncode="false" >
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
     </Columns>
     <FooterStyle BackColor="#CCCCCC" />
     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

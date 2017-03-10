@@ -6,6 +6,68 @@ BSAP_UI_WebForms
 </name>
 </assembly>
 <members>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.ConnectString">
+ <summary>
+ Get the connection string from the web.config.  This method is a little outdate when i just could habe
+ call the connection string directly, but just incase you needed re format the string and method
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.ConnectDB(System.Int64@,System.String)">
+ <summary>
+ Connect to a MySQL Database
+ </summary>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+ <returns></returns>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.CloseDB">
+ <summary>
+ Close the connection to the database
+ </summary>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.GetProjectName(System.Int64,System.Int64@,System.String)">
+ <summary>
+ Get the Project Name from the Application Project Name ID ( APNID )
+ </summary>
+ <param name="APNID"></param>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+ <returns></returns>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.GetSessionTimes(System.Int64,System.String@,System.String@,System.Int64@,System.String)">
+ <summary>
+ Get the Session start and End Date based on the SessionID
+ </summary>
+ <param name="SessionID"></param>
+ <param name="SessionStart"></param>
+ <param name="SessionEnd"></param>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.GetDistinctProcessDetails(System.Int64,System.String,System.Int64@,System.String)">
+ <summary>
+ Get the Distinct value from a column in the process stats main table
+ based on the session id
+ </summary>
+ <param name="SessionID"></param>
+ <param name="sColumn"></param>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+ <returns></returns>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.GetProcessDEtails(System.Int64,System.String@,System.String@,System.String@,System.Int64@,System.String)">
+ <summary>
+ get the ProcessName (imagename) username and command path
+ This is mostly used for the Session details pages.
+ </summary>
+ <param name="SessionID"></param>
+ <param name="imagename"></param>
+ <param name="username"></param>
+ <param name="commandline"></param>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+</member>
 <member name="F:BSAP_UI_WebForms.Application_List._SqlDataSource1">
 <summary>
 SqlDataSource1 control.
@@ -132,18 +194,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:BSAP_UI_WebForms.Session_Details1._SqlDataSource2">
+<member name="F:BSAP_UI_WebForms.Session_Details1._GridView1">
 <summary>
-SqlDataSource2 control.
+GridView1 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:BSAP_UI_WebForms.Session_Details1._GridView1">
+<member name="F:BSAP_UI_WebForms.Session_Details1._SqlDataSource2">
 <summary>
-GridView1 control.
+SqlDataSource2 control.
 </summary>
 <remarks>
 Auto-generated field.
