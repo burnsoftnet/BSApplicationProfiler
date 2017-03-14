@@ -1,0 +1,155 @@
+﻿Imports MySql.Data.MySqlClient
+Imports BurnSoft
+Namespace BurnSoft.BSAP
+    Public Class ProjectSessions
+        ''' <summary>
+        ''' Get the Project Name from the Application Project Name ID ( APNID )
+        ''' </summary>
+        ''' <param name="APNID"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        ''' <returns></returns>
+        Public Function GetProjectName(APNID As Long, Optional ByRef errorID As Long = 0, Optional errMsg As String = "") As String
+            Dim sAns As String = ""
+            Dim Obj As New BSDatabase
+            Try
+                If Obj.ConnectDB(errorID, errMsg) Then
+                    Dim SQL As String = "select * from app_project_name where ID=" & APNID
+                    Dim CMD As New MySqlCommand(SQL, Obj.conn)
+                    Dim RS As MySqlDataReader
+                    RS = CMD.ExecuteReader
+                    While RS.Read
+                        sAns = RS("name")
+                    End While
+                    RS.Close()
+                    RS = Nothing
+                    CMD = Nothing
+                    Call Obj.CloseDB()
+                Else
+                    sAns = "Unable to Connect to Database"
+                End If
+            Catch ex As Exception
+                errorID = Err.Number
+                errMsg = ex.Message.ToString
+            End Try
+            Return sAns
+        End Function
+        ''' <summary>
+        ''' Get the Session start and End Date based on the SessionID
+        ''' </summary>
+        ''' <param name="SessionID"></param>
+        ''' <param name="SessionStart"></param>
+        ''' <param name="SessionEnd"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        Public Sub GetSessionTimes(SessionID As Long, ByRef SessionStart As String, ByRef SessionEnd As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "")
+            Try
+                Dim Obj As New BSDatabase
+                If Obj.ConnectDB(errorID, errMsg) Then
+                    Dim SQL As String = "select * from monitoring_session where id=" & SessionID
+                    Dim CMD As New MySqlCommand(SQL, Obj.conn)
+                    Dim RS As MySqlDataReader
+                    RS = CMD.ExecuteReader
+                    While RS.Read
+                        If Not IsDBNull(RS("sessiondt")) Then SessionStart = RS("sessiondt")
+                        If Not IsDBNull(RS("sessionend")) Then
+                            SessionEnd = RS("sessionend")
+                        Else
+                            SessionEnd = "In Progress"
+                        End If
+                    End While
+                    RS.Close()
+                    RS = Nothing
+                    CMD = Nothing
+                    Call Obj.CloseDB()
+                Else
+                    SessionStart = "N/A"
+                    SessionEnd = "N/A"
+                End If
+            Catch ex As Exception
+                errorID = Err.Number
+                errMsg = ex.Message.ToString
+            End Try
+        End Sub
+        ''' <summary>
+        ''' Get the Distinct value from a column in the process stats main table
+        ''' based on the session id
+        ''' </summary>
+        ''' <param name="SessionID"></param>
+        ''' <param name="sColumn"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        ''' <returns></returns>
+        Private Function GetDistinctProcessDetails(SessionID As Long, sColumn As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "") As String
+            Dim sAns As String = "N/A"
+            Try
+                Dim Obj As New BSDatabase
+                If Obj.ConnectDB(errorID, errMsg) Then
+                    Dim SQL As String = "select distinct(" & sColumn & ") as myvalue from process_stats_main where sessionid=" & SessionID
+                    Dim CMD As New MySqlCommand(SQL, Obj.conn)
+                    Dim RS As MySqlDataReader
+                    RS = CMD.ExecuteReader
+                    While RS.Read
+                        If Not IsDBNull(RS("myvalue")) Then sAns = RS("myvalue")
+                    End While
+                    RS.Close()
+                    RS = Nothing
+                    CMD = Nothing
+                    Call Obj.CloseDB()
+                End If
+            Catch ex As Exception
+                errorID = Err.Number
+                errMsg = ex.Message.ToString
+            End Try
+            Return sAns
+        End Function
+        ''' <summary>
+        ''' get the ProcessName (imagename) username and command path
+        ''' This is mostly used for the Session details pages.
+        ''' </summary>
+        ''' <param name="SessionID"></param>
+        ''' <param name="imagename"></param>
+        ''' <param name="username"></param>
+        ''' <param name="commandline"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        Public Sub GetProcessDEtails(SessionID As Long, ByRef imagename As String, ByRef username As String, ByRef commandline As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "")
+            imagename = GetDistinctProcessDetails(SessionID, "imagename", errorID, errMsg)
+            username = GetDistinctProcessDetails(SessionID, "username", errorID, errMsg)
+            commandline = GetDistinctProcessDetails(SessionID, "commandline", errorID, errMsg)
+        End Sub
+    End Class
+    Public Class AgentSessions
+        ''' <summary>
+        ''' return the computer name based on the ID
+        ''' </summary>
+        ''' <param name="ID"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        ''' <returns>registered computer name</returns>
+        Public Function GetAgentNameFromID(ID As Long, Optional ByRef errorID As Long = 0, Optional errMsg As String = "") As String
+            Dim sAns As String = ""
+            Try
+                Dim Obj As New BSDatabase
+                If Obj.ConnectDB(errorID, errMsg) Then
+                    Dim SQL As String = "select computername from agents where id=" & ID
+                    Dim CMD As New MySqlCommand(SQL, Obj.conn)
+                    Dim rs As MySqlDataReader
+                    rs = CMD.ExecuteReader
+                    While rs.Read
+                        sAns = rs("computername")
+                    End While
+                    rs.Close()
+                    rs = Nothing
+                    CMD = Nothing
+                    Obj.CloseDB()
+                End If
+                Obj = Nothing
+            Catch ex As Exception
+                errorID = Err.Number
+                errMsg = ex.Message.ToString
+            End Try
+            Return sAns
+        End Function
+    End Class
+End Namespace

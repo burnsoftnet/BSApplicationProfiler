@@ -37,7 +37,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style4"><strong>Process Name:</strong></td>
+            <td class="auto-style4"><strong>Main Process Name:</strong></td>
             <td class="auto-style5">
                 <asp:Label ID="lblProcessName" runat="server"></asp:Label>
             </td>

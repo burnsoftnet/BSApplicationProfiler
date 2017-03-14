@@ -7,12 +7,12 @@ Imports System.Runtime.InteropServices
 ' associated with an assembly.
 
 ' Review the values of the assembly attributes
-<Assembly: AssemblyTitle("BSAP_UI_WebForms")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("BSAP_UI_WebForms")>
+<Assembly: AssemblyTitle("BurnSoft Application Profiler WebUI")>
+<Assembly: AssemblyDescription("This site is the dedicated Web Interface to view the information that is collected from the BSAP agents and this is also where you would configure your projects to be monitored")>
+<Assembly: AssemblyCompany("www.burnsoft.net")>
+<Assembly: AssemblyProduct("BurnSoft Application Profiler WebUI")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTrademark("BurnSoft, www.burnsoftn.et")>
 
 <Assembly: ComVisible(False)>
 
@@ -30,5 +30,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.10")>
+<Assembly: AssemblyFileVersion("1.0.0.10")>

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Application_Agents
+Partial Public Class Sessions_by_Agent
     
     '''<summary>
     '''SqlDataSource1 control.

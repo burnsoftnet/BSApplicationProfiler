@@ -9,7 +9,7 @@
         Chart4.Titles.Add("Threads (TOTAL)")
         SqlDataSource1.SelectCommand = SQL
         SqlDataSource2.SelectCommand = "select * from logs_main where sessionid=" & SessionID
-        Dim Obj As New BurnSoft.BSDatabase
+        Dim Obj As New BurnSoft.BSAP.ProjectSessions
         Obj.GetProcessDEtails(SessionID, lblProcessName.Text, lblUser.Text, lblCommandLine.Text)
         Obj.GetSessionTimes(SessionID, lblStart.Text, lblEnd.Text)
         If Not IsDate(lblEnd.Text) Then

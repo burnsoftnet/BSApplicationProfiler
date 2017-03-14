@@ -1,15 +1,15 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Application_Sessions.ascx.vb" Inherits="BSAP_UI_WebForms.Application_Sessions" %>
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Sessions_by_Agent.ascx.vb" Inherits="BSAP_UI_WebForms.Sessions_by_Agent" %>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
-
-<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" CellPadding="3" ForeColor="Black" GridLines="Vertical" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px">
+<div class=".centerme">
+<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" CellPadding="3" ForeColor="Black" GridLines="Vertical" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CssClass=".centerme">
     <AlternatingRowStyle BackColor="#CCCCCC" />
     <Columns>
         <asp:BoundField DataField="id" HeaderText="ID" SortExpression="id" Visible="False" />
-        <asp:BoundField DataField="web_sessiondt" HeaderText="Session Date Time" SortExpression="sessiondt" HtmlEncode="false" >
+        <asp:BoundField DataField="web_ProjectName" HeaderText="Project Name" SortExpression="ProjectName" HtmlEncode="false" >
         <HeaderStyle HorizontalAlign="Center" />
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
-        <asp:BoundField DataField="web_computername" HeaderText="Agent Name" SortExpression="computername" HtmlEncode="false" >
+        <asp:BoundField DataField="web_sessiondt" HeaderText="Session Date Time" SortExpression="sessiondt" HtmlEncode="false" >
         <HeaderStyle HorizontalAlign="Center" />
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
@@ -30,3 +30,4 @@
     <SortedDescendingCellStyle BackColor="#CAC9C9" />
     <SortedDescendingHeaderStyle BackColor="#383838" />
 </asp:GridView>
+    </div>

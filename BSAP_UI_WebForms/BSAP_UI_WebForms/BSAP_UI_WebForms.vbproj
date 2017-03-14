@@ -191,12 +191,15 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Agents.aspx" />
+    <Content Include="All_Sessions_By_Agent.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="controls\Application_Agents.ascx" />
     <Content Include="controls\Application_List.ascx" />
     <Content Include="controls\Application_Sessions.ascx" />
+    <Content Include="controls\Sessions_by_Agent.ascx" />
     <Content Include="controls\Session_Details.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -258,7 +261,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agents.aspx.designer.vb">
+      <DependentUpon>Agents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agents.aspx.vb">
+      <DependentUpon>Agents.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="All_Sessions_By_Agent.aspx.designer.vb">
+      <DependentUpon>All_Sessions_By_Agent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All_Sessions_By_Agent.aspx.vb">
+      <DependentUpon>All_Sessions_By_Agent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Code\BSDatabase.vb" />
+    <Compile Include="App_Code\BSSiteCode.vb" />
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\IdentityConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
@@ -282,6 +300,13 @@
     </Compile>
     <Compile Include="controls\Application_Sessions.ascx.vb">
       <DependentUpon>Application_Sessions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Sessions_by_Agent.ascx.designer.vb">
+      <DependentUpon>Sessions_by_Agent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Sessions_by_Agent.ascx.vb">
+      <DependentUpon>Sessions_by_Agent.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="controls\Session_Details.ascx.designer.vb">

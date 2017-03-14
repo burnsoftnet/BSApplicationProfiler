@@ -5,10 +5,17 @@
     <AlternatingRowStyle BackColor="#CCCCCC" />
     <Columns>
         <asp:BoundField DataField="id" HeaderText="ID" SortExpression="id" Visible="False" />
-        <asp:BoundField DataField="web_name" HeaderText="Project Name" SortExpression="name" HtmlEncode="false" />
-        <asp:BoundField DataField="appdesc" HeaderText="Description" SortExpression="appdesc" />
-        <asp:BoundField DataField="byagent" HeaderText="By Agents" SortExpression="byagent" HtmlEncode="false" />
+        <asp:BoundField DataField="web_name" HeaderText="Project Name" SortExpression="name" HtmlEncode="false" >
+        <HeaderStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="appdesc" HeaderText="Description" SortExpression="appdesc" >
+        <HeaderStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="byagent" HeaderText="By Agents" SortExpression="byagent" HtmlEncode="false" >
+        <HeaderStyle HorizontalAlign="Center" />
+        </asp:BoundField>
         <asp:BoundField DataField="TotalSessions" HeaderText="Total Sessions" SortExpression="TotalSessions" >
+        <HeaderStyle HorizontalAlign="Center" />
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
     </Columns>

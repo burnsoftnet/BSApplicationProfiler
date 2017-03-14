@@ -8,7 +8,7 @@ Public Class Application_Sessions
         If Len(Request.QueryString("ID")) > 0 Then
             APNID = Request.QueryString("ID")
             SQL &= " where apnid=" & APNID
-            Dim Obj As New BurnSoft.BSDatabase
+            Dim Obj As New BurnSoft.BSAP.ProjectSessions
             PageTitle = Obj.GetProjectName(APNID)
         Else
             PageTitle = "NO Project Selected!"

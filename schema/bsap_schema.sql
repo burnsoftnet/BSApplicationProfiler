@@ -213,7 +213,7 @@ DROP TABLE IF EXISTS `view_all_processes_and_projects`;
 /*!50001 DROP TABLE IF EXISTS `view_all_processes_and_projects` */;
 /*!50001 DROP VIEW IF EXISTS `view_all_processes_and_projects` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `view_all_processes_and_projects` AS select `apmp`.`id` AS `ProcessID`,`apmp`.`APNID` AS `apnid`,`apmp`.`process_display_name` AS `process_display_name`,`apmp`.`process_name` AS `process_name`,`apmp`.`match_parameters` AS `match_parameters`,`apmp`.`parameters` AS `parameters`,`apmp`.`haslogs` AS `haslogs`,`apmp`.`interval` AS `interval`,`apn`.`name` AS `name`,`apn`.`enabled` AS `enabled`,`apn`.`has_subprocess` AS `has_subprocess`,`apn`.`appdesc` AS `appdesc` from (`app_project_main_process` `apmp` join `app_project_name` `apn` on((`apn`.`id` = `apmp`.`APNID`))) */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`bsap_admin`@`%` SQL SECURITY DEFINER VIEW `view_all_processes_and_projects` AS select `apmp`.`id` AS `ProcessID`,`apmp`.`APNID` AS `apnid`,`apmp`.`process_display_name` AS `process_display_name`,`apmp`.`process_name` AS `process_name`,`apmp`.`match_parameters` AS `match_parameters`,`apmp`.`parameters` AS `parameters`,`apmp`.`haslogs` AS `haslogs`,`apmp`.`interval` AS `interval`,`apn`.`name` AS `name`,`apn`.`enabled` AS `enabled`,`apn`.`has_subprocess` AS `has_subprocess`,`apn`.`appdesc` AS `appdesc` from (`app_project_main_process` `apmp` join `app_project_name` `apn` on((`apn`.`id` = `apmp`.`APNID`))) */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
@@ -221,21 +221,21 @@ DROP TABLE IF EXISTS `view_all_processes_and_projects`;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`%` PROCEDURE `sp_clear_all_monitoring_data`()
+CREATE DEFINER=`bsap_admin`@`%` PROCEDURE `sp_clear_all_monitoring_data`()
 BEGIN
 	DECLARE done INT DEFAULT 0;
-	DELETE from process_stats_main;
-	DELETE from logs_main;
-	DELETE from monitoring_session;
+	DELETE FROM process_stats_main;
+	DELETE FROM logs_main;
+	DELETE FROM monitoring_session;
 END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`%` PROCEDURE `sp_delete_session`(session_id int)
+CREATE DEFINER=`bsap_admin`@`%` PROCEDURE `sp_delete_session`(session_id INT)
 BEGIN
 	DECLARE done INT DEFAULT 0;
-	DELETE from process_stats_main where SessionID=session_id;
-	DELETE from logs_main where sessionid=session_id;
-	DELETE from monitoring_session where id=session_id;
+	DELETE FROM process_stats_main WHERE SessionID=session_id;
+	DELETE FROM logs_main WHERE sessionid=session_id;
+	DELETE FROM monitoring_session WHERE id=session_id;
 END$$
 DELIMITER ;
