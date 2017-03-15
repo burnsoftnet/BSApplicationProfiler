@@ -45,8 +45,7 @@ CREATE TABLE `DB_Version` (
   UNIQUE KEY `ID_UNIQUE` (`ID`)
 ) ENGINE=INNODB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
-INSERT INTO `DB_Version` (verNo) VALUES(1.0,'2017-02-22 12:49:32');
-INSERT INTO `DB_Version` (verNo) VALUES(1.1,'2017-03-14 14:07:24');
+INSERT INTO `DB_Version` (verNo) VALUES(1.1);
 /*Table structure for table `agents` */
 
 DROP TABLE IF EXISTS `agents`;
@@ -341,7 +340,7 @@ DROP TABLE IF EXISTS `web_view_monitoring_session`;
 /*!50001 DROP TABLE IF EXISTS `web_view_agents` */;
 /*!50001 DROP VIEW IF EXISTS `web_view_agents` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`bsap_admin`@`%` SQL SECURITY DEFINER VIEW `web_view_agents` AS select `a`.`id` AS `id`,`a`.`computername` AS `computername`,`a`.`maxmem` AS `maxmem`,`a`.`cpuspeed` AS `cpuspeed`,`a`.`cpuname` AS `cpuname`,`a`.`operatingsystem` AS `operatingsystem`,`a`.`dtcreated` AS `dtcreated`,`a`.`dtReported` AS `dtReported`,`a`.`SessionCount` AS `SessionCount`,(case `a`.`SessionCount` when 0 then '0' else concat('<a href="All_Sessions_By_Agent.aspx?AID=',cast(`a`.`id` as char(50) charset utf8),'">',`a`.`SessionCount`,'</a>') end) AS `Web_SessionCount` from `view_agents` `a` */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`bsap_admin`@`%` SQL SECURITY DEFINER VIEW `web_view_agents` AS select `a`.`id` AS `id`,`a`.`computername` AS `computername`,`a`.`maxmem` AS `maxmem`,`a`.`cpuspeed` AS `cpuspeed`,`a`.`cpuname` AS `cpuname`,`a`.`operatingsystem` AS `operatingsystem`,`a`.`dtcreated` AS `dtcreated`,`a`.`dtReported` AS `dtReported`,`a`.`SessionCount` AS `SessionCount`,cast((case `a`.`SessionCount` when 0 then '0' else concat('<a href="All_Sessions_By_Agent.aspx?AID=',cast(`a`.`id` as char(50) charset utf8),'">',`a`.`SessionCount`,'</a>') end) as char(255)) AS `Web_SessionCount` from `view_agents` `a` */;
 
 /*View structure for view web_view_app_project_name */
 

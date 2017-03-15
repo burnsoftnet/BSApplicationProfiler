@@ -24,3 +24,9 @@ BSAP_AppMonitor/obj/Debug/*.*
 BSApplicationProfiler/bin/Debug/*.*
 BSApplicationProfiler/obj/Debug/*.*
 BSAP_UI_WebForms/BSAP_UI_WebForms/obj/Debug/*.*
+BSAP_AppMonitor/obj/Release/*.*
+BSAP_Config/obj/Release/*.*
+BSAP_DataDump/obj/Release/*.*
+BSAP_Config/obj/Release/TempPE/*.*
+BSAP_Installer/images/Thumbs.db
+BSAP_Service/obj/Release/*.*

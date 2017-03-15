@@ -81,7 +81,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - <%= System.Configuration.ConfigurationManager.AppSettings("FOOTER_TEXT") %></p>
+                <p>version: <%= System.Configuration.ConfigurationManager.AppSettings("SITE_VERSION") %>  &copy; <%: DateTime.Now.Year %> - <%= System.Configuration.ConfigurationManager.AppSettings("FOOTER_TEXT") %></p>
             </footer>
         </div>
     </form>

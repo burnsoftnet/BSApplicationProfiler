@@ -205,6 +205,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="images\download_48x38.png" />
+    <Content Include="install\BSAP_Installer.msi" />
+    <None Include="My Project\PublishProfiles\Local_Install.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\computer.png" />
     <Content Include="images\eMail2Friend.gif" />

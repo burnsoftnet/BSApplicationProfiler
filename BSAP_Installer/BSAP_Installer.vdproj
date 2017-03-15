@@ -15,50 +15,50 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_019537625EE844499B8F8241038841EC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_06D084C858AC4D5EA7DCBB901FA83786"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1256D7D23D4E4E55A305EBA42E874D00"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_13B5B01D564F46B49800C8F7A93BD870"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_151EA27E47ED47D4B29C0DB7D8CBE63D"
+        "MsmKey" = "8:_165DAB40BA9448C8BD0B5C827298B665"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_16760A84554A23380DE93CAB7263F670"
-        "OwnerKey" = "8:_32386CDEAC0545E0BD0B840D7720A8B9"
+        "OwnerKey" = "8:_455F8937EAF044E4A2697642C2ED42BD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_16760A84554A23380DE93CAB7263F670"
-        "OwnerKey" = "8:_52D2420DDF7C4FE387C91759C5942C78"
+        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_16760A84554A23380DE93CAB7263F670"
-        "OwnerKey" = "8:_3363AE0BD6DF4D1486CCB6E81A5C14FA"
+        "OwnerKey" = "8:_D57A42A70CBF4C35A85D5FE48EE12A59"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1B9E2BC1D5F14C86A693FD9F98393627"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_256B24C70EB5488AB687CE96DC151F21"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2D80590EA0E146B0B05CB5D6C8AE1FF4"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -69,25 +69,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_32386CDEAC0545E0BD0B840D7720A8B9"
+        "MsmKey" = "8:_43B97D09835F4E00886F5B45E4F4BE42"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3363AE0BD6DF4D1486CCB6E81A5C14FA"
+        "MsmKey" = "8:_455F8937EAF044E4A2697642C2ED42BD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3C02232E3BDF4AA5887185D2AA054E73"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3E803DB615F948059F6DF3F22C7929E9"
+        "MsmKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -99,7 +93,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_52D2420DDF7C4FE387C91759C5942C78"
+        "MsmKey" = "8:_5B106E9DC0714C24BC790FF2F5211C12"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5F187CF9B0874953878CBB6A50D67B4F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -111,55 +111,55 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6F51FB7CA30D4F2EBEDD97E067CC65ED"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_76F582D9F734029182350E8B351F127A"
+        "OwnerKey" = "8:_455F8937EAF044E4A2697642C2ED42BD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_765B132B84194A6684CE5F7BBF6C89F4"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_76F582D9F734029182350E8B351F127A"
+        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7AE5D885AAE844DBAF82CB9AE0CBD1DF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7EA42E5B104E4278BC7D0E4DB92C31A8"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_76F582D9F734029182350E8B351F127A"
+        "OwnerKey" = "8:_D57A42A70CBF4C35A85D5FE48EE12A59"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_818B64A3551DA2A7BE4D7668A59341EC"
-        "OwnerKey" = "8:_32386CDEAC0545E0BD0B840D7720A8B9"
+        "OwnerKey" = "8:_455F8937EAF044E4A2697642C2ED42BD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_818B64A3551DA2A7BE4D7668A59341EC"
-        "OwnerKey" = "8:_52D2420DDF7C4FE387C91759C5942C78"
+        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_818B64A3551DA2A7BE4D7668A59341EC"
-        "OwnerKey" = "8:_3363AE0BD6DF4D1486CCB6E81A5C14FA"
+        "OwnerKey" = "8:_D57A42A70CBF4C35A85D5FE48EE12A59"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_91F435661A6E431892875ECAA4913CFC"
+        "MsmKey" = "8:_96FC3C5E542B4265A88FF278630F69C7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_97743E0B16D147EA92D94996C1097D2A"
+        "MsmKey" = "8:_9C99EE5284C5476497959229930DF5FB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A0399D490A2F4DC1B3061C1212437ED6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -171,19 +171,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B8B6193BEAC74C15BAAC345A534899CE"
+        "MsmKey" = "8:_C0574212CC88443D89DB391AC2223FDD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B993563E87F54F99B9234120B2F74177"
+        "MsmKey" = "8:_C7C09923833F4CFF9EE26B5C0EACAEBF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C59CFF4A902542D2BD96B4DBA0210623"
+        "MsmKey" = "8:_CEEBAB6290F44DE5B476369CD69BD1E7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -195,110 +195,110 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D97E7F2618F582E9DA581E98E0394908"
-        "OwnerKey" = "8:_32386CDEAC0545E0BD0B840D7720A8B9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D97E7F2618F582E9DA581E98E0394908"
-        "OwnerKey" = "8:_52D2420DDF7C4FE387C91759C5942C78"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D97E7F2618F582E9DA581E98E0394908"
-        "OwnerKey" = "8:_3363AE0BD6DF4D1486CCB6E81A5C14FA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DEA4387C9F504A2F8DA5D98B730E67D7"
+        "MsmKey" = "8:_D57A42A70CBF4C35A85D5FE48EE12A59"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E3CFBD154F6C4D30879CCEDACA63EEA6"
+        "MsmKey" = "8:_E5C5C255868B4E61802F0D4B6EE4803F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E767EABD94A64AA5B167436825969076"
+        "MsmKey" = "8:_EBC195FD88CF444A8053DF6DE925A9E8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_13B5B01D564F46B49800C8F7A93BD870"
+        "MsmKey" = "8:_FBAF73D694F14DB98CE5455FB00A5D9B"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E767EABD94A64AA5B167436825969076"
+        "MsmKey" = "8:_FCC464F1105043C19C68F5E1193FA661"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E3CFBD154F6C4D30879CCEDACA63EEA6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B8B6193BEAC74C15BAAC345A534899CE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7EA42E5B104E4278BC7D0E4DB92C31A8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_52D2420DDF7C4FE387C91759C5942C78"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3C02232E3BDF4AA5887185D2AA054E73"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3363AE0BD6DF4D1486CCB6E81A5C14FA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D97E7F2618F582E9DA581E98E0394908"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_32386CDEAC0545E0BD0B840D7720A8B9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_16760A84554A23380DE93CAB7263F670"
+        "MsmKey" = "8:_FE7C704F9AD04C1DA0E4A08699A14B02"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_818B64A3551DA2A7BE4D7668A59341EC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5F187CF9B0874953878CBB6A50D67B4F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C7C09923833F4CFF9EE26B5C0EACAEBF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FE7C704F9AD04C1DA0E4A08699A14B02"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_165DAB40BA9448C8BD0B5C827298B665"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5B106E9DC0714C24BC790FF2F5211C12"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D57A42A70CBF4C35A85D5FE48EE12A59"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9C99EE5284C5476497959229930DF5FB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_76F582D9F734029182350E8B351F127A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_455F8937EAF044E4A2697642C2ED42BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_16760A84554A23380DE93CAB7263F670"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -396,26 +396,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_019537625EE844499B8F8241038841EC"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_DataDump.exe.config"
-            "TargetName" = "8:BSAP_DataDump.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_06D084C858AC4D5EA7DCBB901FA83786"
             {
             "SourcePath" = "8:images\\100Sampleicons_61-80_48.ico"
@@ -436,61 +416,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1256D7D23D4E4E55A305EBA42E874D00"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\InstallUtil.exe.config"
-            "TargetName" = "8:InstallUtil.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_13B5B01D564F46B49800C8F7A93BD870"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_165DAB40BA9448C8BD0B5C827298B665"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:InstallUtil, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:BurnSoft.Universal, Version=4.0.23.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_13B5B01D564F46B49800C8F7A93BD870"
+                    "_165DAB40BA9448C8BD0B5C827298B665"
                     {
-                    "Name" = "8:InstallUtil.exe"
+                    "Name" = "8:BurnSoft.Universal.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\InstallUtil.exe"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BurnSoft.Universal.dll"
             "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_151EA27E47ED47D4B29C0DB7D8CBE63D"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSApplicationProfiler.exe.config"
-            "TargetName" = "8:BSApplicationProfiler.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Condition" = "8:"
@@ -538,6 +478,66 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1B9E2BC1D5F14C86A693FD9F98393627"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\System.Data.SQLite.pdb"
+            "TargetName" = "8:System.Data.SQLite.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_256B24C70EB5488AB687CE96DC151F21"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\bsap_client.db"
+            "TargetName" = "8:bsap_client.db"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2D80590EA0E146B0B05CB5D6C8AE1FF4"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Config.exe.config"
+            "TargetName" = "8:BSAP_Config.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31226C0B5CEA41ADAAC787B276B52149"
             {
             "SourcePath" = "8:images\\Update.ico"
@@ -558,21 +558,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_32386CDEAC0545E0BD0B840D7720A8B9"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43B97D09835F4E00886F5B45E4F4BE42"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BSAP_DataDump, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_32386CDEAC0545E0BD0B840D7720A8B9"
-                    {
-                    "Name" = "8:BSAP_DataDump.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_DataDump.exe"
-            "TargetName" = "8:"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_DataDump.exe.config"
+            "TargetName" = "8:BSAP_DataDump.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Condition" = "8:"
@@ -589,20 +578,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3363AE0BD6DF4D1486CCB6E81A5C14FA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_455F8937EAF044E4A2697642C2ED42BD"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:BSAP_AppMonitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_3363AE0BD6DF4D1486CCB6E81A5C14FA"
+                    "_455F8937EAF044E4A2697642C2ED42BD"
                     {
                     "Name" = "8:BSAP_AppMonitor.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_AppMonitor.exe"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_AppMonitor.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
@@ -620,41 +609,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3C02232E3BDF4AA5887185D2AA054E73"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_45F47ED409A9466F85474B01AFDD3ADC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BurnSoft.Universal, Version=4.0.23.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:BSApplicationProfiler, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_3C02232E3BDF4AA5887185D2AA054E73"
+                    "_45F47ED409A9466F85474B01AFDD3ADC"
                     {
-                    "Name" = "8:BurnSoft.Universal.dll"
+                    "Name" = "8:BSApplicationProfiler.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BurnSoft.Universal.dll"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSApplicationProfiler.exe"
             "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E803DB615F948059F6DF3F22C7929E9"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\System.Data.SQLite.pdb"
-            "TargetName" = "8:System.Data.SQLite.pdb"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Condition" = "8:"
@@ -691,20 +660,51 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_52D2420DDF7C4FE387C91759C5942C78"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5B106E9DC0714C24BC790FF2F5211C12"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BSApplicationProfiler, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:BSAP_Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_52D2420DDF7C4FE387C91759C5942C78"
+                    "_5B106E9DC0714C24BC790FF2F5211C12"
                     {
-                    "Name" = "8:BSApplicationProfiler.exe"
+                    "Name" = "8:BSAP_Service.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSApplicationProfiler.exe"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Service.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5F187CF9B0874953878CBB6A50D67B4F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_5F187CF9B0874953878CBB6A50D67B4F"
+                    {
+                    "Name" = "8:System.Data.SQLite.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\System.Data.SQLite.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
@@ -742,80 +742,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F51FB7CA30D4F2EBEDD97E067CC65ED"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BurnSoft.Universal.xml"
-            "TargetName" = "8:BurnSoft.Universal.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_765B132B84194A6684CE5F7BBF6C89F4"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Service.exe.config"
-            "TargetName" = "8:BSAP_Service.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7AE5D885AAE844DBAF82CB9AE0CBD1DF"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\uninstall_service.bat"
-            "TargetName" = "8:uninstall_service.bat"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7EA42E5B104E4278BC7D0E4DB92C31A8"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_76F582D9F734029182350E8B351F127A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BSAP_Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:BurnSoft.Universal, Version=4.0.23.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7EA42E5B104E4278BC7D0E4DB92C31A8"
+                    "_76F582D9F734029182350E8B351F127A"
                     {
-                    "Name" = "8:BSAP_Config.exe"
+                    "Name" = "8:BurnSoft.Universal.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Config.exe"
+            "SourcePath" = "8:BurnSoft.Universal.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
@@ -830,7 +770,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_818B64A3551DA2A7BE4D7668A59341EC"
@@ -864,10 +804,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_91F435661A6E431892875ECAA4913CFC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96FC3C5E542B4265A88FF278630F69C7"
             {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Config.exe.config"
-            "TargetName" = "8:BSAP_Config.exe.config"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Service.exe.config"
+            "TargetName" = "8:BSAP_Service.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Condition" = "8:"
@@ -884,10 +824,41 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_97743E0B16D147EA92D94996C1097D2A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9C99EE5284C5476497959229930DF5FB"
             {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\install_service.bat"
-            "TargetName" = "8:install_service.bat"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:BSAP_Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_9C99EE5284C5476497959229930DF5FB"
+                    {
+                    "Name" = "8:BSAP_Config.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Config.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0399D490A2F4DC1B3061C1212437ED6"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\InstallUtil.exe.config"
+            "TargetName" = "8:InstallUtil.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Condition" = "8:"
@@ -924,40 +895,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B8B6193BEAC74C15BAAC345A534899CE"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0574212CC88443D89DB391AC2223FDD"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_B8B6193BEAC74C15BAAC345A534899CE"
-                    {
-                    "Name" = "8:System.Data.SQLite.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\System.Data.SQLite.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B993563E87F54F99B9234120B2F74177"
-            {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_AppMonitor.exe.config"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_AppMonitor.exe.config"
             "TargetName" = "8:BSAP_AppMonitor.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
@@ -975,10 +915,41 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C59CFF4A902542D2BD96B4DBA0210623"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C7C09923833F4CFF9EE26B5C0EACAEBF"
             {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\bsap_client.db"
-            "TargetName" = "8:bsap_client.db"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C7C09923833F4CFF9EE26B5C0EACAEBF"
+                    {
+                    "Name" = "8:MySql.Data.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\MySql.Data.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CEEBAB6290F44DE5B476369CD69BD1E7"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\uninstall_service.bat"
+            "TargetName" = "8:uninstall_service.bat"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Condition" = "8:"
@@ -1015,20 +986,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D97E7F2618F582E9DA581E98E0394908"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D57A42A70CBF4C35A85D5FE48EE12A59"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BurnSoft.Universal, Version=4.0.23.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:BSAP_DataDump, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_D97E7F2618F582E9DA581E98E0394908"
+                    "_D57A42A70CBF4C35A85D5FE48EE12A59"
                     {
-                    "Name" = "8:BurnSoft.Universal.DLL"
+                    "Name" = "8:BSAP_DataDump.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:BurnSoft.Universal.DLL"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_DataDump.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
@@ -1043,12 +1014,32 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DEA4387C9F504A2F8DA5D98B730E67D7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E5C5C255868B4E61802F0D4B6EE4803F"
             {
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\InstallUtilLib.dll"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BurnSoft.Universal.xml"
+            "TargetName" = "8:BurnSoft.Universal.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EBC195FD88CF444A8053DF6DE925A9E8"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\InstallUtilLib.dll"
             "TargetName" = "8:InstallUtilLib.dll"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
@@ -1066,21 +1057,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E3CFBD154F6C4D30879CCEDACA63EEA6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FBAF73D694F14DB98CE5455FB00A5D9B"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BSAP_Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_E3CFBD154F6C4D30879CCEDACA63EEA6"
-                    {
-                    "Name" = "8:BSAP_Service.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSAP_Service.exe"
-            "TargetName" = "8:"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\install_service.bat"
+            "TargetName" = "8:install_service.bat"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Condition" = "8:"
@@ -1097,20 +1077,40 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E767EABD94A64AA5B167436825969076"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FCC464F1105043C19C68F5E1193FA661"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\BSApplicationProfiler.exe.config"
+            "TargetName" = "8:BSApplicationProfiler.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FE7C704F9AD04C1DA0E4A08699A14B02"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:InstallUtil, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_E767EABD94A64AA5B167436825969076"
+                    "_FE7C704F9AD04C1DA0E4A08699A14B02"
                     {
-                    "Name" = "8:MySql.Data.dll"
+                    "Name" = "8:InstallUtil.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\Beta\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\MySql.Data.dll"
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\BSApplicationProfiler\\bin\\Release\\InstallUtil.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
@@ -1349,49 +1349,21 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_00424134D29C415DB7080A15E51E60CD"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_019FF7AF0C4F467895CC7992FA4BD537"
             {
-            "Name" = "8:Application Profiler"
+            "Name" = "8:Application Profiler Config"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_52D2420DDF7C4FE387C91759C5942C78"
-            "Folder" = "8:_A8EF7158E9274B92848D0BA55080CE87"
-            "WorkingFolder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Icon" = "8:_4710C3AEFE794A6C8ADB57C19C12542F"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_63FD66719D50412290C268FFE14C9FB3"
-            {
-            "Name" = "8:Uninstall Service"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_7AE5D885AAE844DBAF82CB9AE0CBD1DF"
-            "Folder" = "8:_A8EF7158E9274B92848D0BA55080CE87"
-            "WorkingFolder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
-            "Icon" = "8:_6B68E5A26A2D468BBEED7A7FDB7E8489"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8C4180F23ACD4EEF85296AAC40AFF5C1"
-            {
-            "Name" = "8:Application Profiler Configuration"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_7EA42E5B104E4278BC7D0E4DB92C31A8"
+            "Target" = "8:_9C99EE5284C5476497959229930DF5FB"
             "Folder" = "8:_A8EF7158E9274B92848D0BA55080CE87"
             "WorkingFolder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Icon" = "8:_31226C0B5CEA41ADAAC787B276B52149"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EC117A1621564B43921104D28539558D"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1BDA769B979B4202BFDA5719555AA341"
             {
             "Name" = "8:Install Service"
             "Arguments" = "8:"
@@ -1399,7 +1371,35 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_97743E0B16D147EA92D94996C1097D2A"
+            "Target" = "8:_FBAF73D694F14DB98CE5455FB00A5D9B"
+            "Folder" = "8:_A8EF7158E9274B92848D0BA55080CE87"
+            "WorkingFolder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Icon" = "8:_6B68E5A26A2D468BBEED7A7FDB7E8489"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_65ABAA09386D414C8DD127474E07509E"
+            {
+            "Name" = "8:Application Profiler"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
+            "Folder" = "8:_A8EF7158E9274B92848D0BA55080CE87"
+            "WorkingFolder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Icon" = "8:_B5663435035B40B68645CB2DF9A1B22E"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C99917C3114646089D0ED9F59CE4097A"
+            {
+            "Name" = "8:Uninstall Service"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_CEEBAB6290F44DE5B476369CD69BD1E7"
             "Folder" = "8:_A8EF7158E9274B92848D0BA55080CE87"
             "WorkingFolder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
             "Icon" = "8:_6B68E5A26A2D468BBEED7A7FDB7E8489"

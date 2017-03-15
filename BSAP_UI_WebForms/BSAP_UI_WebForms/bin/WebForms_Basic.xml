@@ -6,6 +6,15 @@ BSAP_UI_WebForms
 </name>
 </assembly>
 <members>
+<member name="F:BSAP_UI_WebForms.Agents._Image1">
+<summary>
+Image1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:BSAP_UI_WebForms.Agents._Application_Agents1">
 <summary>
 Application_Agents1 control.

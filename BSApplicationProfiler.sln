@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BSApplicationProfiler", "BSApplicationProfiler\BSApplicationProfiler.vbproj", "{0346AA64-AB25-4BA7-8D94-47AAE7064CCD}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -28,7 +28,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BSAP_Config", "BSAP_Config\
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BSAP_DataDump", "BSAP_DataDump\BSAP_DataDump.vbproj", "{8CF972E2-70D6-4D41-AC64-14E65CAB29EB}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BSAP_UI_WebForms(1)", "http://localhost:49463", "{89FEA326-E982-4002-B979-30D38EA51C75}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BSAP_UI_WebForms", "http://localhost:49463", "{89FEA326-E982-4002-B979-30D38EA51C75}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
@@ -48,6 +48,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BSAP_UI_WebForms(1)", "http
 		Release.AspNetCompiler.Debug = "False"
 		SlnRelativePath = "BSAP_UI_WebForms\"
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BSAP_WebUI_Installer", "BSAP_WebUI_Installer\BSAP_WebUI_Installer.vdproj", "{8CC6A09B-3F61-47F7-8ED2-BC3B282D0DC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,8 @@ Global
 		{89FEA326-E982-4002-B979-30D38EA51C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89FEA326-E982-4002-B979-30D38EA51C75}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{89FEA326-E982-4002-B979-30D38EA51C75}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8CC6A09B-3F61-47F7-8ED2-BC3B282D0DC8}.Debug|Any CPU.ActiveCfg = Debug
+		{8CC6A09B-3F61-47F7-8ED2-BC3B282D0DC8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
