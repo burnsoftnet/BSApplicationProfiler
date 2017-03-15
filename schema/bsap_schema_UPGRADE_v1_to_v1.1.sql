@@ -15,7 +15,7 @@ THIS IS JUST FOR EXISTING STRUCTURES TO RETAIN DATA.
 
 USE `bsap`;
 
-INSERT INTO `DB_Version` (verNo) VALUES(1.1,'2017-03-14 14:07:24');
+INSERT INTO `DB_Version` (verNo,dtUpdated) VALUES(1.1,'2017-03-14 14:07:24');
 
 /*Table structure for table `view_agents` */
 
