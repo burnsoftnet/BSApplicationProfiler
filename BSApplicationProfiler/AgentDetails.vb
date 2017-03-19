@@ -3,6 +3,12 @@ Imports System.Management
 Imports MySql.Data.MySqlClient
 Imports System.Data.SqlClient
 Public Class AgentDetails
+    ''' <summary>
+    ''' Checks to see if agent exists in the database
+    ''' </summary>
+    ''' <param name="sHost"></param>
+    ''' <param name="AgentID"></param>
+    ''' <returns></returns>
     Private Function AgentExists(sHost As String, Optional ByRef AgentID As Long = 0) As Boolean
         Dim bAns As Boolean = False
         Dim Obj As New BurnSoft.BSDatabase
@@ -25,7 +31,10 @@ Public Class AgentDetails
         Obj = Nothing
         Return bAns
     End Function
-
+    ''' <summary>
+    ''' Get the agent id, insert into database if not exists, otherwise update database with client info
+    ''' </summary>
+    ''' <returns></returns>
     Public Function GetAgentID() As Long
         Dim lAns As Long = 0
         Dim Obj As New Universal.BSSystemInfo
@@ -42,7 +51,19 @@ Public Class AgentDetails
         End If
         Dim ObjDB As New BurnSoft.BSDatabase
         ObjDB.ConnExe(SQL)
+        ObjDB = Nothing
+        Obj = Nothing
         If Not bAgent Then AgentExists(HostName, lAns)
         Return lAns
     End Function
+    ''' <summary>
+    ''' Heartbeat to report back that agent i still running.
+    ''' </summary>
+    ''' <param name="AgentID"></param>
+    Public Sub UpdateHeartBeat(AgentID As Long)
+        Dim Obj As New BurnSoft.BSDatabase
+        Dim SQL As String = "UPDATE agents set dtReported=CURRENT_TIMESTAMP where id=" & AgentID
+        Obj.ConnExe(SQL)
+        Obj = Nothing
+    End Sub
 End Class

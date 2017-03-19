@@ -2,7 +2,7 @@
     Inherits System.Web.UI.UserControl
     Public SessionProjectTitle As String
     Sub LoadData(SessionID As Long)
-        Dim SQL As String = "select p.*,TIME_FORMAT(p.dt,'%H:%I') as dt_time from process_stats_main p where p.SessionID=" & SessionID
+        Dim SQL As String = "select p.*,TIME_FORMAT(p.dt,'%H:%I:%S') as dt_time from process_stats_main p where p.SessionID=" & SessionID
         Chart1.Titles.Add("CPU %")
         Chart2.Titles.Add("MEMORY (BYTES)")
         Chart3.Titles.Add("Handles (TOTAL)")
@@ -16,6 +16,10 @@
             lblEnd.ForeColor = Drawing.Color.Green
         End If
         SessionProjectTitle = Obj.GetProjectName(CLng(Request.QueryString("APNID")))
+        Dim ObjS As New BurnSoft.BSAP.BSSessionDetailsStats
+        ObjS.getSessionAverage(SessionID, lblAvgCPU.Text, lblAvgMem.Text, lblAvgHandles.Text, lblAvgThreads.Text)
+        ObjS = Nothing
+        Obj = Nothing
     End Sub
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Call LoadData(CLng(Request.QueryString("SessionID")))

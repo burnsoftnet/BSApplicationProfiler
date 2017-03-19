@@ -118,13 +118,13 @@
         "Entry"
         {
         "MsmKey" = "8:_76F582D9F734029182350E8B351F127A"
-        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
+        "OwnerKey" = "8:_D57A42A70CBF4C35A85D5FE48EE12A59"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_76F582D9F734029182350E8B351F127A"
-        "OwnerKey" = "8:_D57A42A70CBF4C35A85D5FE48EE12A59"
+        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -178,6 +178,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C7C09923833F4CFF9EE26B5C0EACAEBF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CBB616DA466E4EFD8232A6BA3FC73CD2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -238,37 +244,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5F187CF9B0874953878CBB6A50D67B4F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C7C09923833F4CFF9EE26B5C0EACAEBF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_FE7C704F9AD04C1DA0E4A08699A14B02"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_165DAB40BA9448C8BD0B5C827298B665"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5B106E9DC0714C24BC790FF2F5211C12"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -280,7 +256,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C7C09923833F4CFF9EE26B5C0EACAEBF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_9C99EE5284C5476497959229930DF5FB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5F187CF9B0874953878CBB6A50D67B4F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5B106E9DC0714C24BC790FF2F5211C12"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_45F47ED409A9466F85474B01AFDD3ADC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -299,6 +299,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_16760A84554A23380DE93CAB7263F670"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_165DAB40BA9448C8BD0B5C827298B665"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -613,7 +619,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BSApplicationProfiler, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:BSApplicationProfiler, Version=1.0.0.10, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_45F47ED409A9466F85474B01AFDD3ADC"
@@ -932,6 +938,26 @@
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_66A8E3BE2AA649E79DB10DF2A04F17B8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CBB616DA466E4EFD8232A6BA3FC73CD2"
+            {
+            "SourcePath" = "8:\\\\Mac\\Home\\Documents\\Source_Code\\Visual Studio 2015\\Projects\\GitHub\\BSApplicationProfiler\\external\\sqlite-netFx45-setup-bundle-x86-2012-1.0.104.0.exe"
+            "TargetName" = "8:sqlite-netFx45-setup-bundle-x86-2012-1.0.104.0.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_9F5DBC43BA194D05990FF8B544C53D4B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"

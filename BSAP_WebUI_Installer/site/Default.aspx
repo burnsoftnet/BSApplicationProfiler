@@ -17,6 +17,7 @@
         <div class="col-md-4">
             <h2>UPDATES</h2>
             <ul>
+                <li>3/16/2017 - Updated Web UI with additional information to make the site more functional and improve stats.</li>
                 <li>3/10/2017 - Updated Web Interface to be able to view the session details by session.</li>
                 <li>3/8/2017 - Working on Web Interface to read the data.</li>
                 <li>2/15/2017 - Agent functions are up and running</li>

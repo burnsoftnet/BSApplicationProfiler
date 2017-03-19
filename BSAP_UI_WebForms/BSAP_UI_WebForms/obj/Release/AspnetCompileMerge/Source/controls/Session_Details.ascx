@@ -17,21 +17,25 @@
         width: 197px;
     }
     .auto-style6 {
-        width: 84%;
+        width: 75%;
     }
     .auto-style7 {
         text-align: center;
     }
+    .auto-style8 {
+        width: 196px;
+    }
 </style>
 <p>
     <br />
+    <center>
     <table class="auto-style6">
         <tr>
             <td class="auto-style4"><strong>Session Start:</strong></td>
             <td class="auto-style5">
                 <asp:Label ID="lblStart" runat="server"></asp:Label>
             </td>
-            <td class="auto-style3"><strong>Session End:</strong></td>
+            <td class="auto-style3" colspan="2"><strong>Session End:</strong></td>
             <td class="auto-style2">
                 <asp:Label ID="lblEnd" runat="server"></asp:Label>
             </td>
@@ -41,18 +45,40 @@
             <td class="auto-style5">
                 <asp:Label ID="lblProcessName" runat="server"></asp:Label>
             </td>
-            <td class="auto-style3"><strong>User Name:</strong></td>
+            <td class="auto-style3" colspan="2"><strong>User Name:</strong></td>
             <td class="auto-style2">
                 <asp:Label ID="lblUser" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
             <td class="auto-style4"><strong>Command Line:</strong></td>
-            <td colspan="3">
+            <td colspan="4">
                 <asp:Label ID="lblCommandLine" runat="server"></asp:Label>
             </td>
         </tr>
-    </table>
+        <tr>
+            <td class="auto-style4"><strong>Average CPU:</strong></td>
+            <td>
+                <asp:Label ID="lblAvgCPU" runat="server"></asp:Label>
+            </td>
+            <td class="auto-style8">
+                <strong>Average Memory:</strong></td>
+            <td colspan="2">
+                <asp:Label ID="lblAvgMem" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style4"><strong>Average Handles:</strong></td>
+            <td>
+                <asp:Label ID="lblAvgHandles" runat="server"></asp:Label>
+            </td>
+            <td class="auto-style8">
+                <strong>Average Threads:</strong></td>
+            <td colspan="2">
+                <asp:Label ID="lblAvgThreads" runat="server"></asp:Label>
+            </td>
+        </tr>
+    </table></center>
 </p>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
 

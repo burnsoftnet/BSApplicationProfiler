@@ -12,7 +12,14 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Mobile Master Page</h1>
+        <h1><%=System.Configuration.ConfigurationManager.AppSettings("SITE_NAME") %></h1>
+        <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Project_List.aspx">Project Lists</a></li>
+                        <li><a runat="server" href="~/Agents.aspx">Agent Lists</a></li>
+                    </ul>
+                </div>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />

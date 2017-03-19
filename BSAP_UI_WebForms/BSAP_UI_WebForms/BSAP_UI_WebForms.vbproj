@@ -191,23 +191,28 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Add_Application.aspx" />
     <Content Include="Agents.aspx" />
     <Content Include="All_Sessions_By_Agent.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="controls\AddEdit_Project.ascx" />
     <Content Include="controls\Application_Agents.ascx" />
     <Content Include="controls\Application_List.ascx" />
     <Content Include="controls\Application_Sessions.ascx" />
     <Content Include="controls\Sessions_by_Agent.ascx" />
     <Content Include="controls\Session_Details.ascx" />
+    <Content Include="Edit_Application.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="images\add-button_318-32466.jpg" />
     <Content Include="images\download_48x38.png" />
     <Content Include="install\BSAP_Installer.msi" />
     <None Include="My Project\PublishProfiles\Local_Install.pubxml" />
+    <None Include="My Project\PublishProfiles\WebHost.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\computer.png" />
     <Content Include="images\eMail2Friend.gif" />
@@ -264,6 +269,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Application.aspx.designer.vb">
+      <DependentUpon>Add_Application.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Application.aspx.vb">
+      <DependentUpon>Add_Application.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Agents.aspx.designer.vb">
       <DependentUpon>Agents.aspx</DependentUpon>
     </Compile>
@@ -284,6 +296,13 @@
     <Compile Include="App_Start\IdentityConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="controls\AddEdit_Project.ascx.designer.vb">
+      <DependentUpon>AddEdit_Project.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AddEdit_Project.ascx.vb">
+      <DependentUpon>AddEdit_Project.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="controls\Application_Agents.ascx.designer.vb">
       <DependentUpon>Application_Agents.ascx</DependentUpon>
     </Compile>
@@ -325,6 +344,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Application.aspx.designer.vb">
+      <DependentUpon>Edit_Application.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Application.aspx.vb">
+      <DependentUpon>Edit_Application.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>

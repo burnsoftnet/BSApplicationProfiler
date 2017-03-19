@@ -858,6 +858,27 @@ Checks to see if the data that is passed is greater than or less then the curren
  <param name="DefaultValue"></param>
  <returns></returns>
 </member>
+<member name="M:BurnSoft.Universal.BSOtherObjects.ConvertBoolToInt(System.Boolean)">
+ <summary>
+ Convert a boolean value to an integer
+ </summary>
+ <param name="bValue"></param>
+ <returns>1/0</returns>
+</member>
+<member name="M:BurnSoft.Universal.BSOtherObjects.ConvertYNtoBool(System.String)">
+ <summary>
+ Converts a y/Y or n/N value to boolean
+ </summary>
+ <param name="sValue"></param>
+ <returns>True/False</returns>
+</member>
+<member name="M:BurnSoft.Universal.BSOtherObjects.ConvertIntToBool(System.Int32)">
+ <summary>
+ Converts a Integer to to boolean value, if it is not 0 it is true
+ </summary>
+ <param name="iValue"></param>
+ <returns>True/False</returns>
+</member>
 <member name="M:BurnSoft.Universal.BSProcessInfo.GetManagementObject(System.String,System.String)">
  <summary>
  Simple WMI Call just pass the Object then the desciption of the object to look for

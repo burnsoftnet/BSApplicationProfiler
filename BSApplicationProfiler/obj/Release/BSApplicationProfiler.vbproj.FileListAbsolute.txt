@@ -10,3 +10,4 @@
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.Resources.resources
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbproj.GenerateResource.Cache
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.exe
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbprojResolveAssemblyReference.cache

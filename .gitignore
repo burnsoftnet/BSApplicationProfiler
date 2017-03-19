@@ -30,3 +30,9 @@ BSAP_DataDump/obj/Release/*.*
 BSAP_Config/obj/Release/TempPE/*.*
 BSAP_Installer/images/Thumbs.db
 BSAP_Service/obj/Release/*.*
+BSAP_UI_WebForms/BSAP_UI_WebForms/obj/*.*
+BSAP_UI_WebForms/BSAP_UI_WebForms/obj/Debug/*.*
+BSAP_UI_WebForms/BSAP_UI_WebForms/obj/Release/*.*
+BSApplicationProfiler/obj/Release/*.*
+BSApplicationProfiler/obj/Release/TempPE/*.*
+

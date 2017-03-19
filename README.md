@@ -18,8 +18,18 @@ This application will help gather all that information while you are using it no
 Worried about not being able to gather this information when you are using  your application while disconnected from the office?  Don’t be, the agent will see that it cannot connect to the main database and it will continue on using the local database the dump the data in there, once you are able to connect to the office and the agent can connect to the main database, it will dump the information that is the local database to the main database. 
 <br/>
 <br/>
+Sure this sounds like it is geared toward desktop applications, but this can also be used for Websites as well.  Just plug in the w3wp.exe process and have it look for the parameter name of the website listed in IIS, Once it see's that w3wp.exe process with a matching parameter, then it will start monitoring that process.'
+<br/>
+<br/>
+<center>
+<img src="https://github.com/burnsoftnet/BSApplicationProfiler/blob/master/screen_shots/WebSite_Sample_Session.png?raw=true"></center><br/>
+
+<br/>
+<br/>
+
 <b>UPDATES:</b> <br/>
 <ul>
+<li>3/16/2017 - Updated Web UI with additional information to make the site more functional and improve stats.</li>
 <li>3/10/2017 - Updated Web Interface to be able to view the session details by session.</li>
 <li>3/8/2017 - Working on Web Interface to read the data.</li>
 <li>2/15/2017 - Agent functions are up and running</li>

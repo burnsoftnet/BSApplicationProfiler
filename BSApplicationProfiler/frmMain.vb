@@ -7,6 +7,8 @@ Public Class frmMain
     Dim TIMER_INTERVAL As Long
     Dim APP_PATH As String
     Public USELOCAL As Boolean
+    Dim HEARTBEAT_INTERVAL As Long
+    Const HEARTBEAT_INTERVAL_VALUE = 5
 #Region "Local Database Execution"
     ''' <summary>
     ''' Run through the enabled application monitoring list and see if they are running
@@ -214,6 +216,7 @@ Public Class frmMain
     ''' Set Global Vars
     ''' </summary>
     Sub Init()
+        HEARTBEAT_INTERVAL = 1
         'APP_PATH = Application.ExecutablePath
         'APP_PATH = "C:\Program Files (x86)\BurnSoft\Application Profiler"
         If Len(System.Configuration.ConfigurationManager.AppSettings("APP_PATH")) = 0 Then
@@ -277,7 +280,7 @@ Public Class frmMain
                 Obj = Nothing
             Else
                 'Unable to Reach Main DB Server, use Local Settings
-                BuggerMe("Useing Local Database", "frmmain.Form1_Load")
+                BuggerMe("Using Local Database", "frmmain.Form1_Load")
                 AGENT_ID = System.Configuration.ConfigurationManager.AppSettings("AGENT_ID")
                 Call LogError("frmMain.Form1_Load", "Unabled to connnect to database host " & DBHOST)
             End If
@@ -303,5 +306,12 @@ Public Class frmMain
             Call RunDBUpdate(AGENT_ID)
         End If
         Call GetLocalApps()
+        If HEARTBEAT_INTERVAL >= HEARTBEAT_INTERVAL_VALUE Then
+            Dim ObjA As New AgentDetails
+            Call ObjA.UpdateHeartBeat(AGENT_ID)
+            HEARTBEAT_INTERVAL = 0
+        Else
+            HEARTBEAT_INTERVAL += 1
+        End If
     End Sub
 End Class

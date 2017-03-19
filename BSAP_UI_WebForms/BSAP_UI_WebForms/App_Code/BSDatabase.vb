@@ -33,12 +33,40 @@ Namespace BurnSoft
         ''' </summary>
         Public Sub CloseDB()
             Try
+                'If IsDBNull(conn) Then
                 conn.Close()
+                ' ElseIf conn.State = ConnectionState.Open And conn.State <> ConnectionState.Executing Then
+                '    conn.Close()
+                'End If
                 conn = Nothing
             Catch ex As Exception
                 conn = Nothing
             End Try
         End Sub
+        ''' <summary>
+        ''' A quick and Easy Execution on a T-SQL query, greate for everything except SELECT Statements
+        ''' </summary>
+        ''' <param name="SQL"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        Public Sub ConnEXE(SQL As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "")
+            Try
+                If ConnectDB() Then
+                    Dim CMD As New MySqlCommand
+                    CMD.CommandText = SQL
+                    CMD.Connection = conn
+                    CMD.ExecuteNonQuery()
+                    CMD.Connection.Close()
+                    CMD = Nothing
+                    Call CloseDB()
+                Else
+                    conn = Nothing
+                End If
 
+            Catch ex As Exception
+                errorID = Err.Number
+                errMsg = ex.Message.ToString
+            End Try
+        End Sub
     End Class
 End Namespace

@@ -18,6 +18,10 @@
         <HeaderStyle HorizontalAlign="Center" />
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
+        <asp:BoundField DataField="editme" HeaderText="" SortExpression="editme" HtmlEncode="false" >
+        <HeaderStyle HorizontalAlign="Center" />
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
     </Columns>
     <FooterStyle BackColor="#CCCCCC" />
     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

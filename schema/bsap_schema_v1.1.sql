@@ -2,7 +2,8 @@
 SQLyog Ultimate v12.2.4 (64 bit)
 MySQL - 5.6.35 : Database - bsap
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -347,7 +348,7 @@ DROP TABLE IF EXISTS `web_view_monitoring_session`;
 /*!50001 DROP TABLE IF EXISTS `web_view_app_project_name` */;
 /*!50001 DROP VIEW IF EXISTS `web_view_app_project_name` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`bsap_admin`@`%` SQL SECURITY DEFINER VIEW `web_view_app_project_name` AS select `apn`.`id` AS `id`,`apn`.`name` AS `name`,`apn`.`appdesc` AS `appdesc`,concat((case `apn`.`enabled` when 1 then 'YES' when 0 then 'NO' end)) AS `enabled`,cast(concat('<a href="Project_list_all_sessions.aspx?ID=',`apn`.`id`,'">',`apn`.`name`,'</a>') as char(255) charset utf8) AS `web_name`,cast(concat('<a href="Project_list_all_sessions_by_agent.aspx?ID=',`apn`.`id`,'">',convert(concat(_latin1'<img src="images/computer.png"') using utf8),'</a>') as char(255) charset utf8) AS `byagent`,(select count(0) from `monitoring_session` where (`monitoring_session`.`APNID` = `apn`.`id`)) AS `TotalSessions` from `app_project_name` `apn` */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`bsap_admin`@`%` SQL SECURITY DEFINER VIEW `web_view_app_project_name` AS select `apn`.`id` AS `id`,`apn`.`name` AS `name`,`apn`.`appdesc` AS `appdesc`,concat((case `apn`.`enabled` when 1 then 'YES' when 0 then 'NO' end)) AS `enabled`,cast(concat('<a href="Project_list_all_sessions.aspx?ID=',`apn`.`id`,'">',`apn`.`name`,'</a>') as char(255) charset utf8) AS `web_name`,cast(concat('<a href="Project_list_all_sessions_by_agent.aspx?ID=',`apn`.`id`,'">',convert(concat(_latin1'<img src="images/computer.png"') using utf8),'</a>') as char(255) charset utf8) AS `byagent`,(select count(0) from `monitoring_session` where (`monitoring_session`.`APNID` = `apn`.`id`)) AS `TotalSessions`, cast(concat('<a href="Edit_Application.aspx?ID=',`apn`.`id`,'">Edit</a>') as char (255) charset utf8) AS `EDITME` from `app_project_name` `apn` */;
 
 /*View structure for view web_view_monitoring_session */
 

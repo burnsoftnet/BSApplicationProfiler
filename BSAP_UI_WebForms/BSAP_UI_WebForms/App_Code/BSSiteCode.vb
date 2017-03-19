@@ -3,6 +3,37 @@ Imports BurnSoft
 Namespace BurnSoft.BSAP
     Public Class ProjectSessions
         ''' <summary>
+        ''' Get the Project ID based on the Name of the project
+        ''' </summary>
+        ''' <param name="ProjectName"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        ''' <returns></returns>
+        Public Function GetProjectIDbyName(ProjectName As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "") As Long
+            Dim lAns As Long = 0
+            Dim Obj As New BSDatabase
+            Try
+                If Obj.ConnectDB(errorID, errMsg) Then
+                    Dim SQL As String = "select * from app_project_name where name='" & ProjectName & "'"
+                    Dim CMD As New MySqlCommand(SQL, Obj.conn)
+                    Dim RS As MySqlDataReader
+                    RS = CMD.ExecuteReader
+                    While RS.Read
+                        lAns = RS("id")
+                    End While
+                    RS.Close()
+                    RS = Nothing
+                    CMD = Nothing
+                    Obj.CloseDB()
+                End If
+            Catch ex As Exception
+                errorID = Err.Number
+                errMsg = ex.Message.ToString
+            End Try
+            Obj = Nothing
+            Return lAns
+        End Function
+        ''' <summary>
         ''' Get the Project Name from the Application Project Name ID ( APNID )
         ''' </summary>
         ''' <param name="APNID"></param>
@@ -32,6 +63,7 @@ Namespace BurnSoft.BSAP
                 errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
+            Obj = Nothing
             Return sAns
         End Function
         ''' <summary>
@@ -151,5 +183,43 @@ Namespace BurnSoft.BSAP
             End Try
             Return sAns
         End Function
+    End Class
+    Public Class BSSessionDetailsStats
+        ''' <summary>
+        ''' Returns the average cpu,memory, handles and threads for that session
+        ''' </summary>
+        ''' <param name="SessionID"></param>
+        ''' <param name="AvgCPU"></param>
+        ''' <param name="avgMem"></param>
+        ''' <param name="avgHandles"></param>
+        ''' <param name="avgthreads"></param>
+        ''' <param name="errorID"></param>
+        ''' <param name="errMsg"></param>
+        Public Sub getSessionAverage(SessionID As Long, ByRef AvgCPU As String, ByRef avgMem As String, ByRef avgHandles As String, ByRef avgthreads As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "")
+            Try
+                Dim SQL As String = "SELECT AVG(cpu) AS avgcpu, AVG(memoryused) AS avgmem, AVG(handles) AS avghandles, AVG(threads) AS avgthreads FROM `process_stats_main` WHERE sessionid=" & SessionID
+                Dim Obj As New BSDatabase
+                If Obj.ConnectDB(errorID, errMsg) Then
+                    Dim CMD As New MySqlCommand(SQL, Obj.conn)
+                    Dim RS As MySqlDataReader
+                    RS = CMD.ExecuteReader
+                    While RS.Read()
+                        AvgCPU = Format(RS("avgcpu"), "0.00") & "%"
+                        avgMem = Format(((Format(RS("avgmem"), "0.00") / 1024) / 1024), "0.00") & " MB"
+                        avgHandles = Format(RS("avghandles"), "0.00")
+                        avgthreads = Format(RS("avgthreads"), "0.00")
+                    End While
+                    RS.Close()
+                    RS = Nothing
+                    CMD = Nothing
+                    Obj.CloseDB()
+                End If
+                Obj = Nothing
+            Catch ex As Exception
+                errorID = Err.Number
+                errMsg = ex.Message.ToString
+            End Try
+        End Sub
+
     End Class
 End Namespace

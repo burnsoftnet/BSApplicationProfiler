@@ -6,6 +6,15 @@ BSAP_UI_WebForms
 </name>
 </assembly>
 <members>
+<member name="F:BSAP_UI_WebForms.Add_Application._AddEdit_Project1">
+<summary>
+AddEdit_Project1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:BSAP_UI_WebForms.Agents._Image1">
 <summary>
 Image1 control.
@@ -52,6 +61,23 @@ To modify move field declaration from designer file to code-behind file.
  <summary>
  Close the connection to the database
  </summary>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSDatabase.ConnEXE(System.String,System.Int64@,System.String)">
+ <summary>
+ A quick and Easy Execution on a T-SQL query, greate for everything except SELECT Statements
+ </summary>
+ <param name="SQL"></param>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSAP.ProjectSessions.GetProjectIDbyName(System.String,System.Int64@,System.String)">
+ <summary>
+ Get the Project ID based on the Name of the project
+ </summary>
+ <param name="ProjectName"></param>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+ <returns></returns>
 </member>
 <member name="M:BSAP_UI_WebForms.BurnSoft.BSAP.ProjectSessions.GetProjectName(System.Int64,System.Int64@,System.String)">
  <summary>
@@ -103,6 +129,180 @@ To modify move field declaration from designer file to code-behind file.
  <param name="errorID"></param>
  <param name="errMsg"></param>
  <returns>registered computer name</returns>
+</member>
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSAP.BSSessionDetailsStats.getSessionAverage(System.Int64,System.String@,System.String@,System.String@,System.String@,System.Int64@,System.String)">
+ <summary>
+ Returns the average cpu,memory, handles and threads for that session
+ </summary>
+ <param name="SessionID"></param>
+ <param name="AvgCPU"></param>
+ <param name="avgMem"></param>
+ <param name="avgHandles"></param>
+ <param name="avgthreads"></param>
+ <param name="errorID"></param>
+ <param name="errMsg"></param>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtName">
+<summary>
+txtName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtDesc">
+<summary>
+txtDesc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._chkEnabled">
+<summary>
+chkEnabled control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._chkHasSub">
+<summary>
+chkHasSub control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtProcessName">
+<summary>
+txtProcessName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtEXEName">
+<summary>
+txtEXEName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._chkMatchParam">
+<summary>
+chkMatchParam control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtParameter">
+<summary>
+txtParameter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtInterval">
+<summary>
+txtInterval control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._chkHasLogs">
+<summary>
+chkHasLogs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtLogName">
+<summary>
+txtLogName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtLogPath">
+<summary>
+txtLogPath control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._chkClearLogs">
+<summary>
+chkClearLogs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._chkUseEventLog">
+<summary>
+chkUseEventLog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtNTSource">
+<summary>
+txtNTSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._txtNTEventID">
+<summary>
+txtNTEventID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._btnSave">
+<summary>
+btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.AddEdit_Project._btnUpdate">
+<summary>
+btnUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member>
 <member name="F:BSAP_UI_WebForms.Application_Agents._SqlDataSource1">
 <summary>
@@ -221,6 +421,42 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAvgCPU">
+<summary>
+lblAvgCPU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAvgMem">
+<summary>
+lblAvgMem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAvgHandles">
+<summary>
+lblAvgHandles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAvgThreads">
+<summary>
+lblAvgThreads control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:BSAP_UI_WebForms.Session_Details1._SqlDataSource1">
 <summary>
 SqlDataSource1 control.
@@ -284,6 +520,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:BSAP_UI_WebForms.Edit_Application._AddEdit_Project1">
+<summary>
+AddEdit_Project1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="T:BSAP_UI_WebForms.My.MyWebExtension">
  <summary>
  Module used to define the properties that are available in the My Namespace for Web projects.
@@ -314,6 +559,15 @@ To modify move field declaration from designer file to code-behind file.
  <summary>
  Returns the Asp log object.
  </summary>
+</member>
+<member name="F:BSAP_UI_WebForms.Project_List._Image2">
+<summary>
+Image2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member>
 <member name="F:BSAP_UI_WebForms.Project_List._Application_List1">
 <summary>

@@ -9,6 +9,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_WebUI_Installer\site</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Add_Application.aspx">
+      <publishTime>03/16/2017 10:41:31</publishTime>
+    </File>
     <File Include="Agents.aspx">
       <publishTime>03/15/2017 12:54:05</publishTime>
     </File>
@@ -19,13 +22,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2013 07:43:40</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>03/15/2017 13:29:59</publishTime>
+      <publishTime>03/17/2017 07:31:21</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>03/15/2017 13:29:58</publishTime>
+      <publishTime>03/17/2017 07:31:21</publishTime>
     </File>
     <File Include="bin/App_global.asax.pdb">
-      <publishTime>03/15/2017 13:29:58</publishTime>
+      <publishTime>03/17/2017 07:31:21</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>08/22/2013 22:09:14</publishTime>
@@ -34,10 +37,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2013 20:06:22</publishTime>
     </File>
     <File Include="bin/BSAP_UI_WebForms.dll">
-      <publishTime>03/15/2017 13:29:12</publishTime>
+      <publishTime>03/17/2017 07:31:03</publishTime>
     </File>
     <File Include="bin/BurnSoft.Universal.dll">
-      <publishTime>02/22/2017 13:20:56</publishTime>
+      <publishTime>03/16/2017 08:20:52</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 08:32:26</publishTime>
@@ -154,7 +157,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/22/2013 09:21:56</publishTime>
     </File>
     <File Include="bin/WebForms_Basic.xml">
-      <publishTime>03/15/2017 13:29:12</publishTime>
+      <publishTime>03/17/2017 07:31:03</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>09/10/2013 17:28:38</publishTime>
@@ -171,6 +174,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/Site.css">
       <publishTime>03/14/2017 13:58:33</publishTime>
     </File>
+    <File Include="controls/AddEdit_Project.ascx">
+      <publishTime>03/16/2017 14:22:28</publishTime>
+    </File>
     <File Include="controls/Application_Agents.ascx">
       <publishTime>03/14/2017 10:09:22</publishTime>
     </File>
@@ -184,10 +190,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/14/2017 13:59:41</publishTime>
     </File>
     <File Include="controls/Session_Details.ascx">
-      <publishTime>03/14/2017 13:09:25</publishTime>
+      <publishTime>03/16/2017 10:47:02</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>03/10/2017 09:52:33</publishTime>
+      <publishTime>03/16/2017 14:42:44</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>03/09/2017 08:55:51</publishTime>
@@ -203,6 +209,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
       <publishTime>03/09/2017 08:56:09</publishTime>
+    </File>
+    <File Include="images/add-button_318-32466.jpg">
+      <publishTime>03/16/2017 10:36:41</publishTime>
     </File>
     <File Include="images/computer.png">
       <publishTime>03/09/2017 09:24:23</publishTime>
@@ -229,16 +238,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/09/2017 09:24:23</publishTime>
     </File>
     <File Include="install/BSAP_Installer.msi">
-      <publishTime>03/15/2017 12:37:16</publishTime>
+      <publishTime>03/17/2017 07:25:45</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>03/09/2017 08:56:43</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>03/15/2017 13:29:26</publishTime>
+      <publishTime>03/17/2017 07:31:07</publishTime>
     </File>
     <File Include="Project_List.aspx">
-      <publishTime>03/09/2017 10:03:04</publishTime>
+      <publishTime>03/16/2017 10:42:19</publishTime>
     </File>
     <File Include="Project_list_all_sessions.aspx">
       <publishTime>03/09/2017 13:12:36</publishTime>
@@ -349,7 +358,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/09/2017 08:55:51</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/15/2017 13:29:20</publishTime>
+      <publishTime>03/17/2017 07:31:05</publishTime>
     </File>
   </ItemGroup>
 </Project>
