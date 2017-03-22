@@ -1,0 +1,15 @@
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\InstallUtil.exe
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\InstallUtilLib.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\InstallUtil.exe.config
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\install_service.bat
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\uninstall_service.bat
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\BSAP_Service.exe.config
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\BSAP_Service.exe
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\BSAP_Service.pdb
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.vbprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.Resources.resources
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.MyNewService.resources
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.ProjectInstaller.resources
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.vbproj.GenerateResource.Cache
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.exe
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.pdb

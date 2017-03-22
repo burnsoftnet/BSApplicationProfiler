@@ -430,7 +430,7 @@ Module modMain
                 Call BuggerMe("Starting Data Collection at " & Now)
                 Call CollectData(PROCESS_NAME, ProcessActive)
                 Call BuggerMe("Ending Data Collection at " & Now)
-                System.Threading.Thread.Sleep(TIMER_INTERVAL)
+                If ProcessActive Then System.Threading.Thread.Sleep(TIMER_INTERVAL)
             Loop
 
             If HasLogs Then

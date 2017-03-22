@@ -86,6 +86,8 @@ Public Class Form1
         txtDBNAME.Text = Config.AppSettings.Settings.Item("DB_NAME").Value
         txtPWD.Text = Config.AppSettings.Settings.Item("DB_PWD").Value
         txtUID.Text = Config.AppSettings.Settings.Item("DB_UID").Value
+        nudHeartBeat.Value = Config.AppSettings.Settings.Item("HEARTBEAT_INTERVAL").Value
+        nudDBResfreh.Value = Config.AppSettings.Settings.Item("DBREFRESH_INTERVAL").Value
     End Sub
     ''' <summary>
     ''' Save the Changes to the App Monitor config file
@@ -120,6 +122,8 @@ Public Class Form1
         Call ChangeAppSettings(sPath, "EVENT_ID_INFO", nudEventInfo.Value)
         Call ChangeAppSettings(sPath, "EVENT_ID_WARN", nudEventWarning.Value)
         Call ChangeAppSettings(sPath, "EVENT_ID_ERROR", nudEventError.Value)
+        Call ChangeAppSettings(sPath, "DBREFRESH_INTERVAL", nudDBResfreh.Value)
+        Call ChangeAppSettings(sPath, "HEARTBEAT_INTERVAL", nudHeartBeat.Value)
     End Sub
     ''' <summary>
     ''' save changes to the Data Dumper config file

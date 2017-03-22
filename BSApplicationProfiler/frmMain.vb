@@ -8,7 +8,7 @@ Public Class frmMain
     Dim APP_PATH As String
     Public USELOCAL As Boolean
     Dim HEARTBEAT_INTERVAL As Long
-    Const HEARTBEAT_INTERVAL_VALUE = 5
+    Dim DB_REFRESH_INTERVAL As Long
 #Region "Local Database Execution"
     ''' <summary>
     ''' Run through the enabled application monitoring list and see if they are running
@@ -274,9 +274,7 @@ Public Class frmMain
                 Call ChangeAppSettings("AGENT_ID", AGENT_ID)
                 BuggerMe("Using remote Database:" & DBHOST, "frmmain.Form1_Load")
                 'Connect to the MySQL Database and download the Application Lists and details for watching
-                Call RefreshLocalDB()
-                Call RefreshLocalDB_APMP()
-                Call RefreshLocalDB_APML()
+                Call DBRefresh()
                 Obj = Nothing
             Else
                 'Unable to Reach Main DB Server, use Local Settings
@@ -293,7 +291,11 @@ Public Class frmMain
             Call LogError("frmMain.Form1_Load", ex.Message.ToString)
         End Try
     End Sub
-
+    Sub DBRefresh()
+        Call RefreshLocalDB()
+        Call RefreshLocalDB_APMP()
+        Call RefreshLocalDB_APML()
+    End Sub
     Private Sub tmrSched_Tick(sender As Object, e As EventArgs) Handles tmrSched.Tick
         Dim ObjN As New BSNetwork
         Dim LastLocalStatus = USELOCAL
@@ -306,12 +308,18 @@ Public Class frmMain
             Call RunDBUpdate(AGENT_ID)
         End If
         Call GetLocalApps()
-        If HEARTBEAT_INTERVAL >= HEARTBEAT_INTERVAL_VALUE Then
+        If HEARTBEAT_INTERVAL >= CInt(System.Configuration.ConfigurationManager.AppSettings("HEARTBEAT_INTERVAL")) Then
             Dim ObjA As New AgentDetails
             Call ObjA.UpdateHeartBeat(AGENT_ID)
             HEARTBEAT_INTERVAL = 0
         Else
             HEARTBEAT_INTERVAL += 1
+        End If
+        If DB_REFRESH_INTERVAL >= CLng(System.Configuration.ConfigurationManager.AppSettings("DB_REFRESH_INTERVAL")) Then
+            Call DBRefresh()
+            DB_REFRESH_INTERVAL = 0
+        Else
+            DB_REFRESH_INTERVAL += 1
         End If
     End Sub
 End Class

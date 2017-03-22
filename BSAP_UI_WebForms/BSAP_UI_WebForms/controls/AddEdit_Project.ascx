@@ -38,7 +38,7 @@
         <td class="auto-style2">&nbsp;</td>
         <td class="auto-style3">Enabled?</td>
         <td class="auto-style4">
-            <asp:CheckBox ID="chkEnabled" runat="server" Text="Yes" />
+            <asp:CheckBox ID="chkEnabled" runat="server" Text="Yes" Checked="True" />
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -88,7 +88,7 @@
         <td class="auto-style2">&nbsp;</td>
         <td class="auto-style3">Interval:</td>
         <td class="auto-style4">
-            <asp:TextBox ID="txtInterval" runat="server" Width="360px"></asp:TextBox>
+            <asp:TextBox ID="txtInterval" runat="server" Width="360px">0</asp:TextBox>
         </td>
         <td>&nbsp;</td>
     </tr>
