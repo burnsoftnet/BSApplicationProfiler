@@ -51,6 +51,15 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style4"><strong>Session Total Time:</strong></td>
+            <td class="auto-style5">
+                <asp:Label ID="lblSessionTotal" runat="server"></asp:Label>
+&nbsp;minutes</td>
+            <td class="auto-style3" colspan="2">&nbsp;</td>
+            <td class="auto-style2">
+                &nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style4"><strong>Command Line:</strong></td>
             <td colspan="4">
                 <asp:Label ID="lblCommandLine" runat="server"></asp:Label>

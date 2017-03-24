@@ -50,6 +50,15 @@ Partial Public Class Session_Details1
     Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''lblSessionTotal control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblSessionTotal As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''lblCommandLine control.
     '''</summary>
     '''<remarks>

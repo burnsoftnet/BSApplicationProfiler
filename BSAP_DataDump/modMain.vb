@@ -20,6 +20,7 @@ Module modMain
         Dim ObjOF As New BSOtherObjects
         AGENT_ID = ObjOF.GetCommand("agent", 0)
 
+        BUGFILE_LEVEL = System.Configuration.ConfigurationManager.AppSettings("BUGFILE_LEVEL")
         DO_DEBUG = CBool(System.Configuration.ConfigurationManager.AppSettings("DEBUG"))
         DEBUG_LOGFILE = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("BUGFILE")
         MyLogFile = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("LOGFILE")
@@ -167,14 +168,12 @@ Module modMain
                             SessionID & "," & APNID & "," & RS("apmpid") & "," & AID & ",'" & CollectionDT.ToString("yyyy-MM-dd HH:mm:ss") & "','" &
                             RS("imagename") & "','" & RS("username") & "'," & RS("cpu") & "," & RS("memoryused") & "," &
                             RS("handles") & "," & RS("threads") & ",'" & RS("commandline") & "')"
+                    Call BuggerMe(iSQL, "modMain.ProcessStatsMain", "high")
                     ConnExec(iSQL)
-                    Call BuggerMe(iSQL)
                 End While
                 RS.Close()
                 RS = Nothing
                 CMD = Nothing
-                'TODO: verify that this does note close the ProcessSessions connection
-                'Obj.CloseDB()
             End If
             Obj = Nothing
         Catch ex As Exception
@@ -195,7 +194,7 @@ Module modMain
                 While RS.Read
                     iSQL = "INSERT logs_main (sessionid, APNID, filename, logdetails)" &
                     " VALUES(" & SessionID & "," & APNID & ",'" & RS("filename") & "','" & ObjOF.FC(RS("logdetails")) & "')"
-                    Call BuggerMe(iSQL)
+                    Call BuggerMe(iSQL, "modMain.ProcessStatsMainLogs", "high")
                     ConnExec(iSQL)
                 End While
                 RS.Close()
@@ -220,16 +219,16 @@ Module modMain
         Call Init()
         Dim ObjN As New BSNetwork
         If ObjN.DeviceIsUp(DBHOST) Then
-            Call BuggerMe("Using Remote Database " & DBHOST)
+            Call BuggerMe("Using Remote Database " & DBHOST, "modMain.Main")
             If hasWaitingSessions() Then
-                Call BuggerMe("Found Sessions In local Database")
+                Call BuggerMe("Found Sessions In local Database", "modMain.Main")
                 Call ProcessSessions()
                 Call ClearLocalDb()
             Else
-                Call BuggerMe("No local session where found in database")
+                Call BuggerMe("No local session where found in database", "modMain.Main")
             End If
         Else
-            Call BuggerMe("UNABLE TO CONNECT TO REMOTE DATABSE " & DBHOST)
+            Call BuggerMe("UNABLE TO CONNECT TO REMOTE DATABSE " & DBHOST, "modMain.Main")
             Call ExitApp(1)
         End If
     End Sub

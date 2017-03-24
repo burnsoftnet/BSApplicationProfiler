@@ -14,6 +14,9 @@
         Obj.GetSessionTimes(SessionID, lblStart.Text, lblEnd.Text)
         If Not IsDate(lblEnd.Text) Then
             lblEnd.ForeColor = Drawing.Color.Green
+            lblSessionTotal.Text = DateDiff(DateInterval.Minute, CDate(lblStart.Text), Now)
+        Else
+            lblSessionTotal.Text = DateDiff(DateInterval.Minute, CDate(lblStart.Text), CDate(lblEnd.Text))
         End If
         SessionProjectTitle = Obj.GetProjectName(CLng(Request.QueryString("APNID")))
         Dim ObjS As New BurnSoft.BSAP.BSSessionDetailsStats

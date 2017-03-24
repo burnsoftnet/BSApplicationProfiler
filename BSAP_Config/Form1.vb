@@ -44,6 +44,7 @@ Public Class Form1
         nudEventWarningDD.Value = Config.AppSettings.Settings.Item("EVENT_ID_WARN").Value
         nudEventInfoDD.Value = Config.AppSettings.Settings.Item("EVENT_ID_INFO").Value
         nudEventErrorDD.Value = Config.AppSettings.Settings.Item("EVENT_ID_ERROR").Value
+        cmbBugModeDD.Text = Config.AppSettings.Settings.Item("BUGFILE_LEVEL").Value
     End Sub
     ''' <summary>
     ''' Load the settings from the Application Monitor config file
@@ -63,6 +64,7 @@ Public Class Form1
         nudEventWarningAM.Value = Config.AppSettings.Settings.Item("EVENT_ID_WARN").Value
         nudEventInfoAM.Value = Config.AppSettings.Settings.Item("EVENT_ID_INFO").Value
         nudEventErrorAM.Value = Config.AppSettings.Settings.Item("EVENT_ID_ERROR").Value
+        cmbBugModeAM.Text = Config.AppSettings.Settings.Item("BUGFILE_LEVEL").Value
     End Sub
     ''' <summary>
     ''' Load the values from the Application Profiler app.config file
@@ -88,6 +90,7 @@ Public Class Form1
         txtUID.Text = Config.AppSettings.Settings.Item("DB_UID").Value
         nudHeartBeat.Value = Config.AppSettings.Settings.Item("HEARTBEAT_INTERVAL").Value
         nudDBResfreh.Value = Config.AppSettings.Settings.Item("DBREFRESH_INTERVAL").Value
+        cmbBugMode.Text = Config.AppSettings.Settings.Item("BUGFILE_LEVEL").Value
     End Sub
     ''' <summary>
     ''' Save the Changes to the App Monitor config file
@@ -105,6 +108,7 @@ Public Class Form1
         Call ChangeAppSettings(sPath, "EVENT_ID_INFO", nudEventInfoAM.Value)
         Call ChangeAppSettings(sPath, "EVENT_ID_WARN", nudEventWarningAM.Value)
         Call ChangeAppSettings(sPath, "EVENT_ID_ERROR", nudEventErrorAM.Value)
+        Call ChangeAppSettings(sPath, "BUGFILE_LEVEL", cmbBugModeAM.SelectedText)
     End Sub
     ''' <summary>
     ''' save changes to the application profilers config file
@@ -124,6 +128,7 @@ Public Class Form1
         Call ChangeAppSettings(sPath, "EVENT_ID_ERROR", nudEventError.Value)
         Call ChangeAppSettings(sPath, "DBREFRESH_INTERVAL", nudDBResfreh.Value)
         Call ChangeAppSettings(sPath, "HEARTBEAT_INTERVAL", nudHeartBeat.Value)
+        Call ChangeAppSettings(sPath, "BUGFILE_LEVEL", cmbBugMode.SelectedText)
     End Sub
     ''' <summary>
     ''' save changes to the Data Dumper config file
@@ -140,6 +145,7 @@ Public Class Form1
         Call ChangeAppSettings(sPath, "EVENT_ID_INFO", nudEventInfoDD.Value)
         Call ChangeAppSettings(sPath, "EVENT_ID_WARN", nudEventWarningDD.Value)
         Call ChangeAppSettings(sPath, "EVENT_ID_ERROR", nudEventErrorDD.Value)
+        Call ChangeAppSettings(sPath, "BUGFILE_LEVEL", cmbBugModeDD.SelectedText)
     End Sub
     ''' <summary>
     ''' Save the database information to both known config files

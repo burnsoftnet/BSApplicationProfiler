@@ -34,7 +34,7 @@ Public Class frmMain
                         ProcessName = RS("process_name")
                         ProcessID = RS("processid")
                         mon_interval = RS("interval")
-                        BuggerMe("Looking for Process:" & ObjF.GetNameOfFile(ProcessName), "GetLocalApps")
+                        BuggerMe("Looking for Process:" & ObjF.GetNameOfFile(ProcessName), "GetLocalApps", "medium")
                         If ObjS.ProcessExists(ObjF.GetNameOfFile(ProcessName), PID, ProcessCount) Then
                             Call RunMonitor(ProcessName, ProcessID, mon_interval, AGENT_ID)
                         End If
@@ -44,10 +44,10 @@ Public Class frmMain
                     CMD = Nothing
                     Obj.CloseDB()
                 Else
-                    BuggerMe("No Rows Found in Local Database", "GetLocalApps")
+                    BuggerMe("No Rows Found in Local SQLite Database", "GetLocalApps", "medium")
                 End If
             Else
-                    BuggerMe("Unable to connection to the database!", "frmMain.GetLocalApps")
+                BuggerMe("Unable to connection to the SQLite database!", "frmMain.GetLocalApps")
             End If
             Obj = Nothing
         Catch ex As Exception
@@ -89,7 +89,7 @@ Public Class frmMain
                 CMD = Nothing
                 Obj.CloseDB()
             Else
-                BuggerMe("Unable to connection to the database!", "frmMain.RefreshLocalDB")
+                BuggerMe("Unable to connection to the database!", "frmMain.RefreshLocalDB", "high")
             End If
             Obj = Nothing
         Catch ex As Exception
@@ -122,7 +122,7 @@ Public Class frmMain
                 CMD = Nothing
                 Obj.CloseDB()
             Else
-                BuggerMe("Unable to connection to the database!", "frmMain.RefreshLocalDB_APMP")
+                BuggerMe("Unable to connection to the database!", "frmMain.RefreshLocalDB_APMP", "high")
             End If
             Obj = Nothing
         Catch ex As Exception
@@ -153,7 +153,7 @@ Public Class frmMain
                 CMD = Nothing
                 Obj.CloseDB()
             Else
-                BuggerMe("Unable to connection to the database!", "frmMain.RefreshLocalDB_APML")
+                BuggerMe("Unable to connection to the database!", "frmMain.RefreshLocalDB_APML", "high")
             End If
             Obj = Nothing
         Catch ex As Exception
@@ -185,12 +185,17 @@ Public Class frmMain
                 myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
                 myProcess.Start()
             Else
-                BuggerMe("Process Already Started with arguments " & arg & " process count: " & ProcCount, "frmmain.runmonitor")
+                BuggerMe("Process Already Started with arguments " & arg & " process count: " & ProcCount, "frmmain.runmonitor", "high")
             End If
         Catch ex As Exception
             LogError(Me.Name & "." & "RunMonitor", ex.Message.ToString)
         End Try
     End Sub
+    ''' <summary>
+    ''' Connection to the Main Database is avialable, Run the DataDump App to 
+    ''' see if there were any offline recordings to upload to the database
+    ''' </summary>
+    ''' <param name="agentid"></param>
     Sub RunDBUpdate(agentid As Long)
         Try
             Dim arg As String = "/agent=" & agentid
@@ -206,7 +211,7 @@ Public Class frmMain
                 myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
                 myProcess.Start()
             Else
-                BuggerMe("Process Already Started with arguments " & arg & " process count: " & ProcCount, "frmmain.runmonitor")
+                BuggerMe("Process Already Started with arguments " & arg & " process count: " & ProcCount, "frmmain.runmonitor", "high")
             End If
         Catch ex As Exception
             LogError(Me.Name & "." & "RunDBUpdate", ex.Message.ToString)
@@ -226,6 +231,7 @@ Public Class frmMain
         End If
 
         DO_DEBUG = CBool(System.Configuration.ConfigurationManager.AppSettings("DEBUG"))
+        BUGFILE_LEVEL = System.Configuration.ConfigurationManager.AppSettings("BUGFILE_LEVEL")
         DEBUG_LOGFILE = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("BUGFILE")
         MyLogFile = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("LOGFILE")
         CONSOLEMODE = CBool(System.Configuration.ConfigurationManager.AppSettings("CONSOLE"))
@@ -235,10 +241,10 @@ Public Class frmMain
         USE_EVENT_LOG = CBool(System.Configuration.ConfigurationManager.AppSettings("USE_EVENT_LOG"))
         EventLog1.Source = System.Configuration.ConfigurationManager.AppSettings("EVENT_SOURCE")
         EventLog1.Log = System.Configuration.ConfigurationManager.AppSettings("EVENT_LOG")
-        BuggerMe("App Path: " & APP_PATH, "frmmain.init")
-        BuggerMe("DEBUG_LOGFILE: " & DEBUG_LOGFILE, "frmmain.init")
-        BuggerMe("MyLogFile: " & MyLogFile, "frmmain.init")
-        BuggerMe("Initializing AppSettings to Global Vars Completed", "frmmain.init")
+        BuggerMe("App Path: " & APP_PATH, "frmmain.init", "medium")
+        BuggerMe("DEBUG_LOGFILE: " & DEBUG_LOGFILE, "frmmain.init", "medium")
+        BuggerMe("MyLogFile: " & MyLogFile, "frmmain.init", "medium")
+        BuggerMe("Initializing AppSettings to Global Vars Completed", "frmmain.init", "medium")
     End Sub
 
     ''' <summary>
@@ -252,33 +258,55 @@ Public Class frmMain
         Config.AppSettings.Settings.Add(sKey, sValue)
         Config.Save(ConfigurationSaveMode.Modified)
         ConfigurationManager.RefreshSection("appSettings")
-        BuggerMe("Updated App.Config key:" & sKey & " with value=" & sValue, "frmmain.ChangeAppSettings")
+        BuggerMe("Updated App.Config key:" & sKey & " with value=" & sValue, "frmmain.ChangeAppSettings", "medium")
     End Sub
 #End Region
+    ''' <summary>
+    ''' Check to see if the main database is reachable or not and set the USELOCAL accordingly.
+    ''' </summary>
+    Sub CheckAndSetDBStatus()
+        Dim ObjN As New BSNetwork
+        Dim Obj As New BurnSoft.BSDatabase
+        If ObjN.DeviceIsUp(DBHOST) Then
+            If Obj.ConnectDB = 0 Then
+                BuggerMe("Using remote Database:" & DBHOST, "frmmain.CheckAndSetDBStatus", "high")
+                USELOCAL = False
+                Obj.CloseDB()
+            Else
+                USELOCAL = True
+                BuggerMe("Using Local Database. " & DBHOST & " is pingable but unable to connect to database", "frmmain.CheckAndSetDBStatus", "high")
+            End If
+            Obj = Nothing
+        Else
+            USELOCAL = True
+            BuggerMe("Using Local Database. " & DBHOST & " is not pingabl.", "frmmain.CheckAndSetDBStatus", "high")
+        End If
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Me.Visible = False
             tmrSched.Enabled = False
             Call Init()
-            Dim ObjN As New BSNetwork
-            If ObjN.DeviceIsUp(DBHOST) Then
-                USELOCAL = False
-            Else
-                USELOCAL = True
-            End If
+            'Dim ObjN As New BSNetwork
+            'If ObjN.DeviceIsUp(DBHOST) Then
+            'USELOCAL = False
+            'Else
+            'USELOCAL = True
+            'End If
+            Call CheckAndSetDBStatus()
 
             If Not USELOCAL Then
                 'Agent Details and Update
                 Dim Obj As New AgentDetails
                 AGENT_ID = Obj.GetAgentID()
                 Call ChangeAppSettings("AGENT_ID", AGENT_ID)
-                BuggerMe("Using remote Database:" & DBHOST, "frmmain.Form1_Load")
+                BuggerMe("Using remote Database:" & DBHOST, "frmmain.Form1_Load", "medium")
                 'Connect to the MySQL Database and download the Application Lists and details for watching
                 Call DBRefresh()
                 Obj = Nothing
             Else
                 'Unable to Reach Main DB Server, use Local Settings
-                BuggerMe("Using Local Database", "frmmain.Form1_Load")
+                BuggerMe("Using Local Database", "frmmain.Form1_Load", "medium")
                 AGENT_ID = System.Configuration.ConfigurationManager.AppSettings("AGENT_ID")
                 Call LogError("frmMain.Form1_Load", "Unabled to connnect to database host " & DBHOST)
             End If
@@ -292,18 +320,21 @@ Public Class frmMain
         End Try
     End Sub
     Sub DBRefresh()
-        Call RefreshLocalDB()
-        Call RefreshLocalDB_APMP()
-        Call RefreshLocalDB_APML()
+        If Not USELOCAL Then
+            Call RefreshLocalDB()
+            Call RefreshLocalDB_APMP()
+            Call RefreshLocalDB_APML()
+        End If
     End Sub
     Private Sub tmrSched_Tick(sender As Object, e As EventArgs) Handles tmrSched.Tick
-        Dim ObjN As New BSNetwork
+        'Dim ObjN As New BSNetwork
         Dim LastLocalStatus = USELOCAL
-        If ObjN.DeviceIsUp(DBHOST) Then
-            USELOCAL = False
-        Else
-            USELOCAL = True
-        End If
+        Call CheckAndSetDBStatus()
+        'If ObjN.DeviceIsUp(DBHOST) Then
+        'USELOCAL = False
+        'Else
+        'USELOCAL = True
+        'End If
         If LastLocalStatus And Not USELOCAL Then
             Call RunDBUpdate(AGENT_ID)
         End If

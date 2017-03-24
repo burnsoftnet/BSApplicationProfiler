@@ -283,7 +283,7 @@ Module modMain
                     "username,`cpu`,memoryused,handles,threads,commandline) VALUES(" & SessionID & "," &
                     apnid & "," & apmpid & "," & aid & ",'" & imagename & "','" & username & "'," &
                     cpu & "," & memoryused & "," & ihandles & "," & threads & ",'" & commandline & "')"
-            Call BuggerMe(SQL, "modMain.InsertIntoProcessStats")
+            Call BuggerMe(SQL, "modMain.InsertIntoProcessStats", "high")
             Call ConnExec(SQL)
         Catch ex As Exception
             Call LogError("modMain.InsertIntoProcessStats", ex.Message.ToString)
@@ -345,6 +345,7 @@ Module modMain
                 APP_PATH = System.Configuration.ConfigurationManager.AppSettings("APP_PATH")
             End If
 
+            BUGFILE_LEVEL = System.Configuration.ConfigurationManager.AppSettings("BUGFILE_LEVEL")
             DO_DEBUG = CBool(System.Configuration.ConfigurationManager.AppSettings("DEBUG"))
             DEBUG_LOGFILE = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("BUGFILE")
             MyLogFile = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("LOGFILE")
@@ -410,43 +411,41 @@ Module modMain
             ObjN = Nothing
             If USELOCAL Then
                 Call LogError("modMain.Main", "Unabled to connnect to database host " & DBHOST)
-                Call BuggerMe("Using Local Database")
+                Call BuggerMe("Using Local Database", "modMain.Main")
             Else
-                Call BuggerMe("Using Remote Database " & DBHOST)
+                Call BuggerMe("Using Remote Database " & DBHOST, "modMain.Main")
             End If
 
             Dim HasLogs As Boolean = False
             APP_PROJECT_MAIN_PROCESS_ID = getAppProjectMainProcess(PROCESS_NAME, HasLogs)
             BuggerMe("APP_PROJECT_MAIN_PROCESS_ID=" & APP_PROJECT_MAIN_PROCESS_ID)
             Dim ObjS As New BSOtherObjects
-            'TODO Fixe this!  This does not get the username of the process owner when it is running as a service
-            'Dim username As String = ObjS.GetLoggedonUser
-            'BuggerMe("username=" & username)
+
             ObjS = Nothing
             Call StartSessionDetails()
             LAST_CPU_VALUE = 0
             Dim ProcessActive As Boolean = True
             Do While ProcessActive
-                Call BuggerMe("Starting Data Collection at " & Now)
+                Call BuggerMe("Starting Data Collection at " & Now, "modMain.Main", "medium")
                 Call CollectData(PROCESS_NAME, ProcessActive)
-                Call BuggerMe("Ending Data Collection at " & Now)
+                Call BuggerMe("Ending Data Collection at " & Now, "modMain.Main", "medium")
                 If ProcessActive Then System.Threading.Thread.Sleep(TIMER_INTERVAL)
             Loop
 
             If HasLogs Then
-                BuggerMe("Looking for Logs!")
+                BuggerMe("Looking for Logs!", "modMain.Main", "medium")
                 Dim LogLocation As String = GetLogPath(APP_PROJECT_MAIN_PROCESS_ID)
                 BuggerMe("LogFile: " & LogLocation)
                 Dim ObjF As New FileIO
                 If ObjF.FileExists(LogLocation) Then
-                    BuggerMe("Processing Logs!")
+                    BuggerMe("Processing Logs!", "modMain.Main", "medium")
                     Call ProcessLogFile(LogLocation, ObjF.GetNameOfFile(LogLocation), PROCESS_ID, SESSION_ID)
                     BuggerMe("Deleting log file!")
                     ObjF.DeleteFile(LogLocation)
                 Else
-                    BuggerMe(LogLocation & " not found!")
+                    BuggerMe(LogLocation & " not found!", "modMain.Main", "medium")
                 End If
-                BuggerMe("End of looking for Logs!")
+                BuggerMe("End of looking for Logs!", "modMain.Main", "medium")
             End If
             Call EndSession()
         Catch ex As Exception

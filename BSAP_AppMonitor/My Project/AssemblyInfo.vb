@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("This is a sub process of the main Application Profiler, This will monitor the details of that process and insert it into the database")>
 <Assembly: AssemblyCompany("BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyProduct("BurnSoft Application Profiler")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
+<Assembly: AssemblyCopyright("Copyright ©  2017 BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyTrademark("BurnSoft, www.burnsoft.net")>
 
 <Assembly: ComVisible(False)>
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("1.0.0.*")>
-<Assembly: AssemblyFileVersion("1.0.0.10")>
+<Assembly: AssemblyFileVersion("1.0.0.11")>

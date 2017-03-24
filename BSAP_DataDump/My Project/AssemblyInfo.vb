@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Sub Process to the Application Profiler that will dump the data from local SQlite database to the main host")>
 <Assembly: AssemblyCompany("BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyProduct("BurnSoft Application Profiler Data Dump")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
+<Assembly: AssemblyCopyright("Copyright ©  2017 BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyTrademark("BurnSoft, www.burnsoft.net")>
 
 <Assembly: ComVisible(False)>
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("1.0.0.*")>
-<Assembly: AssemblyFileVersion("1.0.0.10")>
+<Assembly: AssemblyFileVersion("1.0.0.11")>

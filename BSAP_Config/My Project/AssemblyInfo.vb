@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("This is the Configuration Setup application of the BurnSoft Application Profiler, This will make it a lot easier to setup the parameters that are in the config file for all the seperate applications")>
 <Assembly: AssemblyCompany("BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyProduct("Application Profiler Configuration Setup")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
+<Assembly: AssemblyCopyright("Copyright ©  2017 BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyTrademark("BurnSoft, www.burnsoft.net")>
 
 <Assembly: ComVisible(False)>
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("1.0.0.*")>
-<Assembly: AssemblyFileVersion("1.0.0.10")>
+<Assembly: AssemblyFileVersion("1.0.0.11")>

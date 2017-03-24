@@ -37,6 +37,12 @@ Partial Class Form1
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.cmbBugMode = New System.Windows.Forms.ComboBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.nudDBResfreh = New System.Windows.Forms.NumericUpDown()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.nudHeartBeat = New System.Windows.Forms.NumericUpDown()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.nudTimer = New System.Windows.Forms.NumericUpDown()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.nudEventError = New System.Windows.Forms.NumericUpDown()
@@ -60,6 +66,8 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.cmbBugModeAM = New System.Windows.Forms.ComboBox()
+        Me.Label40 = New System.Windows.Forms.Label()
         Me.nudTimerAM = New System.Windows.Forms.NumericUpDown()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.nudEventErrorAM = New System.Windows.Forms.NumericUpDown()
@@ -83,6 +91,8 @@ Partial Class Form1
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.chkNTEventDD = New System.Windows.Forms.CheckBox()
+        Me.Label41 = New System.Windows.Forms.Label()
         Me.nudEventErrorDD = New System.Windows.Forms.NumericUpDown()
         Me.nudEventWarningDD = New System.Windows.Forms.NumericUpDown()
         Me.nudEventInfoDD = New System.Windows.Forms.NumericUpDown()
@@ -91,7 +101,6 @@ Partial Class Form1
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.chkNTEventDD = New System.Windows.Forms.CheckBox()
         Me.txtDebugDD = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.chkDebugDD = New System.Windows.Forms.CheckBox()
@@ -99,18 +108,17 @@ Partial Class Form1
         Me.Label33 = New System.Windows.Forms.Label()
         Me.chkLogFileDD = New System.Windows.Forms.CheckBox()
         Me.chkConsoleDD = New System.Windows.Forms.CheckBox()
-        Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.nudHeartBeat = New System.Windows.Forms.NumericUpDown()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.nudDBResfreh = New System.Windows.Forms.NumericUpDown()
+        Me.cmbBugModeDD = New System.Windows.Forms.ComboBox()
+        Me.Label34 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.nudDBResfreh, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudHeartBeat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudTimer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudEventError, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudEventWarning, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,8 +132,6 @@ Partial Class Form1
         CType(Me.nudEventErrorDD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudEventWarningDD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudEventInfoDD, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudHeartBeat, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudDBResfreh, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -133,7 +139,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem, Me.SaveExitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(516, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(515, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -222,7 +228,7 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(0, 28)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(516, 271)
+        Me.TabControl1.Size = New System.Drawing.Size(516, 301)
         Me.TabControl1.TabIndex = 2
         '
         'TabPage1
@@ -238,13 +244,15 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(508, 210)
+        Me.TabPage1.Size = New System.Drawing.Size(508, 275)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Database"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.cmbBugMode)
+        Me.TabPage2.Controls.Add(Me.Label39)
         Me.TabPage2.Controls.Add(Me.nudDBResfreh)
         Me.TabPage2.Controls.Add(Me.Label38)
         Me.TabPage2.Controls.Add(Me.nudHeartBeat)
@@ -274,14 +282,65 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(508, 245)
+        Me.TabPage2.Size = New System.Drawing.Size(508, 275)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Application Profiler"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'cmbBugMode
+        '
+        Me.cmbBugMode.FormattingEnabled = True
+        Me.cmbBugMode.Items.AddRange(New Object() {"low", "medium", "high"})
+        Me.cmbBugMode.Location = New System.Drawing.Point(112, 84)
+        Me.cmbBugMode.Name = "cmbBugMode"
+        Me.cmbBugMode.Size = New System.Drawing.Size(121, 21)
+        Me.cmbBugMode.TabIndex = 29
+        Me.cmbBugMode.Text = "low"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(9, 84)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(72, 13)
+        Me.Label39.TabIndex = 28
+        Me.Label39.Text = "Debug Mode:"
+        '
+        'nudDBResfreh
+        '
+        Me.nudDBResfreh.Location = New System.Drawing.Point(379, 112)
+        Me.nudDBResfreh.Name = "nudDBResfreh"
+        Me.nudDBResfreh.Size = New System.Drawing.Size(120, 20)
+        Me.nudDBResfreh.TabIndex = 27
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(239, 114)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(134, 13)
+        Me.Label38.TabIndex = 26
+        Me.Label38.Text = "Database Refresh Interval:"
+        '
+        'nudHeartBeat
+        '
+        Me.nudHeartBeat.Location = New System.Drawing.Point(113, 112)
+        Me.nudHeartBeat.Name = "nudHeartBeat"
+        Me.nudHeartBeat.Size = New System.Drawing.Size(120, 20)
+        Me.nudHeartBeat.TabIndex = 25
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(9, 114)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(95, 13)
+        Me.Label27.TabIndex = 24
+        Me.Label27.Text = "Heartbeat Interval:"
+        '
         'nudTimer
         '
-        Me.nudTimer.Location = New System.Drawing.Point(282, 9)
+        Me.nudTimer.Location = New System.Drawing.Point(298, 8)
         Me.nudTimer.Name = "nudTimer"
         Me.nudTimer.Size = New System.Drawing.Size(158, 20)
         Me.nudTimer.TabIndex = 23
@@ -290,7 +349,7 @@ Partial Class Form1
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(150, 12)
+        Me.Label15.Location = New System.Drawing.Point(166, 11)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(126, 13)
         Me.Label15.TabIndex = 22
@@ -298,7 +357,7 @@ Partial Class Form1
         '
         'nudEventError
         '
-        Me.nudEventError.Location = New System.Drawing.Point(96, 196)
+        Me.nudEventError.Location = New System.Drawing.Point(113, 217)
         Me.nudEventError.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventError.Name = "nudEventError"
         Me.nudEventError.Size = New System.Drawing.Size(120, 20)
@@ -307,7 +366,7 @@ Partial Class Form1
         '
         'nudEventWarning
         '
-        Me.nudEventWarning.Location = New System.Drawing.Point(364, 170)
+        Me.nudEventWarning.Location = New System.Drawing.Point(367, 191)
         Me.nudEventWarning.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventWarning.Name = "nudEventWarning"
         Me.nudEventWarning.Size = New System.Drawing.Size(120, 20)
@@ -316,7 +375,7 @@ Partial Class Form1
         '
         'nudEventInfo
         '
-        Me.nudEventInfo.Location = New System.Drawing.Point(96, 170)
+        Me.nudEventInfo.Location = New System.Drawing.Point(113, 191)
         Me.nudEventInfo.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventInfo.Name = "nudEventInfo"
         Me.nudEventInfo.Size = New System.Drawing.Size(120, 20)
@@ -325,7 +384,7 @@ Partial Class Form1
         '
         'txtEventSource
         '
-        Me.txtEventSource.Location = New System.Drawing.Point(96, 144)
+        Me.txtEventSource.Location = New System.Drawing.Point(113, 165)
         Me.txtEventSource.Name = "txtEventSource"
         Me.txtEventSource.Size = New System.Drawing.Size(189, 20)
         Me.txtEventSource.TabIndex = 16
@@ -333,7 +392,7 @@ Partial Class Form1
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(9, 198)
+        Me.Label14.Location = New System.Drawing.Point(12, 219)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(77, 13)
         Me.Label14.TabIndex = 15
@@ -342,7 +401,7 @@ Partial Class Form1
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(263, 172)
+        Me.Label13.Location = New System.Drawing.Point(266, 193)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(95, 13)
         Me.Label13.TabIndex = 14
@@ -351,7 +410,7 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(8, 172)
+        Me.Label12.Location = New System.Drawing.Point(11, 193)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(73, 13)
         Me.Label12.TabIndex = 13
@@ -360,7 +419,7 @@ Partial Class Form1
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(9, 147)
+        Me.Label11.Location = New System.Drawing.Point(12, 168)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 13)
         Me.Label11.TabIndex = 12
@@ -369,7 +428,7 @@ Partial Class Form1
         'chkNTEvent
         '
         Me.chkNTEvent.AutoSize = True
-        Me.chkNTEvent.Location = New System.Drawing.Point(96, 119)
+        Me.chkNTEvent.Location = New System.Drawing.Point(113, 140)
         Me.chkNTEvent.Name = "chkNTEvent"
         Me.chkNTEvent.Size = New System.Drawing.Size(44, 17)
         Me.chkNTEvent.TabIndex = 11
@@ -378,7 +437,7 @@ Partial Class Form1
         '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(222, 58)
+        Me.txtDebug.Location = New System.Drawing.Point(238, 57)
         Me.txtDebug.Name = "txtDebug"
         Me.txtDebug.Size = New System.Drawing.Size(237, 20)
         Me.txtDebug.TabIndex = 10
@@ -386,7 +445,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(150, 61)
+        Me.Label10.Location = New System.Drawing.Point(166, 60)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(61, 13)
         Me.Label10.TabIndex = 9
@@ -395,7 +454,7 @@ Partial Class Form1
         'chkDebug
         '
         Me.chkDebug.AutoSize = True
-        Me.chkDebug.Location = New System.Drawing.Point(96, 62)
+        Me.chkDebug.Location = New System.Drawing.Point(112, 61)
         Me.chkDebug.Name = "chkDebug"
         Me.chkDebug.Size = New System.Drawing.Size(44, 17)
         Me.chkDebug.TabIndex = 8
@@ -404,7 +463,7 @@ Partial Class Form1
         '
         'txtLogFile
         '
-        Me.txtLogFile.Location = New System.Drawing.Point(222, 32)
+        Me.txtLogFile.Location = New System.Drawing.Point(238, 31)
         Me.txtLogFile.Name = "txtLogFile"
         Me.txtLogFile.Size = New System.Drawing.Size(237, 20)
         Me.txtLogFile.TabIndex = 7
@@ -412,7 +471,7 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(150, 35)
+        Me.Label9.Location = New System.Drawing.Point(166, 34)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(44, 13)
         Me.Label9.TabIndex = 6
@@ -421,7 +480,7 @@ Partial Class Form1
         'chkLogFile
         '
         Me.chkLogFile.AutoSize = True
-        Me.chkLogFile.Location = New System.Drawing.Point(96, 35)
+        Me.chkLogFile.Location = New System.Drawing.Point(112, 34)
         Me.chkLogFile.Name = "chkLogFile"
         Me.chkLogFile.Size = New System.Drawing.Size(44, 17)
         Me.chkLogFile.TabIndex = 5
@@ -431,7 +490,7 @@ Partial Class Form1
         'chkConsole
         '
         Me.chkConsole.AutoSize = True
-        Me.chkConsole.Location = New System.Drawing.Point(96, 12)
+        Me.chkConsole.Location = New System.Drawing.Point(112, 11)
         Me.chkConsole.Name = "chkConsole"
         Me.chkConsole.Size = New System.Drawing.Size(44, 17)
         Me.chkConsole.TabIndex = 4
@@ -441,7 +500,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(8, 123)
+        Me.Label8.Location = New System.Drawing.Point(11, 144)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 13)
         Me.Label8.TabIndex = 3
@@ -476,6 +535,8 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.cmbBugModeAM)
+        Me.TabPage3.Controls.Add(Me.Label40)
         Me.TabPage3.Controls.Add(Me.nudTimerAM)
         Me.TabPage3.Controls.Add(Me.Label16)
         Me.TabPage3.Controls.Add(Me.nudEventErrorAM)
@@ -501,10 +562,29 @@ Partial Class Form1
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(508, 210)
+        Me.TabPage3.Size = New System.Drawing.Size(508, 275)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Application Monitor"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'cmbBugModeAM
+        '
+        Me.cmbBugModeAM.FormattingEnabled = True
+        Me.cmbBugModeAM.Items.AddRange(New Object() {"low", "medium", "high"})
+        Me.cmbBugModeAM.Location = New System.Drawing.Point(96, 86)
+        Me.cmbBugModeAM.Name = "cmbBugModeAM"
+        Me.cmbBugModeAM.Size = New System.Drawing.Size(121, 21)
+        Me.cmbBugModeAM.TabIndex = 47
+        Me.cmbBugModeAM.Text = "low"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(9, 86)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(72, 13)
+        Me.Label40.TabIndex = 46
+        Me.Label40.Text = "Debug Mode:"
         '
         'nudTimerAM
         '
@@ -526,7 +606,7 @@ Partial Class Form1
         '
         'nudEventErrorAM
         '
-        Me.nudEventErrorAM.Location = New System.Drawing.Point(107, 158)
+        Me.nudEventErrorAM.Location = New System.Drawing.Point(96, 187)
         Me.nudEventErrorAM.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventErrorAM.Name = "nudEventErrorAM"
         Me.nudEventErrorAM.Size = New System.Drawing.Size(120, 20)
@@ -535,7 +615,7 @@ Partial Class Form1
         '
         'nudEventWarningAM
         '
-        Me.nudEventWarningAM.Location = New System.Drawing.Point(364, 132)
+        Me.nudEventWarningAM.Location = New System.Drawing.Point(364, 161)
         Me.nudEventWarningAM.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventWarningAM.Name = "nudEventWarningAM"
         Me.nudEventWarningAM.Size = New System.Drawing.Size(120, 20)
@@ -544,7 +624,7 @@ Partial Class Form1
         '
         'nudEventInfoAM
         '
-        Me.nudEventInfoAM.Location = New System.Drawing.Point(107, 132)
+        Me.nudEventInfoAM.Location = New System.Drawing.Point(96, 161)
         Me.nudEventInfoAM.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventInfoAM.Name = "nudEventInfoAM"
         Me.nudEventInfoAM.Size = New System.Drawing.Size(120, 20)
@@ -553,7 +633,7 @@ Partial Class Form1
         '
         'txtEventSourceAM
         '
-        Me.txtEventSourceAM.Location = New System.Drawing.Point(96, 106)
+        Me.txtEventSourceAM.Location = New System.Drawing.Point(96, 135)
         Me.txtEventSourceAM.Name = "txtEventSourceAM"
         Me.txtEventSourceAM.Size = New System.Drawing.Size(189, 20)
         Me.txtEventSourceAM.TabIndex = 40
@@ -561,7 +641,7 @@ Partial Class Form1
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(9, 160)
+        Me.Label17.Location = New System.Drawing.Point(9, 189)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(77, 13)
         Me.Label17.TabIndex = 39
@@ -570,7 +650,7 @@ Partial Class Form1
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(263, 134)
+        Me.Label18.Location = New System.Drawing.Point(263, 163)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(95, 13)
         Me.Label18.TabIndex = 38
@@ -579,7 +659,7 @@ Partial Class Form1
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(8, 134)
+        Me.Label19.Location = New System.Drawing.Point(8, 163)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(73, 13)
         Me.Label19.TabIndex = 37
@@ -588,7 +668,7 @@ Partial Class Form1
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(9, 109)
+        Me.Label20.Location = New System.Drawing.Point(9, 138)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(75, 13)
         Me.Label20.TabIndex = 36
@@ -597,7 +677,7 @@ Partial Class Form1
         'chkNTEventAM
         '
         Me.chkNTEventAM.AutoSize = True
-        Me.chkNTEventAM.Location = New System.Drawing.Point(96, 84)
+        Me.chkNTEventAM.Location = New System.Drawing.Point(96, 113)
         Me.chkNTEventAM.Name = "chkNTEventAM"
         Me.chkNTEventAM.Size = New System.Drawing.Size(44, 17)
         Me.chkNTEventAM.TabIndex = 35
@@ -669,7 +749,7 @@ Partial Class Form1
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(9, 85)
+        Me.Label23.Location = New System.Drawing.Point(9, 114)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(81, 13)
         Me.Label23.TabIndex = 27
@@ -704,6 +784,10 @@ Partial Class Form1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.cmbBugModeDD)
+        Me.TabPage4.Controls.Add(Me.Label34)
+        Me.TabPage4.Controls.Add(Me.chkNTEventDD)
+        Me.TabPage4.Controls.Add(Me.Label41)
         Me.TabPage4.Controls.Add(Me.nudEventErrorDD)
         Me.TabPage4.Controls.Add(Me.nudEventWarningDD)
         Me.TabPage4.Controls.Add(Me.nudEventInfoDD)
@@ -712,7 +796,6 @@ Partial Class Form1
         Me.TabPage4.Controls.Add(Me.Label29)
         Me.TabPage4.Controls.Add(Me.Label30)
         Me.TabPage4.Controls.Add(Me.Label31)
-        Me.TabPage4.Controls.Add(Me.chkNTEventDD)
         Me.TabPage4.Controls.Add(Me.txtDebugDD)
         Me.TabPage4.Controls.Add(Me.Label32)
         Me.TabPage4.Controls.Add(Me.chkDebugDD)
@@ -720,21 +803,39 @@ Partial Class Form1
         Me.TabPage4.Controls.Add(Me.Label33)
         Me.TabPage4.Controls.Add(Me.chkLogFileDD)
         Me.TabPage4.Controls.Add(Me.chkConsoleDD)
-        Me.TabPage4.Controls.Add(Me.Label34)
         Me.TabPage4.Controls.Add(Me.Label35)
         Me.TabPage4.Controls.Add(Me.Label36)
         Me.TabPage4.Controls.Add(Me.Label37)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(508, 210)
+        Me.TabPage4.Size = New System.Drawing.Size(508, 275)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Data Dump"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'chkNTEventDD
+        '
+        Me.chkNTEventDD.AutoSize = True
+        Me.chkNTEventDD.Location = New System.Drawing.Point(96, 119)
+        Me.chkNTEventDD.Name = "chkNTEventDD"
+        Me.chkNTEventDD.Size = New System.Drawing.Size(44, 17)
+        Me.chkNTEventDD.TabIndex = 67
+        Me.chkNTEventDD.Text = "Yes"
+        Me.chkNTEventDD.UseVisualStyleBackColor = True
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(9, 120)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(81, 13)
+        Me.Label41.TabIndex = 66
+        Me.Label41.Text = "Use EventLog?"
+        '
         'nudEventErrorDD
         '
-        Me.nudEventErrorDD.Location = New System.Drawing.Point(107, 159)
+        Me.nudEventErrorDD.Location = New System.Drawing.Point(96, 197)
         Me.nudEventErrorDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventErrorDD.Name = "nudEventErrorDD"
         Me.nudEventErrorDD.Size = New System.Drawing.Size(120, 20)
@@ -743,7 +844,7 @@ Partial Class Form1
         '
         'nudEventWarningDD
         '
-        Me.nudEventWarningDD.Location = New System.Drawing.Point(364, 133)
+        Me.nudEventWarningDD.Location = New System.Drawing.Point(364, 171)
         Me.nudEventWarningDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventWarningDD.Name = "nudEventWarningDD"
         Me.nudEventWarningDD.Size = New System.Drawing.Size(120, 20)
@@ -752,7 +853,7 @@ Partial Class Form1
         '
         'nudEventInfoDD
         '
-        Me.nudEventInfoDD.Location = New System.Drawing.Point(107, 133)
+        Me.nudEventInfoDD.Location = New System.Drawing.Point(96, 171)
         Me.nudEventInfoDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventInfoDD.Name = "nudEventInfoDD"
         Me.nudEventInfoDD.Size = New System.Drawing.Size(120, 20)
@@ -761,7 +862,7 @@ Partial Class Form1
         '
         'txtEventSourceDD
         '
-        Me.txtEventSourceDD.Location = New System.Drawing.Point(96, 107)
+        Me.txtEventSourceDD.Location = New System.Drawing.Point(96, 145)
         Me.txtEventSourceDD.Name = "txtEventSourceDD"
         Me.txtEventSourceDD.Size = New System.Drawing.Size(189, 20)
         Me.txtEventSourceDD.TabIndex = 62
@@ -769,7 +870,7 @@ Partial Class Form1
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(9, 161)
+        Me.Label28.Location = New System.Drawing.Point(9, 199)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(77, 13)
         Me.Label28.TabIndex = 61
@@ -778,7 +879,7 @@ Partial Class Form1
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(263, 135)
+        Me.Label29.Location = New System.Drawing.Point(263, 173)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(95, 13)
         Me.Label29.TabIndex = 60
@@ -787,7 +888,7 @@ Partial Class Form1
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(8, 135)
+        Me.Label30.Location = New System.Drawing.Point(8, 173)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(73, 13)
         Me.Label30.TabIndex = 59
@@ -796,21 +897,11 @@ Partial Class Form1
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(9, 110)
+        Me.Label31.Location = New System.Drawing.Point(9, 148)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(75, 13)
         Me.Label31.TabIndex = 58
         Me.Label31.Text = "Event Source:"
-        '
-        'chkNTEventDD
-        '
-        Me.chkNTEventDD.AutoSize = True
-        Me.chkNTEventDD.Location = New System.Drawing.Point(96, 85)
-        Me.chkNTEventDD.Name = "chkNTEventDD"
-        Me.chkNTEventDD.Size = New System.Drawing.Size(44, 17)
-        Me.chkNTEventDD.TabIndex = 57
-        Me.chkNTEventDD.Text = "Yes"
-        Me.chkNTEventDD.UseVisualStyleBackColor = True
         '
         'txtDebugDD
         '
@@ -874,15 +965,6 @@ Partial Class Form1
         Me.chkConsoleDD.Text = "Yes"
         Me.chkConsoleDD.UseVisualStyleBackColor = True
         '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(9, 86)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(81, 13)
-        Me.Label34.TabIndex = 49
-        Me.Label34.Text = "Use EventLog?"
-        '
         'Label35
         '
         Me.Label35.AutoSize = True
@@ -910,43 +992,30 @@ Partial Class Form1
         Me.Label37.TabIndex = 46
         Me.Label37.Text = "Use Console?"
         '
-        'Label27
+        'cmbBugModeDD
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(6, 93)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(95, 13)
-        Me.Label27.TabIndex = 24
-        Me.Label27.Text = "Heartbeat Interval:"
+        Me.cmbBugModeDD.FormattingEnabled = True
+        Me.cmbBugModeDD.Items.AddRange(New Object() {"low", "medium", "high"})
+        Me.cmbBugModeDD.Location = New System.Drawing.Point(96, 92)
+        Me.cmbBugModeDD.Name = "cmbBugModeDD"
+        Me.cmbBugModeDD.Size = New System.Drawing.Size(121, 21)
+        Me.cmbBugModeDD.TabIndex = 69
+        Me.cmbBugModeDD.Text = "low"
         '
-        'nudHeartBeat
+        'Label34
         '
-        Me.nudHeartBeat.Location = New System.Drawing.Point(110, 91)
-        Me.nudHeartBeat.Name = "nudHeartBeat"
-        Me.nudHeartBeat.Size = New System.Drawing.Size(120, 20)
-        Me.nudHeartBeat.TabIndex = 25
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(236, 93)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(134, 13)
-        Me.Label38.TabIndex = 26
-        Me.Label38.Text = "Database Refresh Interval:"
-        '
-        'nudDBResfreh
-        '
-        Me.nudDBResfreh.Location = New System.Drawing.Point(376, 91)
-        Me.nudDBResfreh.Name = "nudDBResfreh"
-        Me.nudDBResfreh.Size = New System.Drawing.Size(120, 20)
-        Me.nudDBResfreh.TabIndex = 27
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(9, 95)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(72, 13)
+        Me.Label34.TabIndex = 68
+        Me.Label34.Text = "Debug Mode:"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(516, 300)
+        Me.ClientSize = New System.Drawing.Size(515, 332)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -963,6 +1032,8 @@ Partial Class Form1
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.nudDBResfreh, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudHeartBeat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudTimer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudEventError, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudEventWarning, System.ComponentModel.ISupportInitialize).EndInit()
@@ -978,8 +1049,6 @@ Partial Class Form1
         CType(Me.nudEventErrorDD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudEventWarningDD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudEventInfoDD, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudHeartBeat, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudDBResfreh, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1052,7 +1121,6 @@ Partial Class Form1
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
-    Friend WithEvents chkNTEventDD As CheckBox
     Friend WithEvents txtDebugDD As TextBox
     Friend WithEvents Label32 As Label
     Friend WithEvents chkDebugDD As CheckBox
@@ -1060,7 +1128,6 @@ Partial Class Form1
     Friend WithEvents Label33 As Label
     Friend WithEvents chkLogFileDD As CheckBox
     Friend WithEvents chkConsoleDD As CheckBox
-    Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label37 As Label
@@ -1068,4 +1135,12 @@ Partial Class Form1
     Friend WithEvents Label38 As Label
     Friend WithEvents nudHeartBeat As NumericUpDown
     Friend WithEvents Label27 As Label
+    Friend WithEvents cmbBugMode As ComboBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents cmbBugModeAM As ComboBox
+    Friend WithEvents Label40 As Label
+    Friend WithEvents chkNTEventDD As CheckBox
+    Friend WithEvents Label41 As Label
+    Friend WithEvents cmbBugModeDD As ComboBox
+    Friend WithEvents Label34 As Label
 End Class

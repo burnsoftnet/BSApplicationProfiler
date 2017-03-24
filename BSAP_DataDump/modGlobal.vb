@@ -9,6 +9,7 @@ Module modGlobal
     Public AGENT_ID As Long
     Public DBHOST As String
     Public PROCESS_ID As Long
+    Public BUGFILE_LEVEL As String
     Public Sub LogError(sLocation As String, sMessage As String)
         Dim sMsg As String = "::" & sLocation & "::" & sMessage
         Try
@@ -31,14 +32,32 @@ Module modGlobal
             Console.WriteLine(sMsg)
         End Try
     End Sub
-    Public Sub BuggerMe(sMsg As String, Optional ByVal sLocation As String = "")
+    Function ToLogOrNotToLog(LEVEL As String) As Boolean
+        Dim bAns As Boolean = False
+        Select Case LCase(BUGFILE_LEVEL)
+            Case "low"
+                If LCase(LEVEL) = "low" Then
+                    bAns = True
+                End If
+            Case "medium"
+                If LCase(LEVEL) = "low" Or LCase(LEVEL) = "medium" Then
+                    bAns = True
+                End If
+            Case "high"
+                bAns = True
+        End Select
+        Return bAns
+    End Function
+    Public Sub BuggerMe(sMsg As String, Optional ByVal sLocation As String = "", Optional ByVal LEVEL As String = "low")
         If Len(sLocation) > 0 Then sMsg = sLocation & "::" & sMsg
         Try
             If DO_DEBUG Then
                 Dim obj As New FileIO
-                obj.LogFile(DEBUG_LOGFILE, sMsg)
+                If ToLogOrNotToLog(LEVEL) Then
+                    obj.LogFile(DEBUG_LOGFILE, sMsg)
+                End If
                 obj = Nothing
-            End If
+                End If
         Catch ex As Exception
             Console.WriteLine(sMsg)
         End Try
