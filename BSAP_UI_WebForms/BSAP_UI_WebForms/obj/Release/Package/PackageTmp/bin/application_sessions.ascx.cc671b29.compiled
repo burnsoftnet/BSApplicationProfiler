@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/controls/Application_Sessions.ascx" hash="fffffff85e907f74" filehash="c636d8822a5" flags="110000" assembly="App_Web_ljpobac2" type="ASP.controls_application_sessions_ascx">
-    <filedeps>
-        <filedep name="/controls/Application_Sessions.ascx" />
-    </filedeps>
-</preserve>

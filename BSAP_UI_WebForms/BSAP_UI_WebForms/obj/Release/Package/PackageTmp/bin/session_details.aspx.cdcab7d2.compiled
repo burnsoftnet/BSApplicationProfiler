@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Session_Details.aspx" hash="fffffff85e907f74" filehash="ba83e72d33c7c198" flags="110000" assembly="App_Web_rpkn4byf" type="ASP.session_details_aspx">
-    <filedeps>
-        <filedep name="/controls/Session_Details.ascx" />
-        <filedep name="/Session_Details.aspx" />
-        <filedep name="/Site.Master" />
-    </filedeps>
-</preserve>

@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/controls/AddEdit_Project.ascx" hash="fffffff85e907f74" filehash="3b3ff42f14a" flags="110000" assembly="App_Web_ljpobac2" type="ASP.controls_addedit_project_ascx">
-    <filedeps>
-        <filedep name="/controls/AddEdit_Project.ascx" />
-    </filedeps>
-</preserve>
