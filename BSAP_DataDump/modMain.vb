@@ -50,10 +50,10 @@ Module modMain
     ''' <summary>
     ''' Create a new sessiont in the database
     ''' </summary>
-    Sub CreateNewSession(APNID As Long, sessiondt As Date, sessionend As Date)
-        Dim SQL As String = "INSERT INTO monitoring_session (APNID, AID,sessiondt,sessionend) VALUES (" &
+    Sub CreateNewSession(APNID As Long, sessiondt As Date, sessionend As Date, appversion As String, appcomany As String, applastaccess As String, applastwrite As String, createddatetime As String)
+        Dim SQL As String = "INSERT INTO monitoring_session (APNID, AID,sessiondt,sessionendppversion, appcomany, applastaccess, applastwrite, createddatetime) VALUES (" &
             APNID & "," & AGENT_ID & ",'" & sessiondt.ToString("yyyy-MM-dd HH:mm:ss") & "','" &
-            sessionend.ToString("yyyy-MM-dd HH:mm:ss") & "')"
+            sessionend.ToString("yyyy-MM-dd HH:mm:ss") & "','" & appversion & "','" & appcomany & "','" & applastaccess & "','" & applastwrite & "','" & createddatetime & "')"
         Call ConnExec(SQL)
     End Sub
     ''' <summary>
@@ -130,13 +130,25 @@ Module modMain
                 Dim sessionend As String = ""
                 Dim SessionID As Long = 0
                 Dim OldSessionID As Long = 0
+                Dim appversion As String = ""
+                Dim appcomany As String = ""
+                Dim applastaccess As String = ""
+                Dim applastwrite As String = ""
+                Dim createddatetime As String = ""
+
                 While RS.Read
                     APNID = RS("APNID")
                     AID = RS("AID")
                     sessiondt = RS("sessiondt")
                     sessionend = RS("sessionend")
                     OldSessionID = RS("ID")
-                    Call CreateNewSession(APNID, sessiondt, sessionend)
+                    appversion = RS("appversion")
+                    appcomany = RS("appcomany")
+                    applastaccess = RS("applastaccess")
+                    applastwrite = RS("applastwrite")
+                    createddatetime = RS("createddatetime")
+
+                    Call CreateNewSession(APNID, sessiondt, sessionend, appversion, appcomany, applastaccess, applastwrite, createddatetime)
                     SESSION_ID = getSessionIDMySQL(APNID, sessiondt)
                     Call ProcessStatsMain(SESSION_ID, APNID, AID, OldSessionID)
                     Call ProcessStatsMainLogs(SESSION_ID, APNID, OldSessionID)

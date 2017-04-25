@@ -59,7 +59,7 @@
   <ItemGroup>
     <Reference Include="BurnSoft.Universal, Version=4.0.23.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Libraries\Net40\BurnSoft.Universal.dll</HintPath>
+      <HintPath>..\..\..\Libraries\Net45\BurnSoft.Universal.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

@@ -59,6 +59,51 @@ Partial Public Class Session_Details1
     Protected WithEvents lblSessionTotal As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''lblVersion control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblVersion As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lblAppCreator control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblAppCreator As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lblAppLastAccess control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblAppLastAccess As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lblAppLastWrite control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblAppLastWrite As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lblAppCreateDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblAppCreateDate As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''lblCommandLine control.
     '''</summary>
     '''<remarks>

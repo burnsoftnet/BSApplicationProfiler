@@ -74,7 +74,7 @@ Namespace BurnSoft.BSAP
         ''' <param name="SessionEnd"></param>
         ''' <param name="errorID"></param>
         ''' <param name="errMsg"></param>
-        Public Sub GetSessionTimes(SessionID As Long, ByRef SessionStart As String, ByRef SessionEnd As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "")
+        Public Sub GetSessionTimes(SessionID As Long, ByRef SessionStart As String, ByRef SessionEnd As String, ByRef appversion As String, ByRef appcomany As String, ByRef applastaccess As String, ByRef applastwrite As String, ByRef createddatetime As String, Optional ByRef errorID As Long = 0, Optional errMsg As String = "")
             Try
                 Dim Obj As New BSDatabase
                 If Obj.ConnectDB(errorID, errMsg) Then
@@ -88,6 +88,31 @@ Namespace BurnSoft.BSAP
                             SessionEnd = RS("sessionend")
                         Else
                             SessionEnd = "In Progress"
+                        End If
+                        If Not IsDBNull(RS("appversion")) Then
+                            appversion = RS("appversion")
+                        Else
+                            appversion = "N/A"
+                        End If
+                        If Not IsDBNull(RS("appcomany")) Then
+                            appcomany = RS("appcomany")
+                        Else
+                            appcomany = "N/A"
+                        End If
+                        If Not IsDBNull(RS("applastaccess")) Then
+                            applastaccess = RS("applastaccess")
+                        Else
+                            applastaccess = "N/A"
+                        End If
+                        If Not IsDBNull(RS("applastwrite")) Then
+                            applastwrite = RS("applastwrite")
+                        Else
+                            applastwrite = "N/A"
+                        End If
+                        If Not IsDBNull(RS("createddatetime")) Then
+                            createddatetime = RS("createddatetime")
+                        Else
+                            createddatetime = "N/A"
                         End If
                     End While
                     RS.Close()

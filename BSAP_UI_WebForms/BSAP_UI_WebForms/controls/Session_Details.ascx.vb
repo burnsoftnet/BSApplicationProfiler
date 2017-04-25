@@ -11,7 +11,7 @@
         SqlDataSource2.SelectCommand = "select * from logs_main where sessionid=" & SessionID
         Dim Obj As New BurnSoft.BSAP.ProjectSessions
         Obj.GetProcessDEtails(SessionID, lblProcessName.Text, lblUser.Text, lblCommandLine.Text)
-        Obj.GetSessionTimes(SessionID, lblStart.Text, lblEnd.Text)
+        Obj.GetSessionTimes(SessionID, lblStart.Text, lblEnd.Text, lblVersion.Text, lblAppCreator.Text, lblAppLastAccess.Text, lblAppLastWrite.Text, lblAppCreateDate.Text)
         If Not IsDate(lblEnd.Text) Then
             lblEnd.ForeColor = Drawing.Color.Green
             lblSessionTotal.Text = DateDiff(DateInterval.Minute, CDate(lblStart.Text), Now)

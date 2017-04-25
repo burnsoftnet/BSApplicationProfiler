@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Application_Sessions.ascx.vb" Inherits="BSAP_UI_WebForms.Application_Sessions" %>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>">
+</asp:SqlDataSource>
 
-<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" CellPadding="3" ForeColor="Black" GridLines="Vertical" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px">
+<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" CellPadding="3" ForeColor="Black" GridLines="Vertical" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" DataKeyNames="ID" >
     <AlternatingRowStyle BackColor="#CCCCCC" />
     <Columns>
         <asp:BoundField DataField="id" HeaderText="ID" SortExpression="id" Visible="False" />
@@ -18,6 +19,15 @@
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
         <asp:BoundField DataField="haslogs" HeaderText="Has Log Files" SortExpression="haslogs" HtmlEncode="false" >
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="appversion" HeaderText="Exe Version" SortExpression="appversion" HtmlEncode="false" >
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="appcomany" HeaderText="Creator" SortExpression="appcomany" HtmlEncode="false" >
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="web_deletesession" HeaderText="" SortExpression="web_deletesession" HtmlEncode="false" >
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
     </Columns>

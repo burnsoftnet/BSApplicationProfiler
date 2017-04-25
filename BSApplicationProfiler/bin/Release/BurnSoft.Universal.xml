@@ -618,6 +618,27 @@ Checks to see if the data that is passed is greater than or less then the curren
  <param name="sFile"></param>
  <returns>Company Name as string</returns>
 </member>
+<member name="M:BurnSoft.Universal.FileIO.GetCreationDateTime(System.String)">
+ <summary>
+ Get the Createion date and time of the file that is passed
+ </summary>
+ <param name="sFile"></param>
+ <returns>Date and Time</returns>
+</member>
+<member name="M:BurnSoft.Universal.FileIO.GetLastAccessDateTime(System.String)">
+ <summary>
+ Get the Last Access date and time fo the file that is being passed
+ </summary>
+ <param name="sFile"></param>
+ <returns>Date and Time</returns>
+</member>
+<member name="M:BurnSoft.Universal.FileIO.GetLastWriteDateTime(System.String)">
+ <summary>
+ Get the last time the file was written to from the file that was being passed
+ </summary>
+ <param name="sFile"></param>
+ <returns>Date and Time</returns>
+</member>
 <member name="M:BurnSoft.Universal.FSInfo.GetShortPathName(System.String,BurnSoft.Universal.FSInfo.DirectoryPathlength)">
  <summary>
  Return the Shot 8-BIT DOS name of the path
@@ -850,13 +871,34 @@ Checks to see if the data that is passed is greater than or less then the curren
 </member>
 <member name="M:BurnSoft.Universal.BSOtherObjects.FC(System.String,System.String)">
  <summary>
- Usually Stands for Fluffy Content, this is usually good for formating SQL Strings
+ Usually Stands for Fluff Content, this is usually good for formating SQL Strings
  taking away the single qoute and putting a single qoute twice to prevent errors
  on SQL commands.
  </summary>
  <param name="sValue"></param>
  <param name="DefaultValue"></param>
  <returns></returns>
+</member>
+<member name="M:BurnSoft.Universal.BSOtherObjects.ConvertBoolToInt(System.Boolean)">
+ <summary>
+ Convert a boolean value to an integer
+ </summary>
+ <param name="bValue"></param>
+ <returns>1/0</returns>
+</member>
+<member name="M:BurnSoft.Universal.BSOtherObjects.ConvertYNtoBool(System.String)">
+ <summary>
+ Converts a y/Y or n/N value to boolean
+ </summary>
+ <param name="sValue"></param>
+ <returns>True/False</returns>
+</member>
+<member name="M:BurnSoft.Universal.BSOtherObjects.ConvertIntToBool(System.Int32)">
+ <summary>
+ Converts a Integer to to boolean value, if it is not 0 it is true
+ </summary>
+ <param name="iValue"></param>
+ <returns>True/False</returns>
 </member>
 <member name="M:BurnSoft.Universal.BSProcessInfo.GetManagementObject(System.String,System.String)">
  <summary>

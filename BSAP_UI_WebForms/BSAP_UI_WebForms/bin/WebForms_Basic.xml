@@ -88,7 +88,7 @@ To modify move field declaration from designer file to code-behind file.
  <param name="errMsg"></param>
  <returns></returns>
 </member>
-<member name="M:BSAP_UI_WebForms.BurnSoft.BSAP.ProjectSessions.GetSessionTimes(System.Int64,System.String@,System.String@,System.Int64@,System.String)">
+<member name="M:BSAP_UI_WebForms.BurnSoft.BSAP.ProjectSessions.GetSessionTimes(System.Int64,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Int64@,System.String)">
  <summary>
  Get the Session start and End Date based on the SessionID
  </summary>
@@ -406,6 +406,60 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:BSAP_UI_WebForms.Session_Details1._lblUser">
 <summary>
 lblUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblSessionTotal">
+<summary>
+lblSessionTotal control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblVersion">
+<summary>
+lblVersion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAppCreator">
+<summary>
+lblAppCreator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAppLastAccess">
+<summary>
+lblAppLastAccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAppLastWrite">
+<summary>
+lblAppLastWrite control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._lblAppCreateDate">
+<summary>
+lblAppCreateDate control.
 </summary>
 <remarks>
 Auto-generated field.

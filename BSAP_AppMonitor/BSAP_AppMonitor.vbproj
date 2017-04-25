@@ -53,9 +53,13 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\Computer_ComputerDevice_4.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BurnSoft.Universal">
-      <HintPath>..\..\..\Libraries\Net40\BurnSoft.Universal.dll</HintPath>
+    <Reference Include="BurnSoft.Universal, Version=4.0.23.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Net45\BurnSoft.Universal.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -119,6 +123,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -20,6 +20,12 @@
         <asp:BoundField DataField="haslogs" HeaderText="Has Log Files" SortExpression="haslogs" HtmlEncode="false" >
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
+        <asp:BoundField DataField="appversion" HeaderText="Exe Version" SortExpression="appversion" HtmlEncode="false" >
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="appcomany" HeaderText="Creator" SortExpression="appcomany" HtmlEncode="false" >
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
     </Columns>
     <FooterStyle BackColor="#CCCCCC" />
     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

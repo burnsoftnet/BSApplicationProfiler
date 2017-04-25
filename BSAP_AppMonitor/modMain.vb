@@ -8,6 +8,7 @@ Module modMain
     Dim APP_PROJECT_MAIN_PROCESS_ID As Long
     Dim APP_PATH As String
     Dim USELOCAL As Boolean
+    Private _UPDATEDSESSION As Boolean
 #Region "SQLite Database Function and Sub"
     ''' <summary>
     ''' Get the Application Project Main Process ID and also return if the application has logs or not
@@ -191,6 +192,7 @@ Module modMain
     ''' </summary>
     Sub StartSessionDetails()
         Call CreateNewSession()
+        _UPDATEDSESSION = False
         SESSION_ID = getSessionID()
     End Sub
     Sub EndSession()
@@ -260,6 +262,27 @@ Module modMain
     Sub CreateNewSession()
         Dim SQL As String = "INSERT INTO monitoring_session (APNID, AID) VALUES (" & PROCESS_ID & "," & AGENT_ID & ")"
         Call ConnExec(SQL)
+    End Sub
+    ''' <summary>
+    ''' Update the Current Session with Details from the app such as version, company and dates that are in the application details.
+    ''' </summary>
+    ''' <param name="SID"></param>
+    ''' <param name="appversion"></param>
+    ''' <param name="appcomany"></param>
+    ''' <param name="applastaccess"></param>
+    ''' <param name="applastwrite"></param>
+    ''' <param name="createddatetime"></param>
+    Sub UpdateSessionWithAppDetails(SID As Long, appversion As String, appcomany As String, applastaccess As String, applastwrite As String, createddatetime As String)
+        Try
+            If Not _UPDATEDSESSION Then
+                Dim SQL As String = "UPDATE monitoring_session set appversion='" & appversion & "', appcomany='" & appcomany & "', applastaccess='" & applastaccess &
+                    "', applastwrite='" & applastwrite & "', createddatetime='" & createddatetime & "'  where ID=" & SID
+                Call ConnExec(SQL)
+                _UPDATEDSESSION = True
+            End If
+        Catch ex As Exception
+            _UPDATEDSESSION = True
+        End Try
     End Sub
     ''' <summary>
     ''' Insert the information gathered about the process into the database
@@ -371,6 +394,32 @@ Module modMain
         Application.Exit()
         Environment.Exit(ExitValue)
     End Sub
+
+    Sub GetExeDetails(FullAppPath As String)
+        Try
+            If Not _UPDATEDSESSION Then
+                Dim ObjFS As New FileIO
+                Dim AppVersion As String = ObjFS.GetFileVersion(FullAppPath)
+                Dim AppComp As String = ObjFS.GetFileCompany(FullAppPath)
+                Dim AppLastAccess As String = ObjFS.GetLastAccessDateTime(FullAppPath)
+                Dim AppGetLastWrite As String = ObjFS.GetLastWriteDateTime(FullAppPath)
+                Dim CreatedDateTime As String = ObjFS.GetCreationDateTime(FullAppPath)
+
+                Call UpdateSessionWithAppDetails(SESSION_ID, AppVersion, AppComp, AppLastAccess, AppGetLastWrite, CreatedDateTime)
+            End If
+        Catch ex As Exception
+            Dim sMsg As String = ex.Message.ToString
+            Dim ErrorNum As Long = Err.Number
+            Select Case ErrorNum
+                Case 5
+                    sMsg &= " ( " & FullAppPath & " )"
+            End Select
+            sMsg = Err.Number & "::" & sMsg
+            _UPDATEDSESSION = True
+            LogError("modMain.GetExeDetails", sMsg)
+        End Try
+    End Sub
+
     ''' <summary>
     ''' Collect the information needed to monitor the process
     ''' </summary>
@@ -378,24 +427,36 @@ Module modMain
     ''' <param name="username"></param>
     ''' <param name="ProcessActive"></param>
     Sub CollectData(MyProcess As String, ByRef ProcessActive As Boolean)
-        Dim MyPID As String = ""
-        Dim ProcessCount As Integer = 0
-        Dim CPU As Double = 0
-        Dim ObjP As New BurnSoft.BSProcessInfo
-        Dim Username As String = ObjP.GetProcessOwner(MyProcess)
-        BuggerMe("username=" & Username)
-        ProcessActive = ObjP.ProcessExists(MyProcess, MyPID, ProcessCount)
-        If ProcessActive Then
-            If LAST_CPU_VALUE = 0 Then
-                CPU = ObjP.GetCPUProcessStarting(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE)
-            Else
-                CPU = ObjP.GetProcessCPUTime(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE, LAST_CPU_VALUE)
-            End If
+        Try
+            Dim MyPID As String = ""
+            Dim ProcessCount As Integer = 0
+            Dim CPU As Double = 0
+            Dim ObjP As New BurnSoft.BSProcessInfo
+            Dim Username As String = ObjP.GetProcessOwner(MyProcess)
+            BuggerMe("username=" & Username)
+            ProcessActive = ObjP.ProcessExists(MyProcess, MyPID, ProcessCount)
+            If ProcessActive Then
+                Dim ActivePath As String = ObjP.GetProcessCommandLine(MyPID)
+                BuggerMe("Full Active Path: " & ActivePath)
+                Dim FullAppPath As String = ActivePath.Replace(Chr(34), "")
+                BuggerMe("FullPath Formated: " & FullAppPath)
 
-            Call InsertIntoProcessStats(SESSION_ID, PROCESS_ID, APP_PROJECT_MAIN_PROCESS_ID, AGENT_ID, MyProcess, username,
-                                        CPU, ObjP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
-                                        ObjP.GetProccessHandleCount(MyPID), ObjP.GetProcessThreadCount(MyPID), ObjP.GetProcessCommandLine(MyPID))
-        End If
+                If Not _UPDATEDSESSION Then Call GetExeDetails(FullAppPath)
+
+
+                If LAST_CPU_VALUE = 0 Then
+                    CPU = ObjP.GetCPUProcessStarting(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE)
+                Else
+                    CPU = ObjP.GetProcessCPUTime(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE, LAST_CPU_VALUE)
+                End If
+
+                Call InsertIntoProcessStats(SESSION_ID, PROCESS_ID, APP_PROJECT_MAIN_PROCESS_ID, AGENT_ID, MyProcess, Username,
+                                            CPU, ObjP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
+                                            ObjP.GetProccessHandleCount(MyPID), ObjP.GetProcessThreadCount(MyPID), ActivePath)
+            End If
+        Catch ex As Exception
+            LogError("modMain.CollectData", ex.Message.ToString)
+        End Try
     End Sub
 #End Region
     Sub Main()

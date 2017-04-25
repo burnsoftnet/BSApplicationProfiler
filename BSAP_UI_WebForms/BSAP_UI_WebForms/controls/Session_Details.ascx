@@ -25,6 +25,22 @@
     .auto-style8 {
         width: 196px;
     }
+    .auto-style9 {
+        width: 144px;
+        height: 23px;
+    }
+    .auto-style10 {
+        width: 197px;
+        height: 23px;
+    }
+    .auto-style11 {
+        width: 149px;
+        height: 23px;
+    }
+    .auto-style12 {
+        width: 100px;
+        height: 23px;
+    }
 </style>
 <p>
     <br />
@@ -55,9 +71,30 @@
             <td class="auto-style5">
                 <asp:Label ID="lblSessionTotal" runat="server"></asp:Label>
 &nbsp;minutes</td>
-            <td class="auto-style3" colspan="2">&nbsp;</td>
+            <td class="auto-style3" colspan="2"><strong>Application Version:</strong></td>
             <td class="auto-style2">
-                &nbsp;</td>
+                <asp:Label ID="lblVersion" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style9"><strong>Application Creator:</strong></td>
+            <td class="auto-style10">
+                <asp:Label ID="lblAppCreator" runat="server"></asp:Label>
+            </td>
+            <td class="auto-style11" colspan="2"><strong>App. Last Access:</strong></td>
+            <td class="auto-style12">
+                <asp:Label ID="lblAppLastAccess" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style4"><strong>App. Last Write:</strong></td>
+            <td class="auto-style5">
+                <asp:Label ID="lblAppLastWrite" runat="server"></asp:Label>
+            </td>
+            <td class="auto-style3" colspan="2"><strong>App. Create Date:</strong></td>
+            <td class="auto-style2">
+                <asp:Label ID="lblAppCreateDate" runat="server"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4"><strong>Command Line:</strong></td>
