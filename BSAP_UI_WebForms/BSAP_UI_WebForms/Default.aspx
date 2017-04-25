@@ -17,6 +17,7 @@
         <div class="col-md-4">
             <h2>UPDATES</h2>
             <ul>
+                <li>4-24-2017 - Added the ability to capture the application version in the app monitor.  Update the database monitoring_session table with field appversion, appcomany, applastaccess, applastwrite, and createddatetime, updated the same table in the local SQLITE DB and added the details in the DataDump Project for the session details and updated the web ui to be able to view these changes. Created sp_updateSessionEnded to update anything that was unable to update the session end due to reboot, service stop while monitoring, etc.</li>
                 <li>3/16/2017 - Updated Web UI with additional information to make the site more functional and improve stats.</li>
                 <li>3/10/2017 - Updated Web Interface to be able to view the session details by session.</li>
                 <li>3/8/2017 - Working on Web Interface to read the data.</li>
