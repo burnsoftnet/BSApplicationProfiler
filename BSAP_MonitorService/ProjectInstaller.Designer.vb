@@ -26,10 +26,10 @@
         '
         'ServiceInstaller1
         '
-        Me.ServiceInstaller1.Description = "Monitor you applications performance for testing while just using your applicatio" &
-    "n as you would without thinking about it"
-        Me.ServiceInstaller1.DisplayName = "BurnSoft Application Profiler"
-        Me.ServiceInstaller1.ServiceName = "BSAP"
+        Me.ServiceInstaller1.Description = "Monitors the database for new entries and emails alerts if a new entry is found a" &
+    "nd or if logs were inserted"
+        Me.ServiceInstaller1.DisplayName = "BurnSoft Application Profiler Monitor"
+        Me.ServiceInstaller1.ServiceName = "BSAPM"
         Me.ServiceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic
         '
         'ServiceProcessInstaller1

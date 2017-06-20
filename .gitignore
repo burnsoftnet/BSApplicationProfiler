@@ -83,3 +83,8 @@ BSAP_UI_WebForms/BSAP_UI_WebForms/obj/Release/*.*
 BSAP_DataDump/obj/Release/*.*
 BSAP_Service/obj/Release/*.*
 BSAP_AppMonitor/obj/Release/*.*
+BSAP_MonitorService/obj/Release/*.*
+BSAP_MonitorService/obj/Release/TempPE/*.*
+BSAP_ProjectMonitor/obj/Release/*.*
+BSAP_ProjectMonitor/obj/Release/TempPE/*.*
+BSApplicationProfiler/bin/Release/*.*
