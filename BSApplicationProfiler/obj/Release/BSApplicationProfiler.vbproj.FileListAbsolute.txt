@@ -11,3 +11,15 @@
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbproj.GenerateResource.Cache
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.exe
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbprojResolveAssemblyReference.cache
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\bsap_client.db
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfiler.exe.config
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfiler.exe
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\MySql.Data.dll
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.dll
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BurnSoft.Universal.xml
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\MySql.Data.xml
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.pdb
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.frmMain.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.Resources.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbproj.GenerateResource.Cache
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.exe
