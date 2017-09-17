@@ -358,6 +358,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:BSAP_UI_WebForms.main_loginl._Login1">
+<summary>
+Login1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:BSAP_UI_WebForms.Sessions_by_Agent._SqlDataSource1">
 <summary>
 SqlDataSource1 control.
@@ -583,6 +592,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:BSAP_UI_WebForms.Login._main_loginl1">
+<summary>
+main_loginl1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="T:BSAP_UI_WebForms.My.MyWebExtension">
  <summary>
  Module used to define the properties that are available in the My Namespace for Web projects.
@@ -653,6 +671,24 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:BSAP_UI_WebForms.SiteMaster._MainContent">
 <summary>
 MainContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.User_List._GridView1">
+<summary>
+GridView1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.User_List._SqlDataSource1">
+<summary>
+SqlDataSource1 control.
 </summary>
 <remarks>
 Auto-generated field.

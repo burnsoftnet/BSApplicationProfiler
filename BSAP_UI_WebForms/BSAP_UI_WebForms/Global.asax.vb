@@ -8,4 +8,12 @@ Public Class Global_asax
         RouteConfig.RegisterRoutes(RouteTable.Routes)
         BundleConfig.RegisterBundles(BundleTable.Bundles)
     End Sub
+
+    Sub Session_Start(sender As Object, e As EventArgs)
+        Session("isAdmin") = False
+        Session("isLoggedIn") = False
+        Session("user_email") = ""
+        Session("user_name") = ""
+        Session("user_displayname") = ""
+    End Sub
 End Class

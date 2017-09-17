@@ -201,6 +201,7 @@
     <Content Include="controls\Application_Agents.ascx" />
     <Content Include="controls\Application_List.ascx" />
     <Content Include="controls\Application_Sessions.ascx" />
+    <Content Include="controls\main_loginl.ascx" />
     <Content Include="controls\Sessions_by_Agent.ascx" />
     <Content Include="controls\Session_Details.ascx" />
     <Content Include="Edit_Application.aspx" />
@@ -221,6 +222,7 @@
     <Content Include="images\rtg_email.gif" />
     <Content Include="images\save.gif" />
     <Content Include="images\services.gif" />
+    <Content Include="Login.aspx" />
     <Content Include="Project_List.aspx" />
     <Content Include="Project_list_all_sessions.aspx" />
     <Content Include="Project_list_all_sessions_by_agent.aspx" />
@@ -257,6 +259,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Session_Details.aspx" />
+    <Content Include="User_Add.aspx" />
+    <Content Include="User_Edit.aspx" />
+    <Content Include="User_List.aspx" />
+    <Content Include="User_Roles.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -326,6 +332,13 @@
       <DependentUpon>Application_Sessions.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="controls\main_loginl.ascx.designer.vb">
+      <DependentUpon>main_loginl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\main_loginl.ascx.vb">
+      <DependentUpon>main_loginl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="controls\Sessions_by_Agent.ascx.designer.vb">
       <DependentUpon>Sessions_by_Agent.ascx</DependentUpon>
     </Compile>
@@ -356,6 +369,13 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -413,6 +433,34 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Startup.vb" />
+    <Compile Include="User_Add.aspx.designer.vb">
+      <DependentUpon>User_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Add.aspx.vb">
+      <DependentUpon>User_Add.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="User_Edit.aspx.designer.vb">
+      <DependentUpon>User_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Edit.aspx.vb">
+      <DependentUpon>User_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="User_List.aspx.designer.vb">
+      <DependentUpon>User_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_List.aspx.vb">
+      <DependentUpon>User_List.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="User_Roles.aspx.designer.vb">
+      <DependentUpon>User_Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Roles.aspx.vb">
+      <DependentUpon>User_Roles.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
