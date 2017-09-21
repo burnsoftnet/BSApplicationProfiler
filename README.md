@@ -1,4 +1,4 @@
-# BSApplicationProfiler
+﻿# BSApplicationProfiler
 <br/><br/>
 <center>
 <img src="https://github.com/burnsoftnet/BSApplicationProfiler/blob/master/screen_shots/Project_Lists.png?raw=true"></center><br/><br/>
@@ -19,6 +19,9 @@ Worried about not being able to gather this information when you are using  your
 <br/>
 <br/>
 Sure this sounds like it is geared toward desktop applications, but this can also be used for Websites as well.  Just plug in the w3wp.exe process and have it look for the parameter name of the website listed in IIS, Once it see's that w3wp.exe process with a matching parameter, then it will start monitoring that process.'
+<br/>
+<br/>
+<B>NOTE: THIS PROJECT ALSO USES THE <a href="https://github.com/burnsoftnet/BurnSoft.Universal">BurnSoft.Universal</a> Library</B>
 <br/>
 <br/>
 <center>

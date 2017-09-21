@@ -195,6 +195,9 @@ Module modMain
         _UPDATEDSESSION = False
         SESSION_ID = getSessionID()
     End Sub
+    ''' <summary>
+    ''' Mark the database that the process has exist the system to close to capture project
+    ''' </summary>
     Sub EndSession()
         Dim SQL As String = "UPDATE monitoring_session set sessionend=CURRENT_TIMESTAMP where ID=" & SESSION_ID
         Call ConnExec(SQL)
@@ -348,6 +351,15 @@ Module modMain
         Return bAns
     End Function
     ''' <summary>
+    ''' Start the BSAP_SubAppMonior to look for any sub/child processes that may result from this main application
+    ''' </summary>
+    Sub StartSubProcessMonitor()
+        'TODO:  Need to work this into running the subapp 
+        Dim subApp As String = "BSAP_SubAppMonitor.exe"
+        'Need to Pass Process_ID and Main AgentID to Process
+
+    End Sub
+    ''' <summary>
     ''' Set Global Vars
     ''' </summary>
     Sub INIT()
@@ -459,6 +471,9 @@ Module modMain
         End Try
     End Sub
 #End Region
+    ''' <summary>
+    ''' Starting Point for application
+    ''' </summary>
     Sub Main()
         Try
             Call INIT()

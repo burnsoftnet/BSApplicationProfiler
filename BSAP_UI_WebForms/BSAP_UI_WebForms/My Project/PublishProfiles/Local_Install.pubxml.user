@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_WebUI_Installer\site</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_WebUI_Installer\site</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Add_Application.aspx">

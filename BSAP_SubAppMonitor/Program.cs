@@ -10,12 +10,16 @@ namespace BSAP_SubAppMonitor
     class Program
     {
         private static int _PID;
-        private void init()
+        private static void init()
         {
             bool didexist = false;
             BSOtherObjects obj = new BSOtherObjects();
-            _PID = Convert.ToInt32(obj.GetCommand("PID", 0,ref didexist));
+            _PID = Convert.ToInt32(obj.GetCommand("pid", 0,ref didexist));
 
+            if (_PID ==0 ) {
+                Console.WriteLine("Main PID missing!");
+                System.Environment.Exit(1);
+            }
 
         }
         public static void listChildProcesses(int parentProcessId)
@@ -50,6 +54,8 @@ namespace BSAP_SubAppMonitor
         }
         static void Main(string[] args)
         {
+            init();
+
         }
     }
 }

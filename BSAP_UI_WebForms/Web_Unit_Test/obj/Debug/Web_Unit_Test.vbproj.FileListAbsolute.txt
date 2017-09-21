@@ -1,0 +1,10 @@
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\bin\Debug\Web_Unit_Test.dll
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\bin\Debug\Web_Unit_Test.pdb
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\bin\Debug\Web_Unit_Test.xml
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\obj\Debug\Web_Unit_Test.vbprojResolveAssemblyReference.cache
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\obj\Debug\Web_Unit_Test.Resources.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\obj\Debug\Web_Unit_Test.vbproj.GenerateResource.Cache
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\obj\Debug\Web_Unit_Test.dll
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\obj\Debug\Web_Unit_Test.xml
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\Web_Unit_Test\obj\Debug\Web_Unit_Test.pdb
