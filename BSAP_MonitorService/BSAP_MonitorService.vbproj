@@ -49,9 +49,6 @@
     <ApplicationIcon>Resources\services.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BurnSoft.Universal">
-      <HintPath>..\..\..\Libraries\Net45\BurnSoft.Universal.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -154,6 +151,12 @@
     <Content Include="InstallUtilLib.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BurnSoft.Universal\BurnSoft.Universal\BurnSoft.Universal.vbproj">
+      <Project>{fea68f73-aed1-4af3-a5c9-7541c70f886f}</Project>
+      <Name>BurnSoft.Universal</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

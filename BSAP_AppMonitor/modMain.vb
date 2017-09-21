@@ -356,7 +356,7 @@ Module modMain
     Sub StartSubProcessMonitor()
         'TODO:  Need to work this into running the subapp 
         Dim subApp As String = "BSAP_SubAppMonitor.exe"
-        'Need to Pass Process_ID and Main AgentID to Process
+        'Need to Pass Time_interval Process_ID and Main AgentID to Process
 
     End Sub
     ''' <summary>

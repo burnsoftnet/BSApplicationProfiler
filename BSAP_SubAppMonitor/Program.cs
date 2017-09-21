@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Management;
 using BurnSoft.Universal;
 namespace BSAP_SubAppMonitor
 {
     class Program
     {
-        private static int _PID;
+        private static Timer t;
+        private static long _PID;
+        private static long _MAIN_APP_ID;
+        private static long _INTERVAL;
         private static void init()
         {
             bool didexist = false;
             BSOtherObjects obj = new BSOtherObjects();
-            _PID = Convert.ToInt32(obj.GetCommand("pid", 0,ref didexist));
-
+            _PID = obj.GetCommand("pid", 0,ref didexist);
+            _MAIN_APP_ID = obj.GetCommand("aid", 0, ref didexist);
+            _INTERVAL = obj.GetCommand("interval", 60, ref didexist);
             if (_PID ==0 ) {
                 Console.WriteLine("Main PID missing!");
+                System.Environment.Exit(1);
+            }
+            if (_MAIN_APP_ID == 0)
+            {
+                Console.WriteLine("Missing Main App ID ( aid )!");
                 System.Environment.Exit(1);
             }
 
@@ -52,10 +61,19 @@ namespace BSAP_SubAppMonitor
                 }
             }
         }
+        private static void TimerCallback(Object o)
+        {
+            listChildProcesses(Convert.ToInt32(_PID));
+            // Force a garbage collection to occur.
+            GC.Collect();
+        }
         static void Main(string[] args)
         {
             init();
 
+            TimeSpan TimeToRun = new TimeSpan(0, 0, Convert.ToInt32(_INTERVAL));
+            t = new Timer(TimerCallback, null, TimeToRun, TimeToRun);
+            Console.Read();
         }
     }
 }

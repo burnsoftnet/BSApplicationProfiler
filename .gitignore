@@ -88,3 +88,10 @@ BSAP_MonitorService/obj/Release/TempPE/*.*
 BSAP_ProjectMonitor/obj/Release/*.*
 BSAP_ProjectMonitor/obj/Release/TempPE/*.*
 BSApplicationProfiler/bin/Release/*.*
+/BSAP_SubAppMonitor/bin/Debug
+/BSAP_SubAppMonitor/bin/Release
+/BSAP_SubAppMonitor/obj/Debug/BSAP_SubAppMonitor.pdb
+/BSAP_SubAppMonitor/obj/Debug/BSAP_SubAppMonitor.exe
+/BSAP_SubAppMonitor/obj/Debug/BSAP_SubAppMonitor.csprojResolveAssemblyReference.cache
+/BSAP_SubAppMonitor/obj/Debug/BSAP_SubAppMonitor.csproj.FileListAbsolute.txt
+/BSAP_SubAppMonitor/obj/Release/BSAP_SubAppMonitor.csproj.FileListAbsolute.txt
