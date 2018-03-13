@@ -13,8 +13,8 @@ Module modMain
     ''' <summary>
     ''' Get the Application Project Main Process ID and also return if the application has logs or not
     ''' </summary>
-    ''' <param name="process_name"></param>
-    ''' <param name="HasLogs"></param>
+    ''' <param name="process_name">process name</param>
+    ''' <param name="HasLogs">Pass to check for logs or not</param>
     ''' <returns>id</returns>
     Function getAppProjectMainProcessSQLIte(process_name As String, Optional ByRef HasLogs As Boolean = False) As Long
         Dim lAns As Long = 0
@@ -43,8 +43,8 @@ Module modMain
     ''' <summary>
     ''' Gets the Log file name and path from the database for this main process
     ''' </summary>
-    ''' <param name="APID"></param>
-    ''' <returns></returns>
+    ''' <param name="APID">Application ID</param>
+    ''' <returns>The Path of the logfile for that process</returns>
     Function GetLogPathSQLite(APID As Long) As String
         Dim sAns As String = ""
         Try

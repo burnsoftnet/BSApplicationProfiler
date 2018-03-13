@@ -2,7 +2,7 @@
     Inherits System.Web.UI.UserControl
     Public SessionProjectTitle As String
     Sub LoadData(SessionID As Long)
-        Dim SQL As String = "select p.*,TIME_FORMAT(p.dt,'%H:%I:%S') as dt_time from process_stats_main p where p.SessionID=" & SessionID
+        Dim SQL As String = "select p.*,TIME_FORMAT(p.dt,'%H:%I:%S') as dt_time from process_stats_main p where p.SessionID=" & SessionID & " order by dt_time asc"
         Chart1.Titles.Add("CPU %")
         Chart2.Titles.Add("MEMORY (BYTES)")
         Chart3.Titles.Add("Handles (TOTAL)")

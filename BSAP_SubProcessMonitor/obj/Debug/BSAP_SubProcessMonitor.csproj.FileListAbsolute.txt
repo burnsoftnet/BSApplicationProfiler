@@ -1,0 +1,1 @@
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_SubProcessMonitor\obj\Debug\BSAP_SubProcessMonitor.csprojResolveAssemblyReference.cache

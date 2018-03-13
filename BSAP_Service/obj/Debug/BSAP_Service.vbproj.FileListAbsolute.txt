@@ -13,3 +13,18 @@
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.vbproj.GenerateResource.Cache
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.exe
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.pdb
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\InstallUtil.exe
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\InstallUtilLib.dll
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\InstallUtil.exe.config
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\install_service.bat
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\uninstall_service.bat
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\BSAP_Service.exe.config
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\BSAP_Service.exe
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Debug\BSAP_Service.pdb
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.vbprojResolveAssemblyReference.cache
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.Resources.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.MyNewService.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.ProjectInstaller.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.vbproj.GenerateResource.Cache
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.exe
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_Service\obj\Debug\BSAP_Service.pdb

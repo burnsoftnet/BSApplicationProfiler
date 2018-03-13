@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Management;
 using BurnSoft.Universal;
+using System.Data.SQLite;
 namespace BSAP_SubAppMonitor
 {
     class Program
@@ -13,6 +14,9 @@ namespace BSAP_SubAppMonitor
         private static long _PID;
         private static long _MAIN_APP_ID;
         private static long _INTERVAL;
+        private static string _APP_PATH;
+        private static bool _USELOCAL;
+
         private static void init()
         {
             bool didexist = false;

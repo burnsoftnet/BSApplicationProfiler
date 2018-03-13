@@ -1,0 +1,3 @@
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\obj\Debug\BSAP_ProjectMonitor.frmMain.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\obj\Debug\BSAP_ProjectMonitor.Resources.resources
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\obj\Debug\BSAP_ProjectMonitor.vbproj.GenerateResource.Cache
