@@ -663,7 +663,7 @@ Checks to see if the data that is passed is greater than or less then the curren
  <param name="lpFreeBytesAvailableToCaller"></param>
  <param name="lpTotalNumberOfBytes"></param>
  <param name="lpTotalNumberOfFreeBytes"></param>
- <returns>Bytes as long</returns>
+ <returns></returns>
 </member>
 <member name="M:BurnSoft.Universal.FSInfo.CountAllDirectoriesEx(System.String,System.String@)">
  <summary>
@@ -719,6 +719,50 @@ Checks to see if the data that is passed is greater than or less then the curren
  <param name="Value"></param>
  <returns></returns>
  <remarks></remarks>
+</member>
+<member name="M:BurnSoft.Universal.BSMath.getStandardDeviation(System.Collections.Generic.List{System.Double})">
+ <summary>
+ Get the standard deviation from an array of numbers
+ </summary>
+ <param name="data"></param>
+ <returns></returns>
+</member>
+<member name="M:BurnSoft.Universal.BSMath.getExtremeSpread(System.Collections.Generic.List{System.Double})">
+ <summary>
+ Get the Max difference between the highest and lowest number in an array of numbers
+ </summary>
+ <param name="data"></param>
+ <returns></returns>
+</member>
+<member name="M:BurnSoft.Universal.BSMath.ConvertToDollars(System.Double)">
+ <summary>
+ Mostly converts the double value to the dollar format with two decimal points
+ and rounds up the 3 decimal.
+ </summary>
+ <param name="dValue"></param>
+ <returns></returns>
+</member>
+<member name="M:BurnSoft.Universal.BSMath.getSIN(System.Double)">
+ <summary>
+ get the angle of Cosine
+ </summary>
+ <param name="value"></param>
+ <returns></returns>
+</member>
+<member name="M:BurnSoft.Universal.BSMath.getCOS(System.Double)">
+ <summary>
+ get the angle of Tangent
+ </summary>
+ <param name="value"></param>
+ <returns></returns>
+</member>
+<member name="M:BurnSoft.Universal.BSMath.getTangentOf(System.Double,System.Double)">
+ <summary>
+ get the Tangent of Two Values
+ </summary>
+ <param name="value1"></param>
+ <param name="value2"></param>
+ <returns></returns>
 </member>
 <member name="T:BurnSoft.Universal.BSNetwork.IPProtocolType">
  <summary>
@@ -833,7 +877,15 @@ Checks to see if the data that is passed is greater than or less then the curren
  </summary>
  <returns></returns>
 </member>
-<member name="M:BurnSoft.Universal.BSOtherObjects.GetCommand(System.String,System.String,System.Boolean@,System.String@)">
+<member name="M:BurnSoft.Universal.BSOtherObjects.detectSwitch(System.String)">
+ <summary>
+ Loop Through one of the Values passed in the command arguments and count the first non alphabetical 
+ characters as the switch parameter that needs to be filtered out.
+ </summary>
+ <param name="sValue">Command Parameter</param>
+ <returns>String of non Alphabetical Characters</returns>
+</member>
+<member name="M:BurnSoft.Universal.BSOtherObjects.GetCommand(System.String,System.String,System.Boolean@)">
  <summary>
  The Get Command will looks for Command Line Arguments, this on will return as string
  the switch will be something like /mystring="this is fun"
@@ -842,10 +894,9 @@ Checks to see if the data that is passed is greater than or less then the curren
  <param name="strLookFor"></param>
  <param name="sDefault"></param>
  <param name="DidExist"></param>
- <param name="Switch"></param>
  <returns></returns>
 </member>
-<member name="M:BurnSoft.Universal.BSOtherObjects.GetCommand(System.String,System.Int64,System.Boolean@,System.String@)">
+<member name="M:BurnSoft.Universal.BSOtherObjects.GetCommand(System.String,System.Int64,System.Boolean@)">
  <summary>
  The Get Command will looks for Command Line Arguments, this on will return as long
  the switch will be something like /mylongvalue=92
@@ -854,10 +905,9 @@ Checks to see if the data that is passed is greater than or less then the curren
  <param name="strLookFor"></param>
  <param name="lDefault"></param>
  <param name="DidExist"></param>
- <param name="Switch"></param>
  <returns></returns>
 </member>
-<member name="M:BurnSoft.Universal.BSOtherObjects.GetCommand(System.String,System.Boolean,System.Boolean@,System.String@)">
+<member name="M:BurnSoft.Universal.BSOtherObjects.GetCommand(System.String,System.Boolean,System.Boolean@)">
  <summary>
  The Get Command will looks for Command Line Arguments, this on will return as boolean.
  if the command is /swtich it will return as true since it did exist
@@ -866,7 +916,6 @@ Checks to see if the data that is passed is greater than or less then the curren
  <param name="strLookFor"></param>
  <param name="bDefault"></param>
  <param name="DidExist"></param>
- <param name="Switch"></param>
  <returns></returns>
 </member>
 <member name="M:BurnSoft.Universal.BSOtherObjects.FC(System.String,System.String)">
@@ -1100,21 +1149,21 @@ Checks to see if the data that is passed is greater than or less then the curren
 <member name="M:BurnSoft.Universal.BSProcessInfo.ProcessExists(System.String,System.String@,System.Int32@)">
  <summary>
  Check to see if a process exists by name, Optionally get the PID and Process Count for the result(s)
- </summary>\
- <param name="sProcessName"></param>
+ </summary>
+ <param name="ProcessName"></param>
  <param name="PID"></param>
  <param name="ProcessCount"></param>
- <returns>true/false</returns>
+ <returns></returns>
 </member>
 <member name="M:BurnSoft.Universal.BSProcessInfo.ProcessExists(System.String,System.String,System.String@,System.Int32@)">
  <summary>
  Check to see if a process exists by name and what might be in the commandline parameters, Optionally get the PID and Process Count for the result(s)
  </summary>
- <param name="sProcessName"></param>
+ <param name="ProcessName"></param>
  <param name="CommandLineContains"></param>
  <param name="PID"></param>
  <param name="ProcessCount"></param>
- <returns>true/false</returns>
+ <returns></returns>
 </member>
 <member name="M:BurnSoft.Universal.BSProcessInfo.ExactProcessExists(System.String,System.Int32@)">
  <summary>
@@ -1130,6 +1179,25 @@ Checks to see if the data that is passed is greater than or less then the curren
  </summary>
  <param name="ProcessName"></param>
  <returns>memory in bytes</returns>
+</member>
+<member name="M:BurnSoft.Universal.BSProcessInfo.GetProcessCPUTime(System.String,System.Int64,System.Double,System.Double@)">
+ <summary>
+ Get the Process CPU Time via the Performance Counter
+ </summary>
+ <param name="ProcessName"></param>
+ <param name="TIMER_INTERVAL"></param>
+ <param name="OldValue"></param>
+ <param name="NewValue"></param>
+ <returns></returns>
+</member>
+<member name="M:BurnSoft.Universal.BSProcessInfo.GetCPUProcessStarting(System.String,System.Int64,System.Double@)">
+ <summary>
+ Get the Process Starting, first getProcessCPUtime is to initialize, the second is the time that is returned
+ </summary>
+ <param name="ProcessName"></param>
+ <param name="TIMER_INTERVAL"></param>
+ <param name="NewValue"></param>
+ <returns></returns>
 </member>
 <member name="P:BurnSoft.Universal.BSRegistry.DefaultRegPath">
  <summary>
