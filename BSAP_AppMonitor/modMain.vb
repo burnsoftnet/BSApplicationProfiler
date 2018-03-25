@@ -448,7 +448,7 @@ Module modMain
             BuggerMe("username=" & Username)
             ProcessActive = ObjP.ProcessExists(MyProcess, MyPID, ProcessCount)
             If ProcessActive Then
-                Dim ActivePath As String = ObjP.GetProcessCommandLine(MyPID)
+                Dim ActivePath As String = Replace(ObjP.GetProcessCommandLine(MyPID), "\", "//")
                 BuggerMe("Full Active Path: " & ActivePath)
                 Dim FullAppPath As String = ActivePath.Replace(Chr(34), "")
                 BuggerMe("FullPath Formated: " & FullAppPath)
