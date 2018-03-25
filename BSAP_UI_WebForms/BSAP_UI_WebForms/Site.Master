@@ -57,15 +57,16 @@
                         <li><a runat="server" href="~/Project_List.aspx">Project Lists</a></li>
                         <li><a runat="server" href="~/Agents.aspx">Agent Lists</a></li>
                     </ul>
+                    <% If Application("ADMINMODE") Then %>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/User_List.aspx">Manage Users</a></li>
                                 <li><a runat="server" href="~/Login.aspx">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/User_List.aspx">Manage Users</a></li>
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
@@ -73,6 +74,7 @@
                             </ul>
                         </LoggedInTemplate>
                     </asp:LoginView>
+                    <%End if %>
                 </div>
             </div>
         </div>

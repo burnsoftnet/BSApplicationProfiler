@@ -26,6 +26,7 @@ Public Class Application_Sessions
         SQL &= " ORDER BY sessiondt desc"
         SqlDataSource1.SelectCommand = SQL
 
+        GridView1.Columns(7).Visible = CBool(Session("isLoggedIn"))
 
     End Sub
 

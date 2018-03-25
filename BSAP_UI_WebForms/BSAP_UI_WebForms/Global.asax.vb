@@ -7,6 +7,7 @@ Public Class Global_asax
         ' Fires when the application is started
         RouteConfig.RegisterRoutes(RouteTable.Routes)
         BundleConfig.RegisterBundles(BundleTable.Bundles)
+        Application("ADMINMODE") = CBool(ConfigurationManager.AppSettings("ENABLE_ADMINMODE"))
     End Sub
 
     Sub Session_Start(sender As Object, e As EventArgs)
@@ -15,5 +16,9 @@ Public Class Global_asax
         Session("user_email") = ""
         Session("user_name") = ""
         Session("user_displayname") = ""
+        If Not CBool(Application("ADMINMODE")) Then
+            Session("isAdmin") = True
+            Session("isLoggedIn") = True
+        End If
     End Sub
 End Class
