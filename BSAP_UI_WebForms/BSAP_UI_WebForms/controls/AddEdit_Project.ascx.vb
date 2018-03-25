@@ -4,6 +4,11 @@ Public Class AddEdit_Project
     Inherits System.Web.UI.UserControl
     Public PageTitle As String
     Private _EDITMODE As Boolean
+    ''' <summary>
+    ''' Switch to enable or disable edit mode.  when in edit more
+    ''' it will load the information from the database
+    ''' </summary>
+    ''' <returns></returns>
     Public Property EDITMODE As Boolean
         Get
             Return _EDITMODE
@@ -12,6 +17,10 @@ Public Class AddEdit_Project
             _EDITMODE = value
         End Set
     End Property
+    ''' <summary>
+    ''' Load information from the project name table
+    ''' </summary>
+    ''' <param name="RID">Project ID</param>
     Sub LoadProectDetails(RID As Long)
         Dim Obj As New BurnSoft.BSDatabase
         If Obj.ConnectDB Then
@@ -34,6 +43,11 @@ Public Class AddEdit_Project
         End If
         Obj = Nothing
     End Sub
+    ''' <summary>
+    ''' Load details about the project into the detail screen
+    ''' </summary>
+    ''' <param name="RID">Project ID</param>
+    ''' <param name="APMID">Application Details ID</param>
     Sub LoadMainProcess(RID As Long, Optional ByRef APMID As Long = 0)
         Dim Obj As New BurnSoft.BSDatabase
         If Obj.ConnectDB Then
@@ -43,20 +57,17 @@ Public Class AddEdit_Project
             Dim RS As MySqlDataReader
             RS = CMD.ExecuteReader
             While RS.Read
-                'APNID,process_display_name," &
-                ' "process_name,match_parameters,parameters,haslogs,clear_logs_on_start," &
-                ' "useNTEvent,NTSource,NTEventID,`interval`
                 APMID = RS("id")
                 txtProcessName.Text = RS("process_display_name")
                 txtEXEName.Text = RS("process_name")
                 chkMatchParam.Checked = ObjOF.ConvertIntToBool(RS("match_parameters"))
-                txtParameter.Text = RS("parameters")
+                If Not IsDBNull(RS("parameters")) Then txtParameter.Text = RS("parameters")
                 chkHasLogs.Checked = ObjOF.ConvertIntToBool(RS("haslogs"))
                 chkClearLogs.Checked = ObjOF.ConvertIntToBool(RS("clear_logs_on_start"))
                 chkUseEventLog.Checked = ObjOF.ConvertIntToBool(RS("useNTEvent"))
-                txtNTSource.Text = RS("NTSource")
-                txtNTEventID.Text = RS("NTEventID")
-                txtInterval.Text = RS("interval")
+                If Not IsDBNull(RS("NTSource")) Then txtNTSource.Text = RS("NTSource")
+                If Not IsDBNull(RS("NTEventID")) Then txtNTEventID.Text = RS("NTEventID")
+                If Not IsDBNull(RS("interval")) Then txtInterval.Text = RS("interval")
             End While
             RS.Close()
             RS = Nothing
@@ -66,11 +77,15 @@ Public Class AddEdit_Project
         End If
         Obj = Nothing
     End Sub
+    ''' <summary>
+    ''' If there are logs in the project, load the log details 
+    ''' </summary>
+    ''' <param name="RID">Project ID</param>
     Sub LoadMainLogs(RID As Long)
         Dim Obj As New BurnSoft.BSDatabase
         If Obj.ConnectDB Then
             Dim ObjOF As New BSOtherObjects
-            Dim SQL As String = "SELECT * FROM app_project_name where apmid=" & RID
+            Dim SQL As String = "SELECT * FROM app_project_main_log where apmid=" & RID
             Dim CMD As New MySqlCommand(SQL, Obj.conn)
             Dim RS As MySqlDataReader
             RS = CMD.ExecuteReader
@@ -87,10 +102,21 @@ Public Class AddEdit_Project
         End If
         Obj = Nothing
     End Sub
+    ''' <summary>
+    ''' Start loading the details of the project
+    ''' </summary>
+    ''' <param name="RID"></param>
     Sub LoadData(RID As Long)
         Call LoadProectDetails(RID)
         Call LoadMainProcess(RID)
+        If (chkHasLogs.Checked) Then
+            Call LoadMainLogs(RID)
+        End If
     End Sub
+    ''' <summary>
+    ''' Save the infomration
+    ''' </summary>
+    ''' <param name="RID"></param>
     Sub SaveData(Optional ByVal RID As Long = 0)
         Dim ObjoF As New BSOtherObjects
         Dim Obj As New BurnSoft.BSDatabase
@@ -166,6 +192,11 @@ Public Class AddEdit_Project
         End If
 
     End Sub
+    ''' <summary>
+    ''' Load Page
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
             If _EDITMODE Then
@@ -181,11 +212,19 @@ Public Class AddEdit_Project
             End If
         End If
     End Sub
-
+    ''' <summary>
+    ''' Save button for new project
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Call SaveData()
     End Sub
-
+    ''' <summary>
+    ''' Update the information in the database
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Protected Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Call SaveData(CLng(Request.QueryString("ID")))
     End Sub
