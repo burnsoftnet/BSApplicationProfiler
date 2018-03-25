@@ -17,7 +17,7 @@ Public Class MonitorService
         System.ServiceProcess.ServiceBase.Run(ServicestoRun)
     End Sub
     Sub StartSchedAgent()
-        Dim ProcessName As String = "BSApplicationProfiler.exe"
+        Dim ProcessName As String = "BSAP_ProjectMonitor.exe"
         myProcess.StartInfo.WorkingDirectory = Application.StartupPath & "\"
         If DO_DEBUG Then EventLog1.WriteEntry("Working Path " & myProcess.StartInfo.WorkingDirectory, EventLogEntryType.Information)
         If DO_DEBUG Then EventLog1.WriteEntry("Running Application: " & ProcessName, EventLogEntryType.Information) ', CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
