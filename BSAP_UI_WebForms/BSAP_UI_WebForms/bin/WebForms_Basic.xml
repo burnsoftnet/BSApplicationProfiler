@@ -597,9 +597,27 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Chart1_ModalPopupExtender">
+<summary>
+Chart1_ModalPopupExtender control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:BSAP_UI_WebForms.Session_Details1._Chart2">
 <summary>
 Chart2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Chart2_ModalPopupExtender">
+<summary>
+Chart2_ModalPopupExtender control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -615,9 +633,27 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Chart3_ModalPopupExtender">
+<summary>
+Chart3_ModalPopupExtender control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:BSAP_UI_WebForms.Session_Details1._Chart4">
 <summary>
 Chart4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Chart4_ModalPopupExtender">
+<summary>
+Chart4_ModalPopupExtender control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -636,6 +672,123 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:BSAP_UI_WebForms.Session_Details1._SqlDataSource2">
 <summary>
 SqlDataSource2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_CPU">
+<summary>
+Panel_CPU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._btnClose">
+<summary>
+btnClose control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._GridViewCPU">
+<summary>
+GridViewCPU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._sdsCPU">
+<summary>
+sdsCPU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_Memory">
+<summary>
+Panel_Memory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._btnCloseMem">
+<summary>
+btnCloseMem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._GridViewMem">
+<summary>
+GridViewMem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_Handles">
+<summary>
+Panel_Handles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._btnCloseHandles">
+<summary>
+btnCloseHandles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._GridViewHandles">
+<summary>
+GridViewHandles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_Threads">
+<summary>
+Panel_Threads control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._btnCloseThreads">
+<summary>
+btnCloseThreads control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._GridViewThreads">
+<summary>
+GridViewThreads control.
 </summary>
 <remarks>
 Auto-generated field.

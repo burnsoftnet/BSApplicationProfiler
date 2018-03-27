@@ -41,6 +41,34 @@
         width: 100px;
         height: 23px;
     }
+    .modalBackground
+    {
+        background-color: Black;
+        filter: alpha(opacity=90);
+        opacity: 0.8;
+    }
+    .modalPopup
+    {
+        background-color: #FFFFFF;
+        border-width: 3px;
+        border-style: solid;
+        border-color: black;
+        padding-top: 10px;
+        padding-left: 10px;
+        width: 500px;
+        height: 400px;
+    }
+    .modalPopupLong
+    {
+        background-color: #FFFFFF;
+        border-width: 3px;
+        border-style: solid;
+        border-color: black;
+        padding-top: 10px;
+        padding-left: 10px;
+        width: 600px;
+        height: 400px;
+    }
 </style>
 <p>
     <br />
@@ -143,6 +171,8 @@
                     </asp:ChartArea>
                 </chartareas>
             </asp:Chart>
+            <ajaxToolkit:ModalPopupExtender ID="Chart1_ModalPopupExtender" runat="server" BehaviorID="Chart1_ModalPopupExtender" DynamicServicePath="" PopupControlID="Panel_CPU" TargetControlID="Chart1" BackgroundCssClass="modalBackground" CancelControlID="btnClose">
+            </ajaxToolkit:ModalPopupExtender>
         </td>
         <td class="auto-style7">
             <asp:Chart ID="Chart2" runat="server" DataSourceID="SqlDataSource1">
@@ -155,6 +185,8 @@
                     </asp:ChartArea>
                 </chartareas>
             </asp:Chart>
+            <ajaxToolkit:ModalPopupExtender ID="Chart2_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" BehaviorID="Chart2_ModalPopupExtender" CancelControlID="btnCloseMem" DynamicServicePath="" PopupControlID="Panel_Memory" TargetControlID="Chart2">
+            </ajaxToolkit:ModalPopupExtender>
         </td>
     </tr>
     <tr>
@@ -169,6 +201,8 @@
                     </asp:ChartArea>
                 </chartareas>
             </asp:Chart>
+            <ajaxToolkit:ModalPopupExtender ID="Chart3_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" BehaviorID="Chart3_ModalPopupExtender" CancelControlID="btnCloseHanles" DynamicServicePath="" PopupControlID="Panel_Handles" TargetControlID="Chart3">
+            </ajaxToolkit:ModalPopupExtender>
         </td>
         <td class="auto-style7">
             <asp:Chart ID="Chart4" runat="server" DataSourceID="SqlDataSource1">
@@ -181,6 +215,8 @@
                     </asp:ChartArea>
                 </chartareas>
             </asp:Chart>
+            <ajaxToolkit:ModalPopupExtender ID="Chart4_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" BehaviorID="Chart4_ModalPopupExtender" CancelControlID="btnCloseThreads" DynamicServicePath="" PopupControlID="Panel_Threads" TargetControlID="Chart4">
+            </ajaxToolkit:ModalPopupExtender>
         </td>
     </tr>
     <tr>
@@ -220,9 +256,98 @@
         </td>
     </tr>
 </table>
+
 <br />
 
 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
+<asp:Panel ID="Panel_CPU" runat="server" CssClass="modalPopup" align="center" style = "display:none">
+    <asp:Button ID="btnClose" runat="server" Text="Close" />
+    <asp:GridView ID="GridViewCPU" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AutoGenerateColumns="False" DataSourceID="sdsCPU" AllowPaging="True">
+    <AlternatingRowStyle BackColor="#CCCCCC" />
+    <Columns>
+        <asp:BoundField DataField="dt" HeaderText="Date &amp; Time" SortExpression="dt" />
+        <asp:BoundField DataField="imagename" HeaderText="Process Name" SortExpression="imagename" />
+        <asp:BoundField DataField="username" HeaderText="User Name" SortExpression="username" />
+        <asp:BoundField DataField="cpu" HeaderText="CPU %" SortExpression="cpu" />
+    </Columns>
+    <FooterStyle BackColor="#CCCCCC" />
+    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+    <SortedAscendingHeaderStyle BackColor="Gray" />
+    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+    <SortedDescendingHeaderStyle BackColor="#383838" />
+</asp:GridView>
+<asp:SqlDataSource ID="sdsCPU" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
+
+
+</asp:Panel>
+<asp:Panel ID="Panel_Memory" runat="server" CssClass="modalPopupLong" align="center" style = "display:none">
+    <asp:Button ID="btnCloseMem" runat="server" Text="Close" />
+    <asp:GridView ID="GridViewMem" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AutoGenerateColumns="False" DataSourceID="sdsCPU" AllowPaging="True">
+    <AlternatingRowStyle BackColor="#CCCCCC" />
+    <Columns>
+        <asp:BoundField DataField="dt" HeaderText="Date &amp; Time" SortExpression="dt" />
+        <asp:BoundField DataField="imagename" HeaderText="Process Name" SortExpression="imagename" />
+        <asp:BoundField DataField="username" HeaderText="User Name" SortExpression="username" />
+        <asp:BoundField DataField="memoryused" HeaderText="Memory Used" SortExpression="memoryused" />
+    </Columns>
+    <FooterStyle BackColor="#CCCCCC" />
+    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+    <SortedAscendingHeaderStyle BackColor="Gray" />
+    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+    <SortedDescendingHeaderStyle BackColor="#383838" />
+</asp:GridView>
+
+</asp:Panel>
+<asp:Panel ID="Panel_Handles" runat="server" CssClass="modalPopuplong" align="center" style = "display:none">
+    <asp:Button ID="btnCloseHandles" runat="server" Text="Close" />
+    <asp:GridView ID="GridViewHandles" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AutoGenerateColumns="False" DataSourceID="sdsCPU" AllowPaging="True">
+    <AlternatingRowStyle BackColor="#CCCCCC" />
+    <Columns>
+        <asp:BoundField DataField="dt" HeaderText="Date &amp; Time" SortExpression="dt" />
+        <asp:BoundField DataField="imagename" HeaderText="Process Name" SortExpression="imagename" />
+        <asp:BoundField DataField="username" HeaderText="User Name" SortExpression="username" />
+        <asp:BoundField DataField="handles" HeaderText="Handles" SortExpression="handles" />
+    </Columns>
+    <FooterStyle BackColor="#CCCCCC" />
+    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+    <SortedAscendingHeaderStyle BackColor="Gray" />
+    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+    <SortedDescendingHeaderStyle BackColor="#383838" />
+</asp:GridView>
+
+</asp:Panel>
+<asp:Panel ID="Panel_Threads" runat="server" CssClass="modalPopupLong" align="center" style = "display:none">
+    <asp:Button ID="btnCloseThreads" runat="server" Text="Close" />
+    <asp:GridView ID="GridViewThreads" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AutoGenerateColumns="False" DataSourceID="sdsCPU" AllowPaging="True">
+    <AlternatingRowStyle BackColor="#CCCCCC" />
+    <Columns>
+        <asp:BoundField DataField="dt" HeaderText="Date &amp; Time" SortExpression="dt" />
+        <asp:BoundField DataField="imagename" HeaderText="Process Name" SortExpression="imagename" />
+        <asp:BoundField DataField="username" HeaderText="User Name" SortExpression="username" />
+        <asp:BoundField DataField="threads" HeaderText="Threads" SortExpression="threads" />
+    </Columns>
+    <FooterStyle BackColor="#CCCCCC" />
+    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+    <SortedAscendingHeaderStyle BackColor="Gray" />
+    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+    <SortedDescendingHeaderStyle BackColor="#383838" />
+</asp:GridView>
+
+</asp:Panel>
+
+
 
 
 

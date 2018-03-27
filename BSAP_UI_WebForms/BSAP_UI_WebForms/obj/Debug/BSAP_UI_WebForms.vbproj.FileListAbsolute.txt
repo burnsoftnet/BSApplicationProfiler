@@ -219,3 +219,5 @@ C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_We
 C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.dll
 C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\WebForms_Basic.xml
 C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.pdb
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AjaxControlToolkit.dll
+C:\Users\burnsoft\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AjaxMin.dll

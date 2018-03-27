@@ -24,8 +24,13 @@
         ObjS = Nothing
         Obj = Nothing
     End Sub
+    Sub LoadCPUData(SessionID As Long)
+        Dim sql As String = "SELECT * FROM bsap.process_stats_main where SessionID=" & SessionID & " order by dt asc"
+        sdsCPU.SelectCommand = sql
+    End Sub
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Call LoadData(CLng(Request.QueryString("SessionID")))
+        LoadCPUData(CLng(Request.QueryString("SessionID")))
     End Sub
 
 End Class

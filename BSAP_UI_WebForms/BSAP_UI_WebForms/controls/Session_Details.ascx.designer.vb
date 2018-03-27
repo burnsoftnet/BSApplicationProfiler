@@ -167,6 +167,15 @@ Partial Public Class Session_Details1
     Protected WithEvents Chart1 As Global.System.Web.UI.DataVisualization.Charting.Chart
     
     '''<summary>
+    '''Chart1_ModalPopupExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Chart1_ModalPopupExtender As Global.AjaxControlToolkit.ModalPopupExtender
+    
+    '''<summary>
     '''Chart2 control.
     '''</summary>
     '''<remarks>
@@ -174,6 +183,15 @@ Partial Public Class Session_Details1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Chart2 As Global.System.Web.UI.DataVisualization.Charting.Chart
+    
+    '''<summary>
+    '''Chart2_ModalPopupExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Chart2_ModalPopupExtender As Global.AjaxControlToolkit.ModalPopupExtender
     
     '''<summary>
     '''Chart3 control.
@@ -185,6 +203,15 @@ Partial Public Class Session_Details1
     Protected WithEvents Chart3 As Global.System.Web.UI.DataVisualization.Charting.Chart
     
     '''<summary>
+    '''Chart3_ModalPopupExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Chart3_ModalPopupExtender As Global.AjaxControlToolkit.ModalPopupExtender
+    
+    '''<summary>
     '''Chart4 control.
     '''</summary>
     '''<remarks>
@@ -192,6 +219,15 @@ Partial Public Class Session_Details1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Chart4 As Global.System.Web.UI.DataVisualization.Charting.Chart
+    
+    '''<summary>
+    '''Chart4_ModalPopupExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Chart4_ModalPopupExtender As Global.AjaxControlToolkit.ModalPopupExtender
     
     '''<summary>
     '''GridView1 control.
@@ -210,4 +246,121 @@ Partial Public Class Session_Details1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Panel_CPU control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Panel_CPU As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''btnClose control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnClose As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''GridViewCPU control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridViewCPU As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''sdsCPU control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents sdsCPU As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Panel_Memory control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Panel_Memory As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''btnCloseMem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCloseMem As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''GridViewMem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridViewMem As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Panel_Handles control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Panel_Handles As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''btnCloseHandles control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCloseHandles As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''GridViewHandles control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridViewHandles As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Panel_Threads control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Panel_Threads As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''btnCloseThreads control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCloseThreads As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''GridViewThreads control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridViewThreads As Global.System.Web.UI.WebControls.GridView
 End Class
