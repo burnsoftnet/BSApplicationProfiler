@@ -24,8 +24,10 @@ namespace BSAP_SubProcessMonitor
             {
                 string SQL = "Select id, haslogs from app_project_main_process where process_name='" + process_name + "' COLLATE NOCASE";
                 BurnSoft.BSSqliteDatabase Obj = new BurnSoft.BSSqliteDatabase();
-                if (Obj.ConnectDB == 0)
+                string errMsg = @"";
+                if (Obj.ConnectDB(out errMsg) == 0)
                 {
+                    /*
                     SQLiteCommand CMD = new SQLiteCommand(SQL, Obj.Conn);
                     SQLiteDataReader RS = default(SQLiteDataReader);
                     RS = CMD.ExecuteReader;
@@ -38,12 +40,17 @@ namespace BSAP_SubProcessMonitor
                     RS = null;
                     CMD = null;
                     Obj.CloseDB();
+                    */
+                }
+                else
+                {
+                    throw new Exception(errMsg);
                 }
                 Obj = null;
             }
             catch (Exception ex)
             {
-                LogError("modMain.getAppProjectMainProcessSQLite", ex.Message.ToString);
+                //LogError("modMain.getAppProjectMainProcessSQLite", ex.Message.ToString);
             }
             return lAns;
         }
