@@ -31,13 +31,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2018 09:36:19</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>06/18/2018 13:51:46</publishTime>
+      <publishTime>06/18/2018 15:02:05</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>06/18/2018 13:51:46</publishTime>
+      <publishTime>06/18/2018 15:02:05</publishTime>
     </File>
     <File Include="bin/App_global.asax.pdb">
-      <publishTime>06/18/2018 13:51:46</publishTime>
+      <publishTime>06/18/2018 15:02:05</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>06/18/2018 09:36:19</publishTime>
@@ -46,10 +46,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2018 09:36:19</publishTime>
     </File>
     <File Include="bin/BSAP_UI_WebForms.dll">
-      <publishTime>06/18/2018 13:51:40</publishTime>
+      <publishTime>06/18/2018 15:02:00</publishTime>
     </File>
     <File Include="bin/BSAP_UI_WebForms.pdb">
-      <publishTime>06/18/2018 13:51:40</publishTime>
+      <publishTime>06/18/2018 15:02:00</publishTime>
     </File>
     <File Include="bin/BurnSoft.Universal.dll">
       <publishTime>06/18/2018 09:36:18</publishTime>
@@ -169,7 +169,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2018 09:36:20</publishTime>
     </File>
     <File Include="bin/WebForms_Basic.xml">
-      <publishTime>06/18/2018 13:51:40</publishTime>
+      <publishTime>06/18/2018 15:02:00</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>06/18/2018 09:36:20</publishTime>
@@ -205,7 +205,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2018 09:36:19</publishTime>
     </File>
     <File Include="controls/Session_Details.ascx">
-      <publishTime>06/18/2018 13:39:26</publishTime>
+      <publishTime>06/18/2018 13:57:24</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>06/18/2018 09:36:18</publishTime>
@@ -265,7 +265,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2018 09:36:19</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>06/18/2018 13:51:41</publishTime>
+      <publishTime>06/18/2018 15:02:01</publishTime>
     </File>
     <File Include="Project_List.aspx">
       <publishTime>06/18/2018 09:36:18</publishTime>

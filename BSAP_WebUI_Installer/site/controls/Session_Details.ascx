@@ -186,6 +186,7 @@
                     </asp:ChartArea>
                 </chartareas>
             </asp:Chart>
+            <%-- ReSharper disable once Asp.InvalidControlType --%>
             <ajaxToolkit:ModalPopupExtender ID="Chart2_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" BehaviorID="Chart2_ModalPopupExtender" CancelControlID="btnCloseMem" PopupControlID="PanelMemory" TargetControlID="Chart2">
             </ajaxToolkit:ModalPopupExtender>
         </td>
@@ -202,7 +203,8 @@
                     </asp:ChartArea>
                 </chartareas>
             </asp:Chart>
-            <ajaxToolkit:ModalPopupExtender ID="Chart3_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" BehaviorID="Chart3_ModalPopupExtender" CancelControlID="btnCloseHanles" PopupControlID="PanelHandles" TargetControlID="Chart3">
+            <%-- ReSharper disable once Asp.InvalidControlType --%>
+            <ajaxToolkit:ModalPopupExtender ID="Chart3_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" BehaviorID="Chart3_ModalPopupExtender" CancelControlID="btnCloseHandles" PopupControlID="PanelHandles" TargetControlID="Chart3">
             </ajaxToolkit:ModalPopupExtender>
         </td>
         <td class="auto-style7">
@@ -216,6 +218,7 @@
                     </asp:ChartArea>
                 </chartareas>
             </asp:Chart>
+            <%-- ReSharper disable once Asp.InvalidControlType --%>
             <ajaxToolkit:ModalPopupExtender ID="Chart4_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" BehaviorID="Chart4_ModalPopupExtender" CancelControlID="btnCloseThreads" PopupControlID="PanelThreads" TargetControlID="Chart4">
             </ajaxToolkit:ModalPopupExtender>
         </td>
