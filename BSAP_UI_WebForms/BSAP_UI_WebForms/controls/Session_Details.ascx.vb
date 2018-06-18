@@ -32,5 +32,19 @@
         Call LoadData(CLng(Request.QueryString("SessionID")))
         LoadCPUData(CLng(Request.QueryString("SessionID")))
     End Sub
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Chart1_ModalPopupExtender.Hide()
+    End Sub
 
+    Private Sub btnCloseMem_Click(sender As Object, e As EventArgs) Handles btnCloseMem.Click
+        Chart2_ModalPopupExtender.Hide()
+    End Sub
+
+    Private Sub btnCloseHandles_Click(sender As Object, e As EventArgs) Handles btnCloseHandles.Click
+        Chart3_ModalPopupExtender.Hide()
+    End Sub
+
+    Private Sub btnCloseThreads_Click(sender As Object, e As EventArgs) Handles btnCloseThreads.Click
+        Chart4_ModalPopupExtender.Hide()
+    End Sub
 End Class

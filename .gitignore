@@ -95,3 +95,12 @@ BSApplicationProfiler/bin/Release/*.*
 /BSAP_SubAppMonitor/obj/Debug/BSAP_SubAppMonitor.csprojResolveAssemblyReference.cache
 /BSAP_SubAppMonitor/obj/Debug/BSAP_SubAppMonitor.csproj.FileListAbsolute.txt
 /BSAP_SubAppMonitor/obj/Release/BSAP_SubAppMonitor.csproj.FileListAbsolute.txt
+BSAP_MonitorService/obj/
+BSAP_ProjectMonitor/obj/
+BSAP_Service/obj/
+BSAP_SubProcessMonitor/obj/
+BSAP_SubAppMonitor/obj/
+BSAP_SubProcessMonitor/obj/
+BSAP_UI_WebForms/BSAP_UI_WebForms/obj/
+/.vs/BSApplicationProfiler/v15/Server/sqlite3
+/BSAP_UI_WebForms/.vs/BSAP_UI_WebForms/v15/Server/sqlite3

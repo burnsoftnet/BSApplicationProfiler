@@ -678,9 +678,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_CPU">
+<member name="F:BSAP_UI_WebForms.Session_Details1._sdsCPU">
 <summary>
-Panel_CPU control.
+sdsCPU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._PanelCPU">
+<summary>
+PanelCPU control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -705,18 +714,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:BSAP_UI_WebForms.Session_Details1._sdsCPU">
+<member name="F:BSAP_UI_WebForms.Session_Details1._PanelMemory">
 <summary>
-sdsCPU control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_Memory">
-<summary>
-Panel_Memory control.
+PanelMemory control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -741,9 +741,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_Handles">
+<member name="F:BSAP_UI_WebForms.Session_Details1._PanelHandles">
 <summary>
-Panel_Handles control.
+PanelHandles control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -768,9 +768,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:BSAP_UI_WebForms.Session_Details1._Panel_Threads">
+<member name="F:BSAP_UI_WebForms.Session_Details1._PanelThreads">
 <summary>
-Panel_Threads control.
+PanelThreads control.
 </summary>
 <remarks>
 Auto-generated field.

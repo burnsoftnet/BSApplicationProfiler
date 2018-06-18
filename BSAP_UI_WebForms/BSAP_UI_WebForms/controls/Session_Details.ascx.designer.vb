@@ -248,13 +248,22 @@ Partial Public Class Session_Details1
     Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
-    '''Panel_CPU control.
+    '''sdsCPU control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Panel_CPU As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents sdsCPU As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''PanelCPU control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PanelCPU As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
     '''btnClose control.
@@ -275,22 +284,13 @@ Partial Public Class Session_Details1
     Protected WithEvents GridViewCPU As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''sdsCPU control.
+    '''PanelMemory control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents sdsCPU As Global.System.Web.UI.WebControls.SqlDataSource
-    
-    '''<summary>
-    '''Panel_Memory control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Panel_Memory As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelMemory As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
     '''btnCloseMem control.
@@ -311,13 +311,13 @@ Partial Public Class Session_Details1
     Protected WithEvents GridViewMem As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''Panel_Handles control.
+    '''PanelHandles control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Panel_Handles As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelHandles As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
     '''btnCloseHandles control.
@@ -338,13 +338,13 @@ Partial Public Class Session_Details1
     Protected WithEvents GridViewHandles As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''Panel_Threads control.
+    '''PanelThreads control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Panel_Threads As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelThreads As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
     '''btnCloseThreads control.
