@@ -104,3 +104,8 @@ BSAP_SubProcessMonitor/obj/
 BSAP_UI_WebForms/BSAP_UI_WebForms/obj/
 /.vs/BSApplicationProfiler/v15/Server/sqlite3
 /BSAP_UI_WebForms/.vs/BSAP_UI_WebForms/v15/Server/sqlite3
+BSAP_ProjectMonitor/bin/Debug/
+BSAP_SubAppMonitor/obj/
+BSAP_ProjectMonitor/obj/
+BSAP_SubProcessMonitor/obj/
+BSAP_UI_WebForms\BSAP_UI_WebForms/obj/

@@ -17,7 +17,7 @@ namespace BSAP_SubProcessMonitor
         bool USELOCAL;
         private bool _UPDATEDSESSION;
 
-        public long getAppProjectMainProcessSQLIte(string process_name, ref bool HasLogs = false)
+        public long getAppProjectMainProcessSQLIte(string process_name, ref bool HasLogs)
         {
             long lAns = 0;
             try

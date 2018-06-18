@@ -195,7 +195,6 @@ C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_We
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\System.Web.Optimization.dll
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\System.Web.Providers.dll
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\WebGrease.dll
-C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BurnSoft.Universal.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Data.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Web.xml
