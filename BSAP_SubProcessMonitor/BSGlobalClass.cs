@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Data;
+// ReSharper disable CheckNamespace
+// ReSharper disable InconsistentNaming
 
 namespace BurnSoft
 {
@@ -64,9 +62,9 @@ namespace BurnSoft
         public void ConnExe(string SQL, out string errMsg)
         {
             errMsg = @"";
-            string errMsgConn = @"";
             try
             {
+                string errMsgConn;
                 if (ConnectDB(out errMsgConn) == 0)
                 {
                     MySqlCommand CMD = new MySqlCommand();
@@ -74,7 +72,6 @@ namespace BurnSoft
                     CMD.Connection = Conn;
                     CMD.ExecuteNonQuery();
                     CMD.Connection.Close();
-                    CMD = null;
                     CloseDB();
                 }
                 else

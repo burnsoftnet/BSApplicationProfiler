@@ -27,6 +27,7 @@ namespace BSAP_SubProcessMonitor
                 string errMsg = @"";
                 if (Obj.ConnectDB(out errMsg) == 0)
                 {
+                    
                     /*
                     SQLiteCommand CMD = new SQLiteCommand(SQL, Obj.Conn);
                     SQLiteDataReader RS = default(SQLiteDataReader);
