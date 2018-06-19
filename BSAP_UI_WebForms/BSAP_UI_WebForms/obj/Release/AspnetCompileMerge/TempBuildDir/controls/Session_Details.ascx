@@ -157,6 +157,10 @@
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bsap %>" ProviderName="<%$ ConnectionStrings:bsap.ProviderName %>"></asp:SqlDataSource>
 
 
+<asp:Timer ID="tmr_Data" runat="server" >
+</asp:Timer>
+
+
 <br />
 <table align="center" class="auto-style1">
     <tr>

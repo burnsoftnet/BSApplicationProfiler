@@ -31,6 +31,11 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Call LoadData(CLng(Request.QueryString("SessionID")))
         LoadCPUData(CLng(Request.QueryString("SessionID")))
+        If Not IsDate(lblEnd.Text) Then
+            tmr_Data.Enabled = True
+         else
+             tmr_Data.Enabled = False
+        End If
     End Sub
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Chart1_ModalPopupExtender.Hide()
@@ -46,5 +51,12 @@
 
     Private Sub btnCloseThreads_Click(sender As Object, e As EventArgs) Handles btnCloseThreads.Click
         Chart4_ModalPopupExtender.Hide()
+    End Sub
+
+    Protected Sub tmr_Data_Tick(sender As Object, e As EventArgs) Handles tmr_Data.Tick
+        Chart1.DataBind()
+        Chart2.DataBind()
+        Chart3.DataBind()
+        Chart4.DataBind()
     End Sub
 End Class

@@ -588,6 +588,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:BSAP_UI_WebForms.Session_Details1._tmr_Data">
+<summary>
+tmr_Data control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:BSAP_UI_WebForms.Session_Details1._Chart1">
 <summary>
 Chart1 control.

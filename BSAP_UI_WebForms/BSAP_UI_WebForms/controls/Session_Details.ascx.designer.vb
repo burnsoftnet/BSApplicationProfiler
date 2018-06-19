@@ -158,6 +158,15 @@ Partial Public Class Session_Details1
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
+    '''tmr_Data control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents tmr_Data As Global.System.Web.UI.Timer
+    
+    '''<summary>
     '''Chart1 control.
     '''</summary>
     '''<remarks>
