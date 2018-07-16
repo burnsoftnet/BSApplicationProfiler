@@ -17,6 +17,9 @@ Public Class MyNewService
     End Sub
     Sub StartSchedAgent()
         Dim ProcessName As String = "BSApplicationProfiler.exe"
+        If (Configuration.ConfigurationManager.AppSettings("RUN_OFFLINE")) Then
+            ProcessName = "BSApplicationProfilerOffline.exe"
+        End If
         myProcess.StartInfo.WorkingDirectory = Application.StartupPath & "\"
         If DO_DEBUG Then EventLog1.WriteEntry("Working Path " & myProcess.StartInfo.WorkingDirectory, EventLogEntryType.Information)
         If DO_DEBUG Then EventLog1.WriteEntry("Running Application: " & ProcessName, EventLogEntryType.Information) ', CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
