@@ -211,6 +211,7 @@ Public Class Form1
         txtDBNAME.Enabled = showMe
         txtPWD.Enabled = showMe
         txtUID.Enabled = showMe
+        Call SaveServiceSettings()
     End sub
 
     Private Sub chkOffLine_CheckedChanged(sender As Object, e As EventArgs) Handles chkOffLine.CheckedChanged
