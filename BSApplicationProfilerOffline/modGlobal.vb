@@ -23,13 +23,13 @@ Module modGlobal
         Catch ex As Exception
             Console.WriteLine(sMsg)
         End Try
-        Try
-            If USE_EVENT_LOG Then
-                frmMain.EventLog1.WriteEntry(sMsg, EventLogEntryType.Information, CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
-            End If
-        Catch ex As Exception
-            Console.WriteLine(sMsg)
-        End Try
+        'Try
+        'If USE_EVENT_LOG Then
+        'frmMain.EventLog1.WriteEntry(sMsg, EventLogEntryType.Information, CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
+        'End If
+        'Catch ex As Exception
+        'Console.WriteLine(sMsg)
+        'End Try
     End Sub
     Function ToLogOrNotToLog(LEVEL As String) As Boolean
         Dim bAns As Boolean = False
@@ -60,14 +60,14 @@ Module modGlobal
         Catch ex As Exception
             Console.WriteLine(sMsg)
         End Try
-        Try
-            If DO_DEBUG Then
-                If USE_EVENT_LOG Then
-                    frmMain.EventLog1.WriteEntry(sMsg, EventLogEntryType.Information, CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
-                End If
-            End If
-        Catch ex As Exception
-            Console.WriteLine(sMsg)
-        End Try
+        'Try
+        'If DO_DEBUG Then
+        'If USE_EVENT_LOG Then
+        'frmMain.EventLog1.WriteEntry(sMsg, EventLogEntryType.Information, CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
+        'End If
+        'End If
+        'Catch ex As Exception
+        'Console.WriteLine(sMsg)
+        'End Try
     End Sub
 End Module
