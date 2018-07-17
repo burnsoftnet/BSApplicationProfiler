@@ -3,6 +3,7 @@ Public Class Form1
     Const APP_PROFILER = "\BSApplicationProfiler.exe"
     Const APP_MONITOR = "\BSAP_AppMonitor.exe"
     Const APP_DATADUMP = "\BSAP_DataDump.exe"
+    Const APP_SERVICE = "\BSAP_Service.exe"
     ''' <summary>
     ''' Load Values into the fields when the form starts up
     ''' </summary>
@@ -27,6 +28,12 @@ Public Class Form1
         Config.Save(ConfigurationSaveMode.Modified)
         ConfigurationManager.RefreshSection("appSettings")
     End Sub
+    sub LoadServiceValues()
+        On Error Resume Next
+        Dim AppPath As String = Application.StartupPath & APP_SERVICE
+        Dim Config As Configuration = ConfigurationManager.OpenExeConfiguration(AppPath)
+        chkOffLine.Checked = CBool(Config.AppSettings.Settings.Item("RUN_OFFLINE").Value)
+    End sub
     ''' <summary>
     ''' Load the settings from the Data Dumper config file
     ''' </summary>
@@ -91,6 +98,11 @@ Public Class Form1
         nudHeartBeat.Value = Config.AppSettings.Settings.Item("HEARTBEAT_INTERVAL").Value
         nudDBResfreh.Value = Config.AppSettings.Settings.Item("DBREFRESH_INTERVAL").Value
         cmbBugMode.Text = Config.AppSettings.Settings.Item("BUGFILE_LEVEL").Value
+    End Sub
+
+    Sub SaveServiceSettings()
+        Dim sPath As String = Application.StartupPath & APP_SERVICE
+        Call ChangeAppSettings(sPath, "RUN_OFFLINE", chkOffline.Checked)
     End Sub
     ''' <summary>
     ''' Save the Changes to the App Monitor config file
@@ -190,5 +202,18 @@ Public Class Form1
     Private Sub SaveExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveExitToolStripMenuItem.Click
         Call SaveData()
         Call ExitApp()
+    End Sub
+
+    sub ToggleOffline()
+        Dim showMe as Boolean = false
+        If not chkOffLine.Checked then showMe = true
+        txtDBHost.Enabled = showMe
+        txtDBNAME.Enabled = showMe
+        txtPWD.Enabled = showMe
+        txtUID.Enabled = showMe
+    End sub
+
+    Private Sub chkOffLine_CheckedChanged(sender As Object, e As EventArgs) Handles chkOffLine.CheckedChanged
+        Call ToggleOffline()
     End Sub
 End Class

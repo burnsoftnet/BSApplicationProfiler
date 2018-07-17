@@ -21,7 +21,6 @@ C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\bin\Deb
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\bin\Debug\BurnSoft.Universal.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\bin\Debug\EntityFramework.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\bin\Debug\MySql.Data.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\bin\Debug\System.Data.SQLite.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_ProjectMonitor\obj\Debug\BSAP_ProjectMonitor.vbproj.CopyComplete

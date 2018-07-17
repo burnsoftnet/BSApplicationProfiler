@@ -91,6 +91,8 @@ Partial Class Form1
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.cmbBugModeDD = New System.Windows.Forms.ComboBox()
+        Me.Label34 = New System.Windows.Forms.Label()
         Me.chkNTEventDD = New System.Windows.Forms.CheckBox()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.nudEventErrorDD = New System.Windows.Forms.NumericUpDown()
@@ -111,112 +113,122 @@ Partial Class Form1
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.cmbBugModeDD = New System.Windows.Forms.ComboBox()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.nudDBResfreh, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudHeartBeat, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudTimer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventError, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventWarning, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventInfo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
-        CType(Me.nudTimerAM, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventErrorAM, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventWarningAM, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventInfoAM, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage4.SuspendLayout()
-        CType(Me.nudEventErrorDD, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventWarningDD, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudEventInfoDD, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.chkOffLine = New System.Windows.Forms.CheckBox()
+        Me.MenuStrip1.SuspendLayout
+        Me.TabControl1.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.TabPage2.SuspendLayout
+        CType(Me.nudDBResfreh,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudHeartBeat,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudTimer,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventError,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventWarning,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventInfo,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage3.SuspendLayout
+        CType(Me.nudTimerAM,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventErrorAM,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventWarningAM,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventInfoAM,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage4.SuspendLayout
+        CType(Me.nudEventErrorDD,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventWarningDD,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.nudEventInfoDD,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem, Me.SaveExitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(515, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(687, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(45, 24)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'SaveExitToolStripMenuItem
         '
         Me.SaveExitToolStripMenuItem.Name = "SaveExitToolStripMenuItem"
-        Me.SaveExitToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.SaveExitToolStripMenuItem.Size = New System.Drawing.Size(96, 24)
         Me.SaveExitToolStripMenuItem.Text = "&Save && Exit"
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 17)
+        Me.Label1.AutoSize = true
+        Me.Label1.Location = New System.Drawing.Point(8, 51)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.Size = New System.Drawing.Size(106, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Database Host:"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 46)
+        Me.Label2.AutoSize = true
+        Me.Label2.Location = New System.Drawing.Point(8, 87)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 13)
+        Me.Label2.Size = New System.Drawing.Size(114, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Database Name:"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(257, 17)
+        Me.Label3.AutoSize = true
+        Me.Label3.Location = New System.Drawing.Point(343, 51)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.Size = New System.Drawing.Size(83, 17)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "User Name:"
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(257, 46)
+        Me.Label4.AutoSize = true
+        Me.Label4.Location = New System.Drawing.Point(343, 87)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 13)
+        Me.Label4.Size = New System.Drawing.Size(73, 17)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Password:"
         '
         'txtDBHost
         '
-        Me.txtDBHost.Location = New System.Drawing.Point(94, 17)
+        Me.txtDBHost.Location = New System.Drawing.Point(125, 51)
+        Me.txtDBHost.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDBHost.Name = "txtDBHost"
-        Me.txtDBHost.Size = New System.Drawing.Size(144, 20)
+        Me.txtDBHost.Size = New System.Drawing.Size(191, 22)
         Me.txtDBHost.TabIndex = 4
         '
         'txtDBNAME
         '
-        Me.txtDBNAME.Location = New System.Drawing.Point(94, 43)
+        Me.txtDBNAME.Location = New System.Drawing.Point(125, 83)
+        Me.txtDBNAME.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDBNAME.Name = "txtDBNAME"
-        Me.txtDBNAME.Size = New System.Drawing.Size(144, 20)
+        Me.txtDBNAME.Size = New System.Drawing.Size(191, 22)
         Me.txtDBNAME.TabIndex = 5
         '
         'txtUID
         '
-        Me.txtUID.Location = New System.Drawing.Point(326, 14)
+        Me.txtUID.Location = New System.Drawing.Point(435, 47)
+        Me.txtUID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUID.Name = "txtUID"
-        Me.txtUID.Size = New System.Drawing.Size(140, 20)
+        Me.txtUID.Size = New System.Drawing.Size(185, 22)
         Me.txtUID.TabIndex = 6
         '
         'txtPWD
         '
-        Me.txtPWD.Location = New System.Drawing.Point(326, 43)
+        Me.txtPWD.Location = New System.Drawing.Point(435, 83)
+        Me.txtPWD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPWD.Name = "txtPWD"
-        Me.txtPWD.Size = New System.Drawing.Size(140, 20)
+        Me.txtPWD.Size = New System.Drawing.Size(185, 22)
         Me.txtPWD.TabIndex = 7
         '
         'TabControl1
@@ -225,14 +237,17 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 28)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 34)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(516, 301)
+        Me.TabControl1.Size = New System.Drawing.Size(688, 370)
         Me.TabControl1.TabIndex = 2
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.chkOffLine)
+        Me.TabPage1.Controls.Add(Me.Label42)
         Me.TabPage1.Controls.Add(Me.txtPWD)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.txtUID)
@@ -241,13 +256,14 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.txtDBHost)
         Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(508, 275)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Size = New System.Drawing.Size(680, 341)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Database"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage1.UseVisualStyleBackColor = true
         '
         'TabPage2
         '
@@ -279,257 +295,286 @@ Partial Class Form1
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Controls.Add(Me.Label5)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(508, 275)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Size = New System.Drawing.Size(680, 341)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Application Profiler"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.TabPage2.UseVisualStyleBackColor = true
         '
         'cmbBugMode
         '
-        Me.cmbBugMode.FormattingEnabled = True
+        Me.cmbBugMode.FormattingEnabled = true
         Me.cmbBugMode.Items.AddRange(New Object() {"low", "medium", "high"})
-        Me.cmbBugMode.Location = New System.Drawing.Point(112, 84)
+        Me.cmbBugMode.Location = New System.Drawing.Point(149, 103)
+        Me.cmbBugMode.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbBugMode.Name = "cmbBugMode"
-        Me.cmbBugMode.Size = New System.Drawing.Size(121, 21)
+        Me.cmbBugMode.Size = New System.Drawing.Size(160, 24)
         Me.cmbBugMode.TabIndex = 29
         Me.cmbBugMode.Text = "low"
         '
         'Label39
         '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(9, 84)
+        Me.Label39.AutoSize = true
+        Me.Label39.Location = New System.Drawing.Point(12, 103)
+        Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(72, 13)
+        Me.Label39.Size = New System.Drawing.Size(93, 17)
         Me.Label39.TabIndex = 28
         Me.Label39.Text = "Debug Mode:"
         '
         'nudDBResfreh
         '
-        Me.nudDBResfreh.Location = New System.Drawing.Point(379, 112)
+        Me.nudDBResfreh.Location = New System.Drawing.Point(505, 138)
+        Me.nudDBResfreh.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudDBResfreh.Name = "nudDBResfreh"
-        Me.nudDBResfreh.Size = New System.Drawing.Size(120, 20)
+        Me.nudDBResfreh.Size = New System.Drawing.Size(160, 22)
         Me.nudDBResfreh.TabIndex = 27
         '
         'Label38
         '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(239, 114)
+        Me.Label38.AutoSize = true
+        Me.Label38.Location = New System.Drawing.Point(319, 140)
+        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(134, 13)
+        Me.Label38.Size = New System.Drawing.Size(177, 17)
         Me.Label38.TabIndex = 26
         Me.Label38.Text = "Database Refresh Interval:"
         '
         'nudHeartBeat
         '
-        Me.nudHeartBeat.Location = New System.Drawing.Point(113, 112)
+        Me.nudHeartBeat.Location = New System.Drawing.Point(151, 138)
+        Me.nudHeartBeat.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudHeartBeat.Name = "nudHeartBeat"
-        Me.nudHeartBeat.Size = New System.Drawing.Size(120, 20)
+        Me.nudHeartBeat.Size = New System.Drawing.Size(160, 22)
         Me.nudHeartBeat.TabIndex = 25
         '
         'Label27
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(9, 114)
+        Me.Label27.AutoSize = true
+        Me.Label27.Location = New System.Drawing.Point(12, 140)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(95, 13)
+        Me.Label27.Size = New System.Drawing.Size(125, 17)
         Me.Label27.TabIndex = 24
         Me.Label27.Text = "Heartbeat Interval:"
         '
         'nudTimer
         '
-        Me.nudTimer.Location = New System.Drawing.Point(298, 8)
+        Me.nudTimer.Location = New System.Drawing.Point(397, 10)
+        Me.nudTimer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudTimer.Name = "nudTimer"
-        Me.nudTimer.Size = New System.Drawing.Size(158, 20)
+        Me.nudTimer.Size = New System.Drawing.Size(211, 22)
         Me.nudTimer.TabIndex = 23
         Me.nudTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label15
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(166, 11)
+        Me.Label15.AutoSize = true
+        Me.Label15.Location = New System.Drawing.Point(221, 14)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(126, 13)
+        Me.Label15.Size = New System.Drawing.Size(166, 17)
         Me.Label15.TabIndex = 22
         Me.Label15.Text = "Timer Interval In Minutes:"
         '
         'nudEventError
         '
-        Me.nudEventError.Location = New System.Drawing.Point(113, 217)
+        Me.nudEventError.Location = New System.Drawing.Point(151, 267)
+        Me.nudEventError.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudEventError.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventError.Name = "nudEventError"
-        Me.nudEventError.Size = New System.Drawing.Size(120, 20)
+        Me.nudEventError.Size = New System.Drawing.Size(160, 22)
         Me.nudEventError.TabIndex = 21
         Me.nudEventError.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'nudEventWarning
         '
-        Me.nudEventWarning.Location = New System.Drawing.Point(367, 191)
+        Me.nudEventWarning.Location = New System.Drawing.Point(489, 235)
+        Me.nudEventWarning.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudEventWarning.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventWarning.Name = "nudEventWarning"
-        Me.nudEventWarning.Size = New System.Drawing.Size(120, 20)
+        Me.nudEventWarning.Size = New System.Drawing.Size(160, 22)
         Me.nudEventWarning.TabIndex = 20
         Me.nudEventWarning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'nudEventInfo
         '
-        Me.nudEventInfo.Location = New System.Drawing.Point(113, 191)
+        Me.nudEventInfo.Location = New System.Drawing.Point(151, 235)
+        Me.nudEventInfo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudEventInfo.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventInfo.Name = "nudEventInfo"
-        Me.nudEventInfo.Size = New System.Drawing.Size(120, 20)
+        Me.nudEventInfo.Size = New System.Drawing.Size(160, 22)
         Me.nudEventInfo.TabIndex = 19
         Me.nudEventInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtEventSource
         '
-        Me.txtEventSource.Location = New System.Drawing.Point(113, 165)
+        Me.txtEventSource.Location = New System.Drawing.Point(151, 203)
+        Me.txtEventSource.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtEventSource.Name = "txtEventSource"
-        Me.txtEventSource.Size = New System.Drawing.Size(189, 20)
+        Me.txtEventSource.Size = New System.Drawing.Size(251, 22)
         Me.txtEventSource.TabIndex = 16
         '
         'Label14
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(12, 219)
+        Me.Label14.AutoSize = true
+        Me.Label14.Location = New System.Drawing.Point(16, 270)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(77, 13)
+        Me.Label14.Size = New System.Drawing.Size(101, 17)
         Me.Label14.TabIndex = 15
         Me.Label14.Text = "Event ID Error:"
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(266, 193)
+        Me.Label13.AutoSize = true
+        Me.Label13.Location = New System.Drawing.Point(355, 238)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(95, 13)
+        Me.Label13.Size = New System.Drawing.Size(122, 17)
         Me.Label13.TabIndex = 14
         Me.Label13.Text = "Event ID Warning:"
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(11, 193)
+        Me.Label12.AutoSize = true
+        Me.Label12.Location = New System.Drawing.Point(15, 238)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(73, 13)
+        Me.Label12.Size = New System.Drawing.Size(92, 17)
         Me.Label12.TabIndex = 13
         Me.Label12.Text = "Event ID Info:"
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(12, 168)
+        Me.Label11.AutoSize = true
+        Me.Label11.Location = New System.Drawing.Point(16, 207)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 13)
+        Me.Label11.Size = New System.Drawing.Size(97, 17)
         Me.Label11.TabIndex = 12
         Me.Label11.Text = "Event Source:"
         '
         'chkNTEvent
         '
-        Me.chkNTEvent.AutoSize = True
-        Me.chkNTEvent.Location = New System.Drawing.Point(113, 140)
+        Me.chkNTEvent.AutoSize = true
+        Me.chkNTEvent.Location = New System.Drawing.Point(151, 172)
+        Me.chkNTEvent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkNTEvent.Name = "chkNTEvent"
-        Me.chkNTEvent.Size = New System.Drawing.Size(44, 17)
+        Me.chkNTEvent.Size = New System.Drawing.Size(54, 21)
         Me.chkNTEvent.TabIndex = 11
         Me.chkNTEvent.Text = "Yes"
-        Me.chkNTEvent.UseVisualStyleBackColor = True
+        Me.chkNTEvent.UseVisualStyleBackColor = true
         '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(238, 57)
+        Me.txtDebug.Location = New System.Drawing.Point(317, 70)
+        Me.txtDebug.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDebug.Name = "txtDebug"
-        Me.txtDebug.Size = New System.Drawing.Size(237, 20)
+        Me.txtDebug.Size = New System.Drawing.Size(315, 22)
         Me.txtDebug.TabIndex = 10
         '
         'Label10
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(166, 60)
+        Me.Label10.AutoSize = true
+        Me.Label10.Location = New System.Drawing.Point(221, 74)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(61, 13)
+        Me.Label10.Size = New System.Drawing.Size(80, 17)
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Debug File:"
         '
         'chkDebug
         '
-        Me.chkDebug.AutoSize = True
-        Me.chkDebug.Location = New System.Drawing.Point(112, 61)
+        Me.chkDebug.AutoSize = true
+        Me.chkDebug.Location = New System.Drawing.Point(149, 75)
+        Me.chkDebug.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkDebug.Name = "chkDebug"
-        Me.chkDebug.Size = New System.Drawing.Size(44, 17)
+        Me.chkDebug.Size = New System.Drawing.Size(54, 21)
         Me.chkDebug.TabIndex = 8
         Me.chkDebug.Text = "Yes"
-        Me.chkDebug.UseVisualStyleBackColor = True
+        Me.chkDebug.UseVisualStyleBackColor = true
         '
         'txtLogFile
         '
-        Me.txtLogFile.Location = New System.Drawing.Point(238, 31)
+        Me.txtLogFile.Location = New System.Drawing.Point(317, 38)
+        Me.txtLogFile.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtLogFile.Name = "txtLogFile"
-        Me.txtLogFile.Size = New System.Drawing.Size(237, 20)
+        Me.txtLogFile.Size = New System.Drawing.Size(315, 22)
         Me.txtLogFile.TabIndex = 7
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(166, 34)
+        Me.Label9.AutoSize = true
+        Me.Label9.Location = New System.Drawing.Point(221, 42)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(44, 13)
+        Me.Label9.Size = New System.Drawing.Size(58, 17)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "LogFile:"
         '
         'chkLogFile
         '
-        Me.chkLogFile.AutoSize = True
-        Me.chkLogFile.Location = New System.Drawing.Point(112, 34)
+        Me.chkLogFile.AutoSize = true
+        Me.chkLogFile.Location = New System.Drawing.Point(149, 42)
+        Me.chkLogFile.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkLogFile.Name = "chkLogFile"
-        Me.chkLogFile.Size = New System.Drawing.Size(44, 17)
+        Me.chkLogFile.Size = New System.Drawing.Size(54, 21)
         Me.chkLogFile.TabIndex = 5
         Me.chkLogFile.Text = "Yes"
-        Me.chkLogFile.UseVisualStyleBackColor = True
+        Me.chkLogFile.UseVisualStyleBackColor = true
         '
         'chkConsole
         '
-        Me.chkConsole.AutoSize = True
-        Me.chkConsole.Location = New System.Drawing.Point(112, 11)
+        Me.chkConsole.AutoSize = true
+        Me.chkConsole.Location = New System.Drawing.Point(149, 14)
+        Me.chkConsole.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkConsole.Name = "chkConsole"
-        Me.chkConsole.Size = New System.Drawing.Size(44, 17)
+        Me.chkConsole.Size = New System.Drawing.Size(54, 21)
         Me.chkConsole.TabIndex = 4
         Me.chkConsole.Text = "Yes"
-        Me.chkConsole.UseVisualStyleBackColor = True
+        Me.chkConsole.UseVisualStyleBackColor = true
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(11, 144)
+        Me.Label8.AutoSize = true
+        Me.Label8.Location = New System.Drawing.Point(15, 177)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(81, 13)
+        Me.Label8.Size = New System.Drawing.Size(105, 17)
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "Use EventLog?"
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 61)
+        Me.Label7.AutoSize = true
+        Me.Label7.Location = New System.Drawing.Point(11, 75)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(75, 13)
+        Me.Label7.Size = New System.Drawing.Size(97, 17)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Debug Mode?"
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 35)
+        Me.Label6.AutoSize = true
+        Me.Label6.Location = New System.Drawing.Point(12, 43)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 13)
+        Me.Label6.Size = New System.Drawing.Size(95, 17)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Use Log File?"
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 12)
+        Me.Label5.AutoSize = true
+        Me.Label5.Location = New System.Drawing.Point(11, 15)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 13)
+        Me.Label5.Size = New System.Drawing.Size(96, 17)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Use Console?"
         '
@@ -559,226 +604,251 @@ Partial Class Form1
         Me.TabPage3.Controls.Add(Me.Label24)
         Me.TabPage3.Controls.Add(Me.Label25)
         Me.TabPage3.Controls.Add(Me.Label26)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(508, 275)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage3.Size = New System.Drawing.Size(680, 341)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Application Monitor"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabPage3.UseVisualStyleBackColor = true
         '
         'cmbBugModeAM
         '
-        Me.cmbBugModeAM.FormattingEnabled = True
+        Me.cmbBugModeAM.FormattingEnabled = true
         Me.cmbBugModeAM.Items.AddRange(New Object() {"low", "medium", "high"})
-        Me.cmbBugModeAM.Location = New System.Drawing.Point(96, 86)
+        Me.cmbBugModeAM.Location = New System.Drawing.Point(128, 106)
+        Me.cmbBugModeAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbBugModeAM.Name = "cmbBugModeAM"
-        Me.cmbBugModeAM.Size = New System.Drawing.Size(121, 21)
+        Me.cmbBugModeAM.Size = New System.Drawing.Size(160, 24)
         Me.cmbBugModeAM.TabIndex = 47
         Me.cmbBugModeAM.Text = "low"
         '
         'Label40
         '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(9, 86)
+        Me.Label40.AutoSize = true
+        Me.Label40.Location = New System.Drawing.Point(12, 106)
+        Me.Label40.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(72, 13)
+        Me.Label40.Size = New System.Drawing.Size(93, 17)
         Me.Label40.TabIndex = 46
         Me.Label40.Text = "Debug Mode:"
         '
         'nudTimerAM
         '
-        Me.nudTimerAM.Location = New System.Drawing.Point(282, 12)
+        Me.nudTimerAM.Location = New System.Drawing.Point(376, 15)
+        Me.nudTimerAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudTimerAM.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.nudTimerAM.Name = "nudTimerAM"
-        Me.nudTimerAM.Size = New System.Drawing.Size(158, 20)
+        Me.nudTimerAM.Size = New System.Drawing.Size(211, 22)
         Me.nudTimerAM.TabIndex = 45
         Me.nudTimerAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label16
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(150, 15)
+        Me.Label16.AutoSize = true
+        Me.Label16.Location = New System.Drawing.Point(200, 18)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(102, 13)
+        Me.Label16.Size = New System.Drawing.Size(135, 17)
         Me.Label16.TabIndex = 44
         Me.Label16.Text = "Timer Interval In ms:"
         '
         'nudEventErrorAM
         '
-        Me.nudEventErrorAM.Location = New System.Drawing.Point(96, 187)
+        Me.nudEventErrorAM.Location = New System.Drawing.Point(128, 230)
+        Me.nudEventErrorAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudEventErrorAM.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventErrorAM.Name = "nudEventErrorAM"
-        Me.nudEventErrorAM.Size = New System.Drawing.Size(120, 20)
+        Me.nudEventErrorAM.Size = New System.Drawing.Size(160, 22)
         Me.nudEventErrorAM.TabIndex = 43
         Me.nudEventErrorAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'nudEventWarningAM
         '
-        Me.nudEventWarningAM.Location = New System.Drawing.Point(364, 161)
+        Me.nudEventWarningAM.Location = New System.Drawing.Point(485, 198)
+        Me.nudEventWarningAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudEventWarningAM.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventWarningAM.Name = "nudEventWarningAM"
-        Me.nudEventWarningAM.Size = New System.Drawing.Size(120, 20)
+        Me.nudEventWarningAM.Size = New System.Drawing.Size(160, 22)
         Me.nudEventWarningAM.TabIndex = 42
         Me.nudEventWarningAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'nudEventInfoAM
         '
-        Me.nudEventInfoAM.Location = New System.Drawing.Point(96, 161)
+        Me.nudEventInfoAM.Location = New System.Drawing.Point(128, 198)
+        Me.nudEventInfoAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudEventInfoAM.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudEventInfoAM.Name = "nudEventInfoAM"
-        Me.nudEventInfoAM.Size = New System.Drawing.Size(120, 20)
+        Me.nudEventInfoAM.Size = New System.Drawing.Size(160, 22)
         Me.nudEventInfoAM.TabIndex = 41
         Me.nudEventInfoAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtEventSourceAM
         '
-        Me.txtEventSourceAM.Location = New System.Drawing.Point(96, 135)
+        Me.txtEventSourceAM.Location = New System.Drawing.Point(128, 166)
+        Me.txtEventSourceAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtEventSourceAM.Name = "txtEventSourceAM"
-        Me.txtEventSourceAM.Size = New System.Drawing.Size(189, 20)
+        Me.txtEventSourceAM.Size = New System.Drawing.Size(251, 22)
         Me.txtEventSourceAM.TabIndex = 40
         '
         'Label17
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(9, 189)
+        Me.Label17.AutoSize = true
+        Me.Label17.Location = New System.Drawing.Point(12, 233)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(77, 13)
+        Me.Label17.Size = New System.Drawing.Size(101, 17)
         Me.Label17.TabIndex = 39
         Me.Label17.Text = "Event ID Error:"
         '
         'Label18
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(263, 163)
+        Me.Label18.AutoSize = true
+        Me.Label18.Location = New System.Drawing.Point(351, 201)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(95, 13)
+        Me.Label18.Size = New System.Drawing.Size(122, 17)
         Me.Label18.TabIndex = 38
         Me.Label18.Text = "Event ID Warning:"
         '
         'Label19
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(8, 163)
+        Me.Label19.AutoSize = true
+        Me.Label19.Location = New System.Drawing.Point(11, 201)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(73, 13)
+        Me.Label19.Size = New System.Drawing.Size(92, 17)
         Me.Label19.TabIndex = 37
         Me.Label19.Text = "Event ID Info:"
         '
         'Label20
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(9, 138)
+        Me.Label20.AutoSize = true
+        Me.Label20.Location = New System.Drawing.Point(12, 170)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(75, 13)
+        Me.Label20.Size = New System.Drawing.Size(97, 17)
         Me.Label20.TabIndex = 36
         Me.Label20.Text = "Event Source:"
         '
         'chkNTEventAM
         '
-        Me.chkNTEventAM.AutoSize = True
-        Me.chkNTEventAM.Location = New System.Drawing.Point(96, 113)
+        Me.chkNTEventAM.AutoSize = true
+        Me.chkNTEventAM.Location = New System.Drawing.Point(128, 139)
+        Me.chkNTEventAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkNTEventAM.Name = "chkNTEventAM"
-        Me.chkNTEventAM.Size = New System.Drawing.Size(44, 17)
+        Me.chkNTEventAM.Size = New System.Drawing.Size(54, 21)
         Me.chkNTEventAM.TabIndex = 35
         Me.chkNTEventAM.Text = "Yes"
-        Me.chkNTEventAM.UseVisualStyleBackColor = True
+        Me.chkNTEventAM.UseVisualStyleBackColor = true
         '
         'txtDebugAM
         '
-        Me.txtDebugAM.Location = New System.Drawing.Point(222, 61)
+        Me.txtDebugAM.Location = New System.Drawing.Point(296, 75)
+        Me.txtDebugAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDebugAM.Name = "txtDebugAM"
-        Me.txtDebugAM.Size = New System.Drawing.Size(237, 20)
+        Me.txtDebugAM.Size = New System.Drawing.Size(315, 22)
         Me.txtDebugAM.TabIndex = 34
         '
         'Label21
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(150, 64)
+        Me.Label21.AutoSize = true
+        Me.Label21.Location = New System.Drawing.Point(200, 79)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(61, 13)
+        Me.Label21.Size = New System.Drawing.Size(80, 17)
         Me.Label21.TabIndex = 33
         Me.Label21.Text = "Debug File:"
         '
         'chkDebugAM
         '
-        Me.chkDebugAM.AutoSize = True
-        Me.chkDebugAM.Location = New System.Drawing.Point(96, 65)
+        Me.chkDebugAM.AutoSize = true
+        Me.chkDebugAM.Location = New System.Drawing.Point(128, 80)
+        Me.chkDebugAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkDebugAM.Name = "chkDebugAM"
-        Me.chkDebugAM.Size = New System.Drawing.Size(44, 17)
+        Me.chkDebugAM.Size = New System.Drawing.Size(54, 21)
         Me.chkDebugAM.TabIndex = 32
         Me.chkDebugAM.Text = "Yes"
-        Me.chkDebugAM.UseVisualStyleBackColor = True
+        Me.chkDebugAM.UseVisualStyleBackColor = true
         '
         'txtLogFileAM
         '
-        Me.txtLogFileAM.Location = New System.Drawing.Point(222, 35)
+        Me.txtLogFileAM.Location = New System.Drawing.Point(296, 43)
+        Me.txtLogFileAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtLogFileAM.Name = "txtLogFileAM"
-        Me.txtLogFileAM.Size = New System.Drawing.Size(237, 20)
+        Me.txtLogFileAM.Size = New System.Drawing.Size(315, 22)
         Me.txtLogFileAM.TabIndex = 31
         '
         'Label22
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(150, 38)
+        Me.Label22.AutoSize = true
+        Me.Label22.Location = New System.Drawing.Point(200, 47)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(44, 13)
+        Me.Label22.Size = New System.Drawing.Size(58, 17)
         Me.Label22.TabIndex = 30
         Me.Label22.Text = "LogFile:"
         '
         'chkLogFileAM
         '
-        Me.chkLogFileAM.AutoSize = True
-        Me.chkLogFileAM.Location = New System.Drawing.Point(96, 38)
+        Me.chkLogFileAM.AutoSize = true
+        Me.chkLogFileAM.Location = New System.Drawing.Point(128, 47)
+        Me.chkLogFileAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkLogFileAM.Name = "chkLogFileAM"
-        Me.chkLogFileAM.Size = New System.Drawing.Size(44, 17)
+        Me.chkLogFileAM.Size = New System.Drawing.Size(54, 21)
         Me.chkLogFileAM.TabIndex = 29
         Me.chkLogFileAM.Text = "Yes"
-        Me.chkLogFileAM.UseVisualStyleBackColor = True
+        Me.chkLogFileAM.UseVisualStyleBackColor = true
         '
         'chkConsoleAM
         '
-        Me.chkConsoleAM.AutoSize = True
-        Me.chkConsoleAM.Location = New System.Drawing.Point(96, 15)
+        Me.chkConsoleAM.AutoSize = true
+        Me.chkConsoleAM.Location = New System.Drawing.Point(128, 18)
+        Me.chkConsoleAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkConsoleAM.Name = "chkConsoleAM"
-        Me.chkConsoleAM.Size = New System.Drawing.Size(44, 17)
+        Me.chkConsoleAM.Size = New System.Drawing.Size(54, 21)
         Me.chkConsoleAM.TabIndex = 28
         Me.chkConsoleAM.Text = "Yes"
-        Me.chkConsoleAM.UseVisualStyleBackColor = True
+        Me.chkConsoleAM.UseVisualStyleBackColor = true
         '
         'Label23
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(9, 114)
+        Me.Label23.AutoSize = true
+        Me.Label23.Location = New System.Drawing.Point(12, 140)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(81, 13)
+        Me.Label23.Size = New System.Drawing.Size(105, 17)
         Me.Label23.TabIndex = 27
         Me.Label23.Text = "Use EventLog?"
         '
         'Label24
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(8, 64)
+        Me.Label24.AutoSize = true
+        Me.Label24.Location = New System.Drawing.Point(11, 79)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(75, 13)
+        Me.Label24.Size = New System.Drawing.Size(97, 17)
         Me.Label24.TabIndex = 26
         Me.Label24.Text = "Debug Mode?"
         '
         'Label25
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(9, 38)
+        Me.Label25.AutoSize = true
+        Me.Label25.Location = New System.Drawing.Point(12, 47)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(72, 13)
+        Me.Label25.Size = New System.Drawing.Size(95, 17)
         Me.Label25.TabIndex = 25
         Me.Label25.Text = "Use Log File?"
         '
         'Label26
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(8, 15)
+        Me.Label26.AutoSize = true
+        Me.Label26.Location = New System.Drawing.Point(11, 18)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(73, 13)
+        Me.Label26.Size = New System.Drawing.Size(96, 17)
         Me.Label26.TabIndex = 24
         Me.Label26.Text = "Use Console?"
         '
@@ -806,253 +876,296 @@ Partial Class Form1
         Me.TabPage4.Controls.Add(Me.Label35)
         Me.TabPage4.Controls.Add(Me.Label36)
         Me.TabPage4.Controls.Add(Me.Label37)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(508, 275)
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage4.Size = New System.Drawing.Size(680, 341)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Data Dump"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'chkNTEventDD
-        '
-        Me.chkNTEventDD.AutoSize = True
-        Me.chkNTEventDD.Location = New System.Drawing.Point(96, 119)
-        Me.chkNTEventDD.Name = "chkNTEventDD"
-        Me.chkNTEventDD.Size = New System.Drawing.Size(44, 17)
-        Me.chkNTEventDD.TabIndex = 67
-        Me.chkNTEventDD.Text = "Yes"
-        Me.chkNTEventDD.UseVisualStyleBackColor = True
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(9, 120)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(81, 13)
-        Me.Label41.TabIndex = 66
-        Me.Label41.Text = "Use EventLog?"
-        '
-        'nudEventErrorDD
-        '
-        Me.nudEventErrorDD.Location = New System.Drawing.Point(96, 197)
-        Me.nudEventErrorDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
-        Me.nudEventErrorDD.Name = "nudEventErrorDD"
-        Me.nudEventErrorDD.Size = New System.Drawing.Size(120, 20)
-        Me.nudEventErrorDD.TabIndex = 65
-        Me.nudEventErrorDD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'nudEventWarningDD
-        '
-        Me.nudEventWarningDD.Location = New System.Drawing.Point(364, 171)
-        Me.nudEventWarningDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
-        Me.nudEventWarningDD.Name = "nudEventWarningDD"
-        Me.nudEventWarningDD.Size = New System.Drawing.Size(120, 20)
-        Me.nudEventWarningDD.TabIndex = 64
-        Me.nudEventWarningDD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'nudEventInfoDD
-        '
-        Me.nudEventInfoDD.Location = New System.Drawing.Point(96, 171)
-        Me.nudEventInfoDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
-        Me.nudEventInfoDD.Name = "nudEventInfoDD"
-        Me.nudEventInfoDD.Size = New System.Drawing.Size(120, 20)
-        Me.nudEventInfoDD.TabIndex = 63
-        Me.nudEventInfoDD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtEventSourceDD
-        '
-        Me.txtEventSourceDD.Location = New System.Drawing.Point(96, 145)
-        Me.txtEventSourceDD.Name = "txtEventSourceDD"
-        Me.txtEventSourceDD.Size = New System.Drawing.Size(189, 20)
-        Me.txtEventSourceDD.TabIndex = 62
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(9, 199)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(77, 13)
-        Me.Label28.TabIndex = 61
-        Me.Label28.Text = "Event ID Error:"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(263, 173)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(95, 13)
-        Me.Label29.TabIndex = 60
-        Me.Label29.Text = "Event ID Warning:"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(8, 173)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(73, 13)
-        Me.Label30.TabIndex = 59
-        Me.Label30.Text = "Event ID Info:"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(9, 148)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(75, 13)
-        Me.Label31.TabIndex = 58
-        Me.Label31.Text = "Event Source:"
-        '
-        'txtDebugDD
-        '
-        Me.txtDebugDD.Location = New System.Drawing.Point(222, 62)
-        Me.txtDebugDD.Name = "txtDebugDD"
-        Me.txtDebugDD.Size = New System.Drawing.Size(237, 20)
-        Me.txtDebugDD.TabIndex = 56
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(150, 65)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(61, 13)
-        Me.Label32.TabIndex = 55
-        Me.Label32.Text = "Debug File:"
-        '
-        'chkDebugDD
-        '
-        Me.chkDebugDD.AutoSize = True
-        Me.chkDebugDD.Location = New System.Drawing.Point(96, 66)
-        Me.chkDebugDD.Name = "chkDebugDD"
-        Me.chkDebugDD.Size = New System.Drawing.Size(44, 17)
-        Me.chkDebugDD.TabIndex = 54
-        Me.chkDebugDD.Text = "Yes"
-        Me.chkDebugDD.UseVisualStyleBackColor = True
-        '
-        'txtLogFileDD
-        '
-        Me.txtLogFileDD.Location = New System.Drawing.Point(222, 36)
-        Me.txtLogFileDD.Name = "txtLogFileDD"
-        Me.txtLogFileDD.Size = New System.Drawing.Size(237, 20)
-        Me.txtLogFileDD.TabIndex = 53
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(150, 39)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(44, 13)
-        Me.Label33.TabIndex = 52
-        Me.Label33.Text = "LogFile:"
-        '
-        'chkLogFileDD
-        '
-        Me.chkLogFileDD.AutoSize = True
-        Me.chkLogFileDD.Location = New System.Drawing.Point(96, 39)
-        Me.chkLogFileDD.Name = "chkLogFileDD"
-        Me.chkLogFileDD.Size = New System.Drawing.Size(44, 17)
-        Me.chkLogFileDD.TabIndex = 51
-        Me.chkLogFileDD.Text = "Yes"
-        Me.chkLogFileDD.UseVisualStyleBackColor = True
-        '
-        'chkConsoleDD
-        '
-        Me.chkConsoleDD.AutoSize = True
-        Me.chkConsoleDD.Location = New System.Drawing.Point(96, 16)
-        Me.chkConsoleDD.Name = "chkConsoleDD"
-        Me.chkConsoleDD.Size = New System.Drawing.Size(44, 17)
-        Me.chkConsoleDD.TabIndex = 50
-        Me.chkConsoleDD.Text = "Yes"
-        Me.chkConsoleDD.UseVisualStyleBackColor = True
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(8, 65)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(75, 13)
-        Me.Label35.TabIndex = 48
-        Me.Label35.Text = "Debug Mode?"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(9, 39)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(72, 13)
-        Me.Label36.TabIndex = 47
-        Me.Label36.Text = "Use Log File?"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(8, 16)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(73, 13)
-        Me.Label37.TabIndex = 46
-        Me.Label37.Text = "Use Console?"
+        Me.TabPage4.UseVisualStyleBackColor = true
         '
         'cmbBugModeDD
         '
-        Me.cmbBugModeDD.FormattingEnabled = True
+        Me.cmbBugModeDD.FormattingEnabled = true
         Me.cmbBugModeDD.Items.AddRange(New Object() {"low", "medium", "high"})
-        Me.cmbBugModeDD.Location = New System.Drawing.Point(96, 92)
+        Me.cmbBugModeDD.Location = New System.Drawing.Point(128, 113)
+        Me.cmbBugModeDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbBugModeDD.Name = "cmbBugModeDD"
-        Me.cmbBugModeDD.Size = New System.Drawing.Size(121, 21)
+        Me.cmbBugModeDD.Size = New System.Drawing.Size(160, 24)
         Me.cmbBugModeDD.TabIndex = 69
         Me.cmbBugModeDD.Text = "low"
         '
         'Label34
         '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(9, 95)
+        Me.Label34.AutoSize = true
+        Me.Label34.Location = New System.Drawing.Point(12, 117)
+        Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(72, 13)
+        Me.Label34.Size = New System.Drawing.Size(93, 17)
         Me.Label34.TabIndex = 68
         Me.Label34.Text = "Debug Mode:"
         '
+        'chkNTEventDD
+        '
+        Me.chkNTEventDD.AutoSize = true
+        Me.chkNTEventDD.Location = New System.Drawing.Point(128, 146)
+        Me.chkNTEventDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkNTEventDD.Name = "chkNTEventDD"
+        Me.chkNTEventDD.Size = New System.Drawing.Size(54, 21)
+        Me.chkNTEventDD.TabIndex = 67
+        Me.chkNTEventDD.Text = "Yes"
+        Me.chkNTEventDD.UseVisualStyleBackColor = true
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = true
+        Me.Label41.Location = New System.Drawing.Point(12, 148)
+        Me.Label41.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(105, 17)
+        Me.Label41.TabIndex = 66
+        Me.Label41.Text = "Use EventLog?"
+        '
+        'nudEventErrorDD
+        '
+        Me.nudEventErrorDD.Location = New System.Drawing.Point(128, 242)
+        Me.nudEventErrorDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudEventErrorDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.nudEventErrorDD.Name = "nudEventErrorDD"
+        Me.nudEventErrorDD.Size = New System.Drawing.Size(160, 22)
+        Me.nudEventErrorDD.TabIndex = 65
+        Me.nudEventErrorDD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'nudEventWarningDD
+        '
+        Me.nudEventWarningDD.Location = New System.Drawing.Point(485, 210)
+        Me.nudEventWarningDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudEventWarningDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.nudEventWarningDD.Name = "nudEventWarningDD"
+        Me.nudEventWarningDD.Size = New System.Drawing.Size(160, 22)
+        Me.nudEventWarningDD.TabIndex = 64
+        Me.nudEventWarningDD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'nudEventInfoDD
+        '
+        Me.nudEventInfoDD.Location = New System.Drawing.Point(128, 210)
+        Me.nudEventInfoDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudEventInfoDD.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.nudEventInfoDD.Name = "nudEventInfoDD"
+        Me.nudEventInfoDD.Size = New System.Drawing.Size(160, 22)
+        Me.nudEventInfoDD.TabIndex = 63
+        Me.nudEventInfoDD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtEventSourceDD
+        '
+        Me.txtEventSourceDD.Location = New System.Drawing.Point(128, 178)
+        Me.txtEventSourceDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEventSourceDD.Name = "txtEventSourceDD"
+        Me.txtEventSourceDD.Size = New System.Drawing.Size(251, 22)
+        Me.txtEventSourceDD.TabIndex = 62
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = true
+        Me.Label28.Location = New System.Drawing.Point(12, 245)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(101, 17)
+        Me.Label28.TabIndex = 61
+        Me.Label28.Text = "Event ID Error:"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = true
+        Me.Label29.Location = New System.Drawing.Point(351, 213)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(122, 17)
+        Me.Label29.TabIndex = 60
+        Me.Label29.Text = "Event ID Warning:"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = true
+        Me.Label30.Location = New System.Drawing.Point(11, 213)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(92, 17)
+        Me.Label30.TabIndex = 59
+        Me.Label30.Text = "Event ID Info:"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = true
+        Me.Label31.Location = New System.Drawing.Point(12, 182)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(97, 17)
+        Me.Label31.TabIndex = 58
+        Me.Label31.Text = "Event Source:"
+        '
+        'txtDebugDD
+        '
+        Me.txtDebugDD.Location = New System.Drawing.Point(296, 76)
+        Me.txtDebugDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDebugDD.Name = "txtDebugDD"
+        Me.txtDebugDD.Size = New System.Drawing.Size(315, 22)
+        Me.txtDebugDD.TabIndex = 56
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = true
+        Me.Label32.Location = New System.Drawing.Point(200, 80)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(80, 17)
+        Me.Label32.TabIndex = 55
+        Me.Label32.Text = "Debug File:"
+        '
+        'chkDebugDD
+        '
+        Me.chkDebugDD.AutoSize = true
+        Me.chkDebugDD.Location = New System.Drawing.Point(128, 81)
+        Me.chkDebugDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkDebugDD.Name = "chkDebugDD"
+        Me.chkDebugDD.Size = New System.Drawing.Size(54, 21)
+        Me.chkDebugDD.TabIndex = 54
+        Me.chkDebugDD.Text = "Yes"
+        Me.chkDebugDD.UseVisualStyleBackColor = true
+        '
+        'txtLogFileDD
+        '
+        Me.txtLogFileDD.Location = New System.Drawing.Point(296, 44)
+        Me.txtLogFileDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtLogFileDD.Name = "txtLogFileDD"
+        Me.txtLogFileDD.Size = New System.Drawing.Size(315, 22)
+        Me.txtLogFileDD.TabIndex = 53
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = true
+        Me.Label33.Location = New System.Drawing.Point(200, 48)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(58, 17)
+        Me.Label33.TabIndex = 52
+        Me.Label33.Text = "LogFile:"
+        '
+        'chkLogFileDD
+        '
+        Me.chkLogFileDD.AutoSize = true
+        Me.chkLogFileDD.Location = New System.Drawing.Point(128, 48)
+        Me.chkLogFileDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkLogFileDD.Name = "chkLogFileDD"
+        Me.chkLogFileDD.Size = New System.Drawing.Size(54, 21)
+        Me.chkLogFileDD.TabIndex = 51
+        Me.chkLogFileDD.Text = "Yes"
+        Me.chkLogFileDD.UseVisualStyleBackColor = true
+        '
+        'chkConsoleDD
+        '
+        Me.chkConsoleDD.AutoSize = true
+        Me.chkConsoleDD.Location = New System.Drawing.Point(128, 20)
+        Me.chkConsoleDD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkConsoleDD.Name = "chkConsoleDD"
+        Me.chkConsoleDD.Size = New System.Drawing.Size(54, 21)
+        Me.chkConsoleDD.TabIndex = 50
+        Me.chkConsoleDD.Text = "Yes"
+        Me.chkConsoleDD.UseVisualStyleBackColor = true
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = true
+        Me.Label35.Location = New System.Drawing.Point(11, 80)
+        Me.Label35.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(97, 17)
+        Me.Label35.TabIndex = 48
+        Me.Label35.Text = "Debug Mode?"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = true
+        Me.Label36.Location = New System.Drawing.Point(12, 48)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(95, 17)
+        Me.Label36.TabIndex = 47
+        Me.Label36.Text = "Use Log File?"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = true
+        Me.Label37.Location = New System.Drawing.Point(11, 20)
+        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(96, 17)
+        Me.Label37.TabIndex = 46
+        Me.Label37.Text = "Use Console?"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = true
+        Me.Label42.Location = New System.Drawing.Point(8, 20)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(82, 17)
+        Me.Label42.TabIndex = 8
+        Me.Label42.Text = "Use Offline:"
+        '
+        'chkOffLine
+        '
+        Me.chkOffLine.AutoSize = true
+        Me.chkOffLine.Location = New System.Drawing.Point(125, 19)
+        Me.chkOffLine.Name = "chkOffLine"
+        Me.chkOffLine.Size = New System.Drawing.Size(54, 21)
+        Me.chkOffLine.TabIndex = 9
+        Me.chkOffLine.Text = "Yes"
+        Me.chkOffLine.UseVisualStyleBackColor = true
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(515, 332)
+        Me.ClientSize = New System.Drawing.Size(687, 409)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MaximizeBox = False
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaximizeBox = false
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Application Profiler Configuration"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.nudDBResfreh, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudHeartBeat, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudTimer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventError, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventWarning, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventInfo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        CType(Me.nudTimerAM, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventErrorAM, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventWarningAM, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventInfoAM, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        CType(Me.nudEventErrorDD, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventWarningDD, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudEventInfoDD, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(false)
+        Me.MenuStrip1.PerformLayout
+        Me.TabControl1.ResumeLayout(false)
+        Me.TabPage1.ResumeLayout(false)
+        Me.TabPage1.PerformLayout
+        Me.TabPage2.ResumeLayout(false)
+        Me.TabPage2.PerformLayout
+        CType(Me.nudDBResfreh,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudHeartBeat,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudTimer,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventError,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventWarning,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventInfo,System.ComponentModel.ISupportInitialize).EndInit
+        Me.TabPage3.ResumeLayout(false)
+        Me.TabPage3.PerformLayout
+        CType(Me.nudTimerAM,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventErrorAM,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventWarningAM,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventInfoAM,System.ComponentModel.ISupportInitialize).EndInit
+        Me.TabPage4.ResumeLayout(false)
+        Me.TabPage4.PerformLayout
+        CType(Me.nudEventErrorDD,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventWarningDD,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.nudEventInfoDD,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
@@ -1143,4 +1256,6 @@ Partial Class Form1
     Friend WithEvents Label41 As Label
     Friend WithEvents cmbBugModeDD As ComboBox
     Friend WithEvents Label34 As Label
+    Friend WithEvents chkOffLine As CheckBox
+    Friend WithEvents Label42 As Label
 End Class

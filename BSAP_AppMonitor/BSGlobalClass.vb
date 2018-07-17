@@ -1,14 +1,15 @@
 ﻿Imports System.Management
 Imports MySql.Data.MySqlClient
+
 Namespace BurnSoft
-    Public Class BSDatabase
+    Public Class BsDatabase
         Public Conn As MySqlConnection
         Private Function MyConnectionString() As String
-            Dim sAns As String = "Server=" & System.Configuration.ConfigurationManager.AppSettings("DB_HOST")
-            sAns &= ";user id=" & System.Configuration.ConfigurationManager.AppSettings("DB_UID")
-            sAns &= ";password=" & System.Configuration.ConfigurationManager.AppSettings("DB_PWD")
+            Dim sAns As String = "Server=" & Configuration.ConfigurationManager.AppSettings("DB_HOST")
+            sAns &= ";user id=" & Configuration.ConfigurationManager.AppSettings("DB_UID")
+            sAns &= ";password=" & Configuration.ConfigurationManager.AppSettings("DB_PWD")
             sAns &= ";persist security info=true"
-            sAns &= ";database=" & System.Configuration.ConfigurationManager.AppSettings("DB_NAME")
+            sAns &= ";database=" & Configuration.ConfigurationManager.AppSettings("DB_NAME")
             Return sAns
         End Function
         Public Function ConnectDB() As Integer
