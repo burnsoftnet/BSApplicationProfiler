@@ -1,0 +1,13 @@
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfilerOffline.exe.config
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfilerOffline.exe
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfilerOffline.pdb
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfilerOffline.xml
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.vbprojResolveAssemblyReference.cache
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.FrmMain.resources
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.Resources.resources
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.vbproj.GenerateResource.cache
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.vbproj.CoreCompileInputs.cache
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.vbproj.CopyComplete
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.exe
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.xml
+C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfilerOffline\obj\Release\BSApplicationProfilerOffline.pdb
