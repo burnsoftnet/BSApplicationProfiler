@@ -22,25 +22,30 @@ Public Class FrmMain
         End Try
     End Sub
     Sub GetLocalApps()
-        Dim sList As String() = Split(ConfigurationManager.AppSettings("APPLICATION_LISTINGS"), ",")
-        If (sList.Count > 0) Then
-            Dim sProcess As String
-            Dim ObjS As New BSProcessInfo
-            Dim ObjF As New FileIO
-            Dim ProcessID As String = ""
-            Dim mon_interval As Long = 0
-            Dim PID As String = ""
-            Dim ProcessCount As Integer = 0
 
-            For x As Integer = 0 To sList.Count
-                sProcess = sList(x)
-                BuggerMe("Looking for Process:" & sProcess, "GetLocalApps", "medium")
-                If ObjS.ProcessExists(ObjF.GetNameOfFile(sProcess), PID, ProcessCount) Then
-                    Call RunMonitor(sProcess, ProcessID, mon_interval, AGENT_ID)
-                End If
-                x += 1
-            Next
-        End If
+        Dim iProcCount As Integer = Convert.ToInt32(ConfigurationManager.AppSettings("APPLICATION_COUNT"))
+        Dim appName As String = ""
+        Dim appParam As String = ""
+        Dim appInterval As Integer = 0
+        'Dim appSetting As String = ""
+        Dim ObjS As New BSProcessInfo
+        Dim ObjF As New FileIO
+        Dim ProcessID As String = ""
+        Dim mon_interval As Long = 0
+        Dim PID As String = ""
+        Dim ProcessCount As Integer = 0
+
+        For x As Integer = 1 To iProcCount
+            'appSetting = "APPLICATION_" & x
+            appName = ConfigurationManager.AppSettings("APPLICATION_" & x)
+            appParam = ConfigurationManager.AppSettings("APPLICATION_PARAM_" & x)
+            appInterval = Convert.ToInt32(ConfigurationManager.AppSettings("APPLICATION_INTERVAL_" & x))
+            BuggerMe("Looking for Process:" & appName, "GetLocalApps", "medium")
+            If ObjS.ProcessExists(ObjF.GetNameOfFile(appName), PID, ProcessCount) Then
+                Call RunMonitor(appName, ProcessID, mon_interval, AGENT_ID)
+            End If
+            x += 1
+        Next
     End Sub
     ''' <summary>
     ''' Run the Main Monitor application that will collection the information for performance
