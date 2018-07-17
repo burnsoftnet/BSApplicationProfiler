@@ -21,8 +21,8 @@ BSAP_DataDump/obj/Debug/*.*
 BSAP_Config/obj/Debug/TempPE/*.*
 BSAP_Config/obj/Debug/*.*
 BSAP_AppMonitor/obj/Debug/*.*
-BSApplicationProfiler/bin/Debug/*.*
-BSApplicationProfiler/obj/Debug/*.*
+BSApplicationProfiler/bin/Debug/
+BSApplicationProfiler/obj/Debug/
 BSAP_UI_WebForms/BSAP_UI_WebForms/obj/Debug/*.*
 BSAP_AppMonitor/obj/Release/*.*
 BSAP_Config/obj/Release/*.*
