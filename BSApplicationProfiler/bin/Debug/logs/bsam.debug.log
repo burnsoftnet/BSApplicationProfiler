@@ -1,47 +1,11 @@
-4/24/2017 10:39:07 AM	modMain.Main::Using Local Database
-4/24/2017 10:39:08 AM	APP_PROJECT_MAIN_PROCESS_ID=6
-4/24/2017 10:39:09 AM	username=
-4/24/2017 10:39:09 AM	LogFile: C:UsersurnsoftAppDataRoamingBurnSoftMLL\err.log
-4/24/2017 10:39:42 AM	modMain.Main::Using Local Database
-4/24/2017 10:39:42 AM	APP_PROJECT_MAIN_PROCESS_ID=6
-4/24/2017 10:39:42 AM	username=
-4/24/2017 10:39:42 AM	LogFile: C:UsersurnsoftAppDataRoamingBurnSoftMLL\err.log
-4/24/2017 10:40:58 AM	modMain.Main::Using Local Database
-4/24/2017 10:40:58 AM	APP_PROJECT_MAIN_PROCESS_ID=6
-4/24/2017 10:41:30 AM	username=
-4/24/2017 10:41:32 AM	LogFile: C:UsersurnsoftAppDataRoamingBurnSoftMLL\err.log
-4/24/2017 10:43:02 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 10:43:04 AM	APP_PROJECT_MAIN_PROCESS_ID=6
-4/24/2017 10:43:07 AM	username=
-4/24/2017 10:43:19 AM	LogFile: C:UsersurnsoftAppDataRoamingBurnSoftMLL\err.log
-4/24/2017 10:44:59 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 10:45:07 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 10:45:16 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 10:45:25 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 10:45:27 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 10:45:34 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 10:46:25 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 10:46:26 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 10:46:26 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 11:05:33 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 11:05:35 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 11:05:37 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 11:08:44 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 11:08:45 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 11:08:46 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 11:12:17 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 11:12:18 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 11:12:20 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 11:18:36 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 11:18:36 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 11:18:38 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 11:34:28 AM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 11:34:29 AM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 11:34:30 AM	username=BURNSOFT1404\\burnsoft
-4/24/2017 12:20:04 PM	modMain.Main::Using Remote Database bsdb01
-4/24/2017 12:20:05 PM	APP_PROJECT_MAIN_PROCESS_ID=3
-4/24/2017 12:20:08 PM	username=BURNSOFT1404\\burnsoft
-4/24/2017 12:21:12 PM	username=BURNSOFT1404\\burnsoft
-4/24/2017 12:21:42 PM	username=BURNSOFT1404\\burnsoft
-4/24/2017 12:22:13 PM	username=
-4/24/2017 12:22:13 PM	LogFile: C:\Users\burnsoft\AppData\Roaming\BurnSoft\MLL\err.log
+7/17/2018 3:04:12 PM	modMain.Main::OFFLINE MODE WRITING TO FLAT FILES
+7/17/2018 3:04:13 PM	username=\\
+7/17/2018 3:04:13 PM	Full Active Path: 
+7/17/2018 3:04:13 PM	FullPath Formated: 
+7/17/2018 3:05:09 PM	modMain.Main::OFFLINE MODE WRITING TO FLAT FILES
+7/17/2018 3:05:10 PM	username=\\
+7/17/2018 3:05:10 PM	Full Active Path: 
+7/17/2018 3:05:10 PM	FullPath Formated: 
+7/17/2018 3:05:46 PM	username=\\
+7/17/2018 3:05:46 PM	Full Active Path: 
+7/17/2018 3:05:46 PM	FullPath Formated: 

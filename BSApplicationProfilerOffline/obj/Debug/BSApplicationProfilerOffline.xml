@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BSApplicationProfilerOffline
+</name>
+</assembly>
+<members>
+<member name="T:BSApplicationProfilerOffline.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:BSApplicationProfilerOffline.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:BSApplicationProfilerOffline.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:BSApplicationProfilerOffline.FrmMain.RunMonitor(System.String,System.String,System.Int64,System.String)">
+ <summary>
+ Run the Main Monitor application that will collection the information for performance
+ monitoring on the selected process
+ </summary>
+ <param name="ProcessName"></param>
+ <param name="PID"></param>
+ <param name="mon_interval"></param>
+ <param name="agentid"></param>
+</member>
+<member name="M:BSApplicationProfilerOffline.FrmMain.ChangeAppSettings(System.String,System.String)">
+ <summary>
+ Update the Local App.Confg File
+ </summary>
+ <param name="sKey"></param>
+ <param name="sValue"></param>
+</member>
+</members>
+</doc>

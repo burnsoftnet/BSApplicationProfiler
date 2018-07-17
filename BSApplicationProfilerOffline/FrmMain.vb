@@ -42,7 +42,8 @@ Public Class FrmMain
             appInterval = Convert.ToInt32(ConfigurationManager.AppSettings("APPLICATION_INTERVAL_" & x))
             BuggerMe("Looking for Process:" & appName, "GetLocalApps", "medium")
             If ObjS.ProcessExists(ObjF.GetNameOfFile(appName), PID, ProcessCount) Then
-                Call RunMonitor(appName, ProcessID, mon_interval, AGENT_ID)
+                Call RunMonitor(appName, PID, mon_interval, appParam)
+
             End If
             x += 1
         Next
@@ -55,9 +56,12 @@ Public Class FrmMain
     ''' <param name="PID"></param>
     ''' <param name="mon_interval"></param>
     ''' <param name="agentid"></param>
-    Sub RunMonitor(ProcessName As String, PID As String, mon_interval As Long, agentid As Long)
+    Sub RunMonitor(ProcessName As String, PID As String, mon_interval As Long, param As string)
         Try
-            Dim arg As String = "/name=" & ProcessName & " /pid=" & PID & " /aid=" & agentid & " /interval=" & mon_interval
+            Dim arg As String = "/name=" & ProcessName & " /pid=" & PID & " /param=" & chr(34) & param & chr(34) & " /interval=" & mon_interval & "/offline=true"
+            if param.Length = 0 Then
+                arg = "/name=" & ProcessName & " /pid=" & PID & " /interval=" & mon_interval & " /offline=true"
+            End If
             Dim ObjP As New BSProcessInfo
             Dim ProcCount As Integer
             Dim AppName As String = System.Configuration.ConfigurationManager.AppSettings("RUNPROGRAM")
@@ -78,8 +82,7 @@ Public Class FrmMain
     End Sub
     Sub Init()
         HEARTBEAT_INTERVAL = 1
-        'APP_PATH = Application.ExecutablePath
-        'APP_PATH = "C:\Program Files (x86)\BurnSoft\Application Profiler"
+
         If Len(System.Configuration.ConfigurationManager.AppSettings("APP_PATH")) = 0 Then
             APP_PATH = Application.StartupPath
         Else
@@ -92,11 +95,8 @@ Public Class FrmMain
         MyLogFile = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("LOGFILE")
         CONSOLEMODE = CBool(System.Configuration.ConfigurationManager.AppSettings("CONSOLE"))
         USE_LOGFILE = CBool(System.Configuration.ConfigurationManager.AppSettings("USE_LOGFILE"))
-        'DBHOST = System.Configuration.ConfigurationManager.AppSettings("DB_HOST")
+
         TIMER_INTERVAL = 30 * 1000
-        USE_EVENT_LOG = CBool(System.Configuration.ConfigurationManager.AppSettings("USE_EVENT_LOG"))
-        'EventLog1.Source = System.Configuration.ConfigurationManager.AppSettings("EVENT_SOURCE")
-        'EventLog1.Log = System.Configuration.ConfigurationManager.AppSettings("EVENT_LOG")
         BuggerMe("App Path: " & APP_PATH, "frmmain.init", "medium")
         BuggerMe("DEBUG_LOGFILE: " & DEBUG_LOGFILE, "frmmain.init", "medium")
         BuggerMe("MyLogFile: " & MyLogFile, "frmmain.init", "medium")
@@ -118,24 +118,6 @@ Public Class FrmMain
     End Sub
 
     Private Sub tmrSched_Tick(sender As Object, e As EventArgs) Handles tmrSched.Tick
-        'Dim ObjN As New BSNetwork
-        'Dim LastLocalStatus = USELOCAL
-        'If LastLocalStatus And Not USELOCAL Then
-        'Call RunDBUpdate(AGENT_ID)
-        'End If
-        'Call GetLocalApps()
-        If HEARTBEAT_INTERVAL >= CInt(System.Configuration.ConfigurationManager.AppSettings("HEARTBEAT_INTERVAL")) Then
-            '   Dim ObjA As New AgentDetails
-            '  Call ObjA.UpdateHeartBeat(AGENT_ID)
-            HEARTBEAT_INTERVAL = 0
-        Else
-            HEARTBEAT_INTERVAL += 1
-        End If
-        'If DB_REFRESH_INTERVAL >= CLng(System.Configuration.ConfigurationManager.AppSettings("DB_REFRESH_INTERVAL")) Then
-        '' Call DBRefresh()
-        'DB_REFRESH_INTERVAL = 0
-        'Else
-        'DB_REFRESH_INTERVAL += 1
-        'End If
+        Call GetLocalApps()
     End Sub
 End Class

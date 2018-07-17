@@ -8,6 +8,8 @@ Module modMain
     Dim APP_PROJECT_MAIN_PROCESS_ID As Long
     Dim APP_PATH As String
     Dim USELOCAL As Boolean
+    Dim OFFLINE as Boolean
+    Dim PARAM As string
     Private _UPDATEDSESSION As Boolean
 #Region "SQLite Database Function and Sub"
     ''' <summary>
@@ -368,6 +370,9 @@ Module modMain
             PROCESS_NAME = ObjO.GetCommand("name", "")
             PROCESS_ID = ObjO.GetCommand("pid", 0)
             AGENT_ID = ObjO.GetCommand("aid", 0)
+            PARAM = ObjO.GetCommand("param","")
+            OFFLINE = ObjO.GetCommand("offline",False)
+
             TIMER_INTERVAL = ObjO.GetCommand("interval", 0) * 60000
             If TIMER_INTERVAL = 0 Then
                 TIMER_INTERVAL = System.Configuration.ConfigurationManager.AppSettings("TIMER_INTERVAL")
@@ -393,10 +398,18 @@ Module modMain
             AGENT_ID = 1
             TIMER_INTERVAL = 1 * 60000
         End If
-        If PROCESS_ID = 0 Or AGENT_ID = 0 Then
-            LogError("modMail.Init", "Missing Agent ID or Process ID")
-            Call ExitApp()
+        If (Not OFFLINE) Then
+            If PROCESS_ID = 0 Or AGENT_ID = 0 Then
+                LogError("modMail.Init", "Missing Agent ID or Process ID")
+                Call ExitApp()
+            End If
+        Else 
+            If PROCESS_ID = 0 Then
+                LogError("modMail.Init", "Missing Process ID")
+                Call ExitApp()
+            End If
         End If
+        
     End Sub
     ''' <summary>
     ''' Properly exit the application
@@ -450,10 +463,13 @@ Module modMain
             If ProcessActive Then
                 Dim ActivePath As String = Replace(ObjP.GetProcessCommandLine(MyPID), "\", "//")
                 BuggerMe("Full Active Path: " & ActivePath)
-                Dim FullAppPath As String = ActivePath.Replace(Chr(34), "")
+                Dim FullAppPath As String = ""
+                If IsDBNull(ActivePath) Then
+                    FullAppPath = ActivePath.Replace(Chr(34), "")
+                End If
                 BuggerMe("FullPath Formated: " & FullAppPath)
 
-                If Not _UPDATEDSESSION Then Call GetExeDetails(FullAppPath)
+                If not OFFLINE Then If Not _UPDATEDSESSION Then Call GetExeDetails(FullAppPath)
 
 
                 If LAST_CPU_VALUE = 0 Then
@@ -461,14 +477,41 @@ Module modMain
                 Else
                     CPU = ObjP.GetProcessCPUTime(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE, LAST_CPU_VALUE)
                 End If
+                If not OFFLINE Then
+                    Call InsertIntoProcessStats(SESSION_ID, PROCESS_ID, APP_PROJECT_MAIN_PROCESS_ID, AGENT_ID, MyProcess, Username,
+                                                CPU, ObjP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
+                                                ObjP.GetProccessHandleCount(MyPID), ObjP.GetProcessThreadCount(MyPID), ActivePath)
+                Else 
+                    Call InsertIntoFile( MyProcess, Username,
+                                         CPU, ObjP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
+                                         ObjP.GetProccessHandleCount(MyPID), ObjP.GetProcessThreadCount(MyPID), ActivePath)
+                End If
 
-                Call InsertIntoProcessStats(SESSION_ID, PROCESS_ID, APP_PROJECT_MAIN_PROCESS_ID, AGENT_ID, MyProcess, Username,
-                                            CPU, ObjP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
-                                            ObjP.GetProccessHandleCount(MyPID), ObjP.GetProcessThreadCount(MyPID), ActivePath)
             End If
         Catch ex As Exception
             LogError("modMain.CollectData", ex.Message.ToString)
         End Try
+    End Sub
+    Sub InsertIntoFile (imagename As String,
+                        username As String, cpu As String, memoryused As String, ihandles As String, threads As String,
+                        commandline As String)
+        Try
+            Dim LogName as String = String.Format("{0}-{1}.log",imagename,DateTime.Now.ToString("yyyMMdd"))
+        
+            Dim obj as New FileIO
+            Dim fullPath as String = APP_PATH & "\logs\" & LogName
+
+            If ( Not obj.FileExists(fullPath))
+                Dim sHeader = "User Name" & vbTab & "CPU" & vbTab & "Memory Used" & vbTab & "Handles" & vbTab & "Threads" & vbTab & "Command Line"
+                obj.LogFile(fullPath,sHeader)
+            End If
+
+            Dim sLine as String = username & vbTab & cpu & vbTab & memoryused & vbTab & ihandles & vbTab & threads & vbTab & commandline
+            obj.LogFile(fullPath,sLine)
+        Catch ex As Exception
+            LogError("modMain.InsertIntoFile", ex.Message.ToString)
+        End Try
+
     End Sub
 #End Region
     ''' <summary>
@@ -477,56 +520,71 @@ Module modMain
     Sub Main()
         Try
             Call INIT()
-
-            Dim ObjN As New BSNetwork
-            If ObjN.DeviceIsUp(DBHOST) Then
-                USELOCAL = False
-            Else
-                USELOCAL = True
-            End If
-            ObjN = Nothing
-            If USELOCAL Then
-                Call LogError("modMain.Main", "Unabled to connnect to database host " & DBHOST)
-                Call BuggerMe("Using Local Database", "modMain.Main")
-            Else
-                Call BuggerMe("Using Remote Database " & DBHOST, "modMain.Main")
-            End If
-
-            Dim HasLogs As Boolean = False
-            APP_PROJECT_MAIN_PROCESS_ID = getAppProjectMainProcess(PROCESS_NAME, HasLogs)
-            BuggerMe("APP_PROJECT_MAIN_PROCESS_ID=" & APP_PROJECT_MAIN_PROCESS_ID)
-            Dim ObjS As New BSOtherObjects
-
-            ObjS = Nothing
-            Call StartSessionDetails()
-            LAST_CPU_VALUE = 0
-            Dim ProcessActive As Boolean = True
-            Do While ProcessActive
-                Call BuggerMe("Starting Data Collection at " & Now, "modMain.Main", "medium")
-                Call CollectData(PROCESS_NAME, ProcessActive)
-                Call BuggerMe("Ending Data Collection at " & Now, "modMain.Main", "medium")
-                If ProcessActive Then System.Threading.Thread.Sleep(TIMER_INTERVAL)
-            Loop
-
-            If HasLogs Then
-                BuggerMe("Looking for Logs!", "modMain.Main", "medium")
-                Dim LogLocation As String = GetLogPath(APP_PROJECT_MAIN_PROCESS_ID)
-                BuggerMe("LogFile: " & LogLocation)
-                Dim ObjF As New FileIO
-                If ObjF.FileExists(LogLocation) Then
-                    BuggerMe("Processing Logs!", "modMain.Main", "medium")
-                    Call ProcessLogFile(LogLocation, ObjF.GetNameOfFile(LogLocation), PROCESS_ID, SESSION_ID)
-                    BuggerMe("Deleting log file!")
-                    ObjF.DeleteFile(LogLocation)
+            if Not OFFLINE Then
+                Dim ObjN As New BSNetwork
+                If ObjN.DeviceIsUp(DBHOST) Then
+                    USELOCAL = False
                 Else
-                    BuggerMe(LogLocation & " not found!", "modMain.Main", "medium")
+                    USELOCAL = True
                 End If
-                BuggerMe("End of looking for Logs!", "modMain.Main", "medium")
+                ObjN = Nothing
+                If USELOCAL Then
+                    Call LogError("modMain.Main", "Unabled to connnect to database host " & DBHOST)
+                    Call BuggerMe("Using Local Database", "modMain.Main")
+                Else
+                    Call BuggerMe("Using Remote Database " & DBHOST, "modMain.Main")
+                End If
+
+                Dim HasLogs As Boolean = False
+                APP_PROJECT_MAIN_PROCESS_ID = getAppProjectMainProcess(PROCESS_NAME, HasLogs)
+                BuggerMe("APP_PROJECT_MAIN_PROCESS_ID=" & APP_PROJECT_MAIN_PROCESS_ID)
+                'REFACTOR: This might not be needed anymore
+                Dim ObjS As New BSOtherObjects
+                ObjS = Nothing
+                'Start up a session in the database
+                Call StartSessionDetails()
+                'Start Watching the process for details
+                LAST_CPU_VALUE = 0
+                Dim ProcessActive As Boolean = True
+                Do While ProcessActive
+                    Call BuggerMe("Starting Data Collection at " & Now, "modMain.Main", "medium")
+                    Call CollectData(PROCESS_NAME, ProcessActive)
+                    Call BuggerMe("Ending Data Collection at " & Now, "modMain.Main", "medium")
+                    If ProcessActive Then System.Threading.Thread.Sleep(TIMER_INTERVAL)
+                Loop
+
+                'Check to see if there was any log files left by the application after it exit the system
+                If HasLogs Then
+                    BuggerMe("Looking for Logs!", "modMain.Main", "medium")
+                    Dim LogLocation As String = GetLogPath(APP_PROJECT_MAIN_PROCESS_ID)
+                    BuggerMe("LogFile: " & LogLocation)
+                    Dim ObjF As New FileIO
+                    If ObjF.FileExists(LogLocation) Then
+                        BuggerMe("Processing Logs!", "modMain.Main", "medium")
+                        Call ProcessLogFile(LogLocation, ObjF.GetNameOfFile(LogLocation), PROCESS_ID, SESSION_ID)
+                        BuggerMe("Deleting log file!")
+                        ObjF.DeleteFile(LogLocation)
+                    Else
+                        BuggerMe(LogLocation & " not found!", "modMain.Main", "medium")
+                    End If
+                    BuggerMe("End of looking for Logs!", "modMain.Main", "medium")
+                End If
+                'Mark the recording secction as ended in the database
+                Call EndSession()
+            Else 
+                Call BuggerMe("OFFLINE MODE WRITING TO FLAT FILES", "modMain.Main")
+                LAST_CPU_VALUE = 0
+                Dim ProcessActive As Boolean = True
+                Do While ProcessActive
+                    Call BuggerMe("Starting Data Collection at " & Now, "modMain.Main", "medium")
+                    Call CollectData(PROCESS_NAME, ProcessActive)
+                    Call BuggerMe("Ending Data Collection at " & Now, "modMain.Main", "medium")
+                    If ProcessActive Then System.Threading.Thread.Sleep(TIMER_INTERVAL)
+                Loop
             End If
-            Call EndSession()
         Catch ex As Exception
             LogError("modMain.Main", ex.Message.ToString)
-        End Try
+        End Try            
     End Sub
 
 End Module
