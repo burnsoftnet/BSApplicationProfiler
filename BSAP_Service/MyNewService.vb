@@ -9,6 +9,8 @@ Public Class MyNewService
     Dim iInterval As Long
     Public RunOnFirstRun As Boolean
     Public myProcess As New Process
+    Const PROFILE_APP = "BSApplicationProfiler"
+    Const PROFILE_OFFLINE_APP = "BSApplicationProfilerOffline"
     Shared Sub Main()
         Dim ServicestoRun() As System.ServiceProcess.ServiceBase
         ServicestoRun = New System.ServiceProcess.ServiceBase() _
@@ -16,9 +18,9 @@ Public Class MyNewService
         System.ServiceProcess.ServiceBase.Run(ServicestoRun)
     End Sub
     Sub StartSchedAgent()
-        Dim ProcessName As String = "BSApplicationProfiler.exe"
+        Dim ProcessName As String = PROFILE_APP & ".exe"
         If (Configuration.ConfigurationManager.AppSettings("RUN_OFFLINE")) Then
-            ProcessName = "BSApplicationProfilerOffline.exe"
+            ProcessName = PROFILE_OFFLINE_APP & ".exe"
         End If
         myProcess.StartInfo.WorkingDirectory = Application.StartupPath & "\"
         If DO_DEBUG Then EventLog1.WriteEntry("Working Path " & myProcess.StartInfo.WorkingDirectory, EventLogEntryType.Information)
@@ -75,7 +77,10 @@ Public Class MyNewService
                 'End If
             End If
         End If
-        Dim returnValue As Process() = Process.GetProcessesByName("BSApplicationProfiler")
+        Dim returnValue As Process() = Process.GetProcessesByName(PROFILE_APP)
+        If (Configuration.ConfigurationManager.AppSettings("RUN_OFFLINE")) Then
+            returnValue = Process.GetProcessesByName(PROFILE_OFFLINE_APP)
+        End If
         If returnValue.Length = 0 Then Call StartSchedAgent()
     End Sub
 
