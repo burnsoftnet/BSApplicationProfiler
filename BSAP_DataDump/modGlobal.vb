@@ -1,22 +1,22 @@
 ﻿Imports BurnSoft.Universal
-Module modGlobal
-    Public DO_DEBUG As Boolean
-    Public DEBUG_LOGFILE As String
-    Public CONSOLEMODE As Boolean
+Module ModGlobal
+    Public DoDebug As Boolean
+    Public DebugLogfile As String
+    Public Consolemode As Boolean
     Public MyLogFile As String
-    Public USE_EVENT_LOG As Boolean
-    Public USE_LOGFILE As Boolean
-    Public AGENT_ID As Long
-    Public DBHOST As String
-    Public PROCESS_ID As Long
-    Public BUGFILE_LEVEL As String
+    Public UseEventLog As Boolean
+    Public UseLogfile As Boolean
+    Public AgentId As Long
+    Public Dbhost As String
+    Public ProcessId As Long
+    Public BugfileLevel As String
     Public Sub LogError(sLocation As String, sMessage As String)
         Dim sMsg As String = "::" & sLocation & "::" & sMessage
         Try
-            If USE_LOGFILE Then
-                Dim Obj As New FileIO
-                Obj.LogFile(MyLogFile, sMsg)
-                Obj = Nothing
+            If UseLogfile Then
+                Dim obj As New FileIO
+                obj.LogFile(MyLogFile, sMsg)
+                'obj = Nothing
             End If
             If CONSOLEMODE Then
                 Console.WriteLine(sMsg)
@@ -25,22 +25,22 @@ Module modGlobal
             Console.WriteLine(sMsg)
         End Try
         Try
-            If USE_EVENT_LOG Then
+            If UseEventLog Then
                 'frmMain.EventLog1.WriteEntry(sMsg, EventLogEntryType.Information, CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
             End If
         Catch ex As Exception
             Console.WriteLine(sMsg)
         End Try
     End Sub
-    Function ToLogOrNotToLog(LEVEL As String) As Boolean
+    Function ToLogOrNotToLog(level As String) As Boolean
         Dim bAns As Boolean = False
-        Select Case LCase(BUGFILE_LEVEL)
+        Select Case LCase(BugfileLevel)
             Case "low"
-                If LCase(LEVEL) = "low" Then
+                If LCase(level) = "low" Then
                     bAns = True
                 End If
             Case "medium"
-                If LCase(LEVEL) = "low" Or LCase(LEVEL) = "medium" Then
+                If LCase(level) = "low" Or LCase(level) = "medium" Then
                     bAns = True
                 End If
             Case "high"
@@ -48,22 +48,22 @@ Module modGlobal
         End Select
         Return bAns
     End Function
-    Public Sub BuggerMe(sMsg As String, Optional ByVal sLocation As String = "", Optional ByVal LEVEL As String = "low")
+    Public Sub BuggerMe(sMsg As String, Optional ByVal sLocation As String = "", Optional ByVal level As String = "low")
         If Len(sLocation) > 0 Then sMsg = sLocation & "::" & sMsg
         Try
-            If DO_DEBUG Then
+            If DoDebug Then
                 Dim obj As New FileIO
-                If ToLogOrNotToLog(LEVEL) Then
-                    obj.LogFile(DEBUG_LOGFILE, sMsg)
+                If ToLogOrNotToLog(level) Then
+                    obj.LogFile(DebugLogfile, sMsg)
                 End If
-                obj = Nothing
+                'obj = Nothing
                 End If
         Catch ex As Exception
             Console.WriteLine(sMsg)
         End Try
         Try
-            If DO_DEBUG Then
-                If USE_EVENT_LOG Then
+            If DoDebug Then
+                If UseEventLog Then
                     'frmMain.EventLog1.WriteEntry(sMsg, EventLogEntryType.Information, CInt(System.Configuration.ConfigurationManager.AppSettings("EVENT_ID_INFO")))
                 End If
             End If

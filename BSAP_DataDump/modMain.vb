@@ -2,37 +2,37 @@
 Imports System.Windows.Forms
 Imports MySql.Data.MySqlClient
 Imports System.Data.SQLite
-Imports System.IO
-Module modMain
-    Dim APP_PATH As String
-    Dim SESSION_ID As Long
-    Dim APP_PROJECT_MAIN_PROCESS_ID As Long
+'Imports System.IO
+Module ModMain
+    Dim _appPath As String
+    Dim _sessionId As Long
+    'Dim _appProjectMainProcessId As Long
 #Region "Other Subs and Functions"
     ''' <summary>
     ''' Set Global Vars
     ''' </summary>
     Sub Init()
-        If Len(System.Configuration.ConfigurationManager.AppSettings("APP_PATH")) = 0 Then
-            APP_PATH = Application.StartupPath
+        If Len(Configuration.ConfigurationManager.AppSettings("APP_PATH")) = 0 Then
+            _appPath = Application.StartupPath
         Else
-            APP_PATH = System.Configuration.ConfigurationManager.AppSettings("APP_PATH")
+            _appPath = Configuration.ConfigurationManager.AppSettings("APP_PATH")
         End If
-        Dim ObjOF As New BSOtherObjects
-        AGENT_ID = ObjOF.GetCommand("agent", 0)
+        Dim objOf As New BSOtherObjects
+        AgentId = objOf.GetCommand("agent", 0)
 
-        BUGFILE_LEVEL = System.Configuration.ConfigurationManager.AppSettings("BUGFILE_LEVEL")
-        DO_DEBUG = CBool(System.Configuration.ConfigurationManager.AppSettings("DEBUG"))
-        DEBUG_LOGFILE = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("BUGFILE")
-        MyLogFile = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("LOGFILE")
-        CONSOLEMODE = CBool(System.Configuration.ConfigurationManager.AppSettings("CONSOLE"))
-        USE_LOGFILE = CBool(System.Configuration.ConfigurationManager.AppSettings("USE_LOGFILE"))
-        DBHOST = System.Configuration.ConfigurationManager.AppSettings("DB_HOST")
+        BugfileLevel = Configuration.ConfigurationManager.AppSettings("BUGFILE_LEVEL")
+        DoDebug = CBool(Configuration.ConfigurationManager.AppSettings("DEBUG"))
+        DebugLogfile = _appPath & "\" & Configuration.ConfigurationManager.AppSettings("BUGFILE")
+        MyLogFile = _appPath & "\" & Configuration.ConfigurationManager.AppSettings("LOGFILE")
+        CONSOLEMODE = CBool(Configuration.ConfigurationManager.AppSettings("CONSOLE"))
+        UseLogfile = CBool(Configuration.ConfigurationManager.AppSettings("USE_LOGFILE"))
+        DBHOST = Configuration.ConfigurationManager.AppSettings("DB_HOST")
     End Sub
     ''' <summary>
     ''' Properly exit the application
     ''' </summary>
-    ''' <param name="ExitValue"></param>
-    Sub ExitApp(Optional ByVal ExitValue As Integer = 0)
+    ''' <param name="exitValue"></param>
+    Sub ExitApp(Optional ByVal exitValue As Integer = 0)
         Application.Exit()
         Environment.Exit(ExitValue)
     End Sub
@@ -41,43 +41,43 @@ Module modMain
     ''' <summary>
     ''' Insert data into the MySQL Database
     ''' </summary>
-    ''' <param name="SQL"></param>
-    Sub ConnExec(SQL As String)
-        Dim Obj As New BurnSoft.BSDatabase
-        Obj.ConnExe(SQL)
-        Obj = Nothing
+    ''' <param name="sql"></param>
+    Sub ConnExec(sql As String)
+        Dim obj As New BsDatabase
+        obj.ConnExe(SQL)
+        'obj = Nothing
     End Sub
     ''' <summary>
     ''' Create a new sessiont in the database
     ''' </summary>
-    Sub CreateNewSession(APNID As Long, sessiondt As Date, sessionend As Date, appversion As String, appcomany As String, applastaccess As String, applastwrite As String, createddatetime As String)
-        Dim SQL As String = "INSERT INTO monitoring_session (APNID, AID,sessiondt,sessionendppversion, appcomany, applastaccess, applastwrite, createddatetime) VALUES (" &
-            APNID & "," & AGENT_ID & ",'" & sessiondt.ToString("yyyy-MM-dd HH:mm:ss") & "','" &
+    Sub CreateNewSession(apnid As Long, sessiondt As Date, sessionend As Date, appversion As String, appcomany As String, applastaccess As String, applastwrite As String, createddatetime As String)
+        Dim sql As String = "INSERT INTO monitoring_session (APNID, AID,sessiondt,sessionendppversion, appcomany, applastaccess, applastwrite, createddatetime) VALUES (" &
+            APNID & "," & AgentId & ",'" & sessiondt.ToString("yyyy-MM-dd HH:mm:ss") & "','" &
             sessionend.ToString("yyyy-MM-dd HH:mm:ss") & "','" & appversion & "','" & appcomany & "','" & applastaccess & "','" & applastwrite & "','" & createddatetime & "')"
-        Call ConnExec(SQL)
+        Call ConnExec(sql)
     End Sub
     ''' <summary>
     ''' Get the latest session that was just entered into the database
     ''' </summary>
     ''' <returns>id</returns>
-    Function getSessionIDMySQL(APNID As Long, sessiondt As Date) As Long
+    Function GetSessionIdmySql(apnid As Long, sessiondt As Date) As Long
         Dim lAns As Long = 0
         Try
-            Dim SQL As String = "SELECT id from monitoring_session where APNID=" & APNID & " and AID=" & AGENT_ID &
+            Dim sql As String = "SELECT id from monitoring_session where APNID=" & APNID & " and AID=" & AgentId &
                                 " and sessiondt='" & sessiondt.ToString("yyyy-MM-dd HH:mm:ss") & "' order by id desc limit 1"
-            Dim Obj As New BurnSoft.BSDatabase
-            If Obj.ConnectDB = 0 Then
-                Dim CMD As New MySqlCommand(SQL, Obj.Conn)
-                Dim RS As MySqlDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    lAns = RS("id")
+            Dim obj As New BsDatabase
+            If obj.ConnectDB = 0 Then
+                Dim cmd As New MySqlCommand(sql, obj.Conn)
+                Dim rs As MySqlDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    lAns = rs("id")
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
-                Obj = Nothing
+                rs.Close()
+                'rs = Nothing
+                'cmd = Nothing
+                obj.CloseDB()
+                'obj = Nothing
             End If
         Catch ex As Exception
             Call LogError("modmain.getSessionIDMySQL", ex.Message.ToString)
@@ -90,22 +90,22 @@ Module modMain
     ''' Checks the local database to see if there are any sessions in the table.
     ''' </summary>
     ''' <returns></returns>
-    Function hasWaitingSessions() As Boolean
+    Function HasWaitingSessions() As Boolean
         Dim bAns As Boolean = False
         Try
-            Dim SQL As String = "select * from monitoring_session"
-            Dim Obj As New BurnSoft.BSSqliteDatabase
-            If Obj.ConnectDB = 0 Then
-                Dim CMD As New SQLiteCommand(SQL, Obj.Conn)
-                Dim RS As SQLiteDataReader
-                RS = CMD.ExecuteReader
-                bAns = RS.HasRows
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
+            Dim sql As String = "select * from monitoring_session"
+            Dim obj As New BsSqliteDatabase
+            If obj.ConnectDB = 0 Then
+                Dim cmd As New SQLiteCommand(sql, obj.Conn)
+                Dim rs As SQLiteDataReader
+                rs = cmd.ExecuteReader
+                bAns = rs.HasRows
+                rs.Close()
+                'rs = Nothing
+                'cmd = Nothing
+                obj.CloseDB()
             End If
-            Obj = Nothing
+            'obj = Nothing
         Catch ex As Exception
             LogError("modMain.hasWaitingSessions", ex.Message.ToString)
         End Try
@@ -118,119 +118,119 @@ Module modMain
     ''' </summary>
     Sub ProcessSessions()
         Try
-            Dim SQL As String = "select * from monitoring_session"
-            Dim Obj As New BurnSoft.BSSqliteDatabase
-            If Obj.ConnectDB = 0 Then
-                Dim CMD As New SQLiteCommand(SQL, Obj.Conn)
-                Dim RS As SQLiteDataReader
-                RS = CMD.ExecuteReader
-                Dim APNID As Long = 0
-                Dim AID As Long = 0
-                Dim sessiondt As String = ""
-                Dim sessionend As String = ""
-                Dim SessionID As Long = 0
-                Dim OldSessionID As Long = 0
-                Dim appversion As String = ""
-                Dim appcomany As String = ""
-                Dim applastaccess As String = ""
-                Dim applastwrite As String = ""
-                Dim createddatetime As String = ""
+            Dim sql As String = "select * from monitoring_session"
+            Dim obj As New BsSqliteDatabase
+            If obj.ConnectDB = 0 Then
+                Dim cmd As New SQLiteCommand(sql, obj.Conn)
+                Dim rs As SQLiteDataReader
+                rs = cmd.ExecuteReader
+                Dim apnid As Long
+                Dim aid As Long
+                Dim sessiondt As String
+                Dim sessionend As String
+                'Dim sessionId As Long = 0
+                Dim oldSessionId As Long
+                Dim appversion As String
+                Dim appcomany As String
+                Dim applastaccess As String
+                Dim applastwrite As String
+                Dim createddatetime As String
 
-                While RS.Read
-                    APNID = RS("APNID")
-                    AID = RS("AID")
-                    sessiondt = RS("sessiondt")
-                    sessionend = RS("sessionend")
-                    OldSessionID = RS("ID")
-                    appversion = RS("appversion")
-                    appcomany = RS("appcomany")
-                    applastaccess = RS("applastaccess")
-                    applastwrite = RS("applastwrite")
-                    createddatetime = RS("createddatetime")
+                While rs.Read
+                    apnid = rs("APNID")
+                    aid = rs("AID")
+                    sessiondt = rs("sessiondt")
+                    sessionend = rs("sessionend")
+                    oldSessionId = rs("ID")
+                    appversion = rs("appversion")
+                    appcomany = rs("appcomany")
+                    applastaccess = rs("applastaccess")
+                    applastwrite = rs("applastwrite")
+                    createddatetime = rs("createddatetime")
 
-                    Call CreateNewSession(APNID, sessiondt, sessionend, appversion, appcomany, applastaccess, applastwrite, createddatetime)
-                    SESSION_ID = getSessionIDMySQL(APNID, sessiondt)
-                    Call ProcessStatsMain(SESSION_ID, APNID, AID, OldSessionID)
-                    Call ProcessStatsMainLogs(SESSION_ID, APNID, OldSessionID)
+                    Call CreateNewSession(apnid, sessiondt, sessionend, appversion, appcomany, applastaccess, applastwrite, createddatetime)
+                    _sessionId = getSessionIDMySQL(apnid, sessiondt)
+                    Call ProcessStatsMain(_sessionId, apnid, aid, oldSessionId)
+                    Call ProcessStatsMainLogs(_sessionId, apnid, oldSessionId)
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
+                rs.Close()
+                'rs = Nothing
+                'cmd = Nothing
+                obj.CloseDB()
             End If
-            Obj = Nothing
+            'obj = Nothing
         Catch ex As Exception
             LogError("modMain.ProcessSessions", ex.Message.ToString)
         End Try
     End Sub
-    Sub ProcessStatsMain(SessionID As Long, APNID As Long, AID As Long, OldSessionID As Long)
+    Sub ProcessStatsMain(sessionId As Long, apnid As Long, aid As Long, oldSessionId As Long)
         Try
-            Dim iSQL As String = ""
-            Dim SQL As String = "select * from process_stats_main where SessionID=" & OldSessionID
-            Dim Obj As New BurnSoft.BSSqliteDatabase
-            If Obj.ConnectDB() = 0 Then
-                Dim CMD As New SQLiteCommand(SQL, Obj.Conn)
-                Dim RS As SQLiteDataReader
-                RS = CMD.ExecuteReader
-                Dim CollectionDT As Date
-                While RS.Read
-                    CollectionDT = RS("dt")
-                    iSQL = "INSERT process_stats_main (SessionID, apnid, apmpid, AID, dt," &
+            Dim iSql As String
+            Dim sql As String = "select * from process_stats_main where SessionID=" & OldSessionID
+            Dim obj As New BsSqliteDatabase
+            If obj.ConnectDB() = 0 Then
+                Dim cmd As New SQLiteCommand(sql, obj.Conn)
+                Dim rs As SQLiteDataReader
+                rs = cmd.ExecuteReader
+                Dim collectionDt As Date
+                While rs.Read
+                    collectionDt = rs("dt")
+                    iSql = "INSERT process_stats_main (SessionID, apnid, apmpid, AID, dt," &
                             " imagename, username, cpu, memoryused, handles, threads, commandline) VALUES(" &
-                            SessionID & "," & APNID & "," & RS("apmpid") & "," & AID & ",'" & CollectionDT.ToString("yyyy-MM-dd HH:mm:ss") & "','" &
-                            RS("imagename") & "','" & RS("username") & "'," & RS("cpu") & "," & RS("memoryused") & "," &
-                            RS("handles") & "," & RS("threads") & ",'" & RS("commandline") & "')"
-                    Call BuggerMe(iSQL, "modMain.ProcessStatsMain", "high")
-                    ConnExec(iSQL)
+                            SessionID & "," & APNID & "," & rs("apmpid") & "," & AID & ",'" & collectionDt.ToString("yyyy-MM-dd HH:mm:ss") & "','" &
+                            rs("imagename") & "','" & rs("username") & "'," & rs("cpu") & "," & rs("memoryused") & "," &
+                            rs("handles") & "," & rs("threads") & ",'" & rs("commandline") & "')"
+                    Call BuggerMe(iSql, "modMain.ProcessStatsMain", "high")
+                    ConnExec(iSql)
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
+                rs.Close()
+                'rs = Nothing
+                'cmd = Nothing
             End If
-            Obj = Nothing
+            'obj = Nothing
         Catch ex As Exception
             LogError("modMain.ProcessStatsMain", ex.Message.ToString)
         End Try
     End Sub
-    Sub ProcessStatsMainLogs(SessionID As Long, APNID As Long, OldSessionID As Long)
+    Sub ProcessStatsMainLogs(sessionId As Long, apnid As Long, oldSessionId As Long)
         Try
-            Dim iSQL As String = ""
-            Dim SQL As String = "select * from logs_main where SessionID=" & OldSessionID
-            Dim Obj As New BurnSoft.BSSqliteDatabase
-            Dim ObjOF As New BSOtherObjects
+            Dim iSql As String
+            Dim sql As String = "select * from logs_main where SessionID=" & OldSessionID
+            Dim obj As New BsSqliteDatabase
+            Dim objOf As New BSOtherObjects
 
-            If Obj.ConnectDB() = 0 Then
-                Dim CMD As New SQLiteCommand(SQL, Obj.Conn)
-                Dim RS As SQLiteDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    iSQL = "INSERT logs_main (sessionid, APNID, filename, logdetails)" &
-                    " VALUES(" & SessionID & "," & APNID & ",'" & RS("filename") & "','" & ObjOF.FC(RS("logdetails")) & "')"
-                    Call BuggerMe(iSQL, "modMain.ProcessStatsMainLogs", "high")
-                    ConnExec(iSQL)
+            If obj.ConnectDB() = 0 Then
+                Dim cmd As New SQLiteCommand(sql, obj.Conn)
+                Dim rs As SQLiteDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    iSql = "INSERT logs_main (sessionid, APNID, filename, logdetails)" &
+                    " VALUES(" & SessionID & "," & APNID & ",'" & rs("filename") & "','" & objOf.FC(rs("logdetails")) & "')"
+                    Call BuggerMe(iSql, "modMain.ProcessStatsMainLogs", "high")
+                    ConnExec(iSql)
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
+                rs.Close()
+                'rs = Nothing
+                'cmd = Nothing
+                obj.CloseDB()
             End If
-            Obj = Nothing
+            'obj = Nothing
         Catch ex As Exception
             LogError("modMain.ProcessStatsMainLogs", ex.Message.ToString)
         End Try
     End Sub
     Sub ClearLocalDb()
-        Dim Obj As New BurnSoft.BSSqliteDatabase
-        Dim SQL As String = "delete from "
-        Obj.ConnExe(SQL & "logs_main")
-        Obj.ConnExe(SQL & "process_stats_main")
-        Obj.ConnExe(SQL & "monitoring_session")
+        Dim obj As New BsSqliteDatabase
+        Dim sql As String = "delete from "
+        obj.ConnExe(sql & "logs_main")
+        obj.ConnExe(sql & "process_stats_main")
+        obj.ConnExe(sql & "monitoring_session")
     End Sub
 #End Region
     Sub Main()
         Call Init()
-        Dim ObjN As New BSNetwork
-        If ObjN.DeviceIsUp(DBHOST) Then
+        Dim objN As New BSNetwork
+        If objN.DeviceIsUp(DBHOST) Then
             Call BuggerMe("Using Remote Database " & DBHOST, "modMain.Main")
             If hasWaitingSessions() Then
                 Call BuggerMe("Found Sessions In local Database", "modMain.Main")
