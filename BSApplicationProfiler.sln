@@ -38,6 +38,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BurnSoft.Universal", "..\Bu
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BSApplicationProfilerOffline", "BSApplicationProfilerOffline\BSApplicationProfilerOffline.vbproj", "{E0B9073E-2F29-4EDF-BAFE-781BB466727A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BSAP_Installer", "BSAP_Installer\BSAP_Installer.vdproj", "{51729872-E4EC-4051-BCC2-C92267E0F34D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,8 @@ Global
 		{E0B9073E-2F29-4EDF-BAFE-781BB466727A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0B9073E-2F29-4EDF-BAFE-781BB466727A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0B9073E-2F29-4EDF-BAFE-781BB466727A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51729872-E4EC-4051-BCC2-C92267E0F34D}.Debug|Any CPU.ActiveCfg = Debug
+		{51729872-E4EC-4051-BCC2-C92267E0F34D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
