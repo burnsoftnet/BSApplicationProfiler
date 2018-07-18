@@ -39,7 +39,6 @@ C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\R
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BurnSoft.Universal.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\EntityFramework.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\EntityFramework.SqlServer.xml
-C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\MySql.Data.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.dll.config
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbprojResolveAssemblyReference.cache

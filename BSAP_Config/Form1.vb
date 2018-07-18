@@ -13,6 +13,7 @@ Public Class Form1
         Call LoadProfilerValues()
         Call LoadAppMonitorValues()
         Call LoadDataDumperValues()
+        call LoadServiceValues()
     End Sub
     ''' <summary>
     ''' Sub to Save values to the app.config file based on the sPath ( path of the config file) 
