@@ -1,11 +1,8 @@
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\bsap_client.db
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfiler.exe.config
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BSApplicationProfiler.exe
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BurnSoft.Universal.dll
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\MySql.Data.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\BurnSoft.Universal.xml
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.pdb
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.frmMain.resources
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.Resources.resources
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbproj.GenerateResource.Cache
@@ -52,3 +49,11 @@ C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\R
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbproj.CoreCompileInputs.cache
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.vbproj.CopyComplete
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSApplicationProfiler\obj\Release\BSApplicationProfiler.exe
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\EntityFramework.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.EF6.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.Linq.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\EntityFramework.xml
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\System.Data.SQLite.xml
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSApplicationProfiler\bin\Release\MySql.Data.dll

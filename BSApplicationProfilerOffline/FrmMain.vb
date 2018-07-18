@@ -55,7 +55,6 @@ Public Class FrmMain
     ''' <param name="ProcessName"></param>
     ''' <param name="PID"></param>
     ''' <param name="mon_interval"></param>
-    ''' <param name="agentid"></param>
     Sub RunMonitor(ProcessName As String, PID As String, mon_interval As Long, param As string)
         Try
             Dim arg As String = "/name=" & ProcessName & " /pid=" & PID & " /param=" & chr(34) & param & chr(34) & " /interval=" & mon_interval & "/offline=true"

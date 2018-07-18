@@ -30,7 +30,6 @@ BSApplicationProfilerOffline
  <param name="ProcessName"></param>
  <param name="PID"></param>
  <param name="mon_interval"></param>
- <param name="agentid"></param>
 </member>
 <member name="M:BSApplicationProfilerOffline.FrmMain.ChangeAppSettings(System.String,System.String)">
  <summary>

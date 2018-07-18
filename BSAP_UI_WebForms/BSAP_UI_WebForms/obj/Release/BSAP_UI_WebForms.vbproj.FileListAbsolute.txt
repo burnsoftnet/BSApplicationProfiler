@@ -17,7 +17,6 @@
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Antlr3.Runtime.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AspNet.ScriptManager.bootstrap.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AspNet.ScriptManager.jQuery.dll
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BurnSoft.Universal.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\EntityFramework.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\EntityFramework.SqlServer.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Microsoft.AspNet.FriendlyUrls.dll
@@ -38,14 +37,11 @@
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Microsoft.ScriptManager.MSAjax.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Microsoft.ScriptManager.WebForms.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Microsoft.Web.Infrastructure.dll
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Data.dll
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Web.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Newtonsoft.Json.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Owin.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\System.Web.Optimization.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\System.Web.Providers.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\WebGrease.dll
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BurnSoft.Universal.xml
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\System.Web.Optimization.xml
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Antlr3.Runtime.pdb
@@ -225,3 +221,7 @@ C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_We
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Release\BSAP_UI_WebForms.dll
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Release\WebForms_Basic.xml
 C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Release\BSAP_UI_WebForms.pdb
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AjaxControlToolkit.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AjaxMin.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Data.xml
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Web.xml
