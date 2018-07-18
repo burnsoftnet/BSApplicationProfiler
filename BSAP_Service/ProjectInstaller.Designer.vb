@@ -26,7 +26,7 @@
         '
         'ServiceInstaller1
         '
-        Me.ServiceInstaller1.Description = "Monitor you applications performance for testing while just using your applicatio" &
+        Me.ServiceInstaller1.Description = "Monitor you applications performance for testing while just using your applicatio"& _ 
     "n as you would without thinking about it"
         Me.ServiceInstaller1.DisplayName = "BurnSoft Application Profiler"
         Me.ServiceInstaller1.ServiceName = "BSAP"
@@ -34,6 +34,7 @@
         '
         'ServiceProcessInstaller1
         '
+        Me.ServiceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalSystem
         Me.ServiceProcessInstaller1.Password = Nothing
         Me.ServiceProcessInstaller1.Username = Nothing
         '
@@ -41,7 +42,7 @@
         '
         Me.Installers.AddRange(New System.Configuration.Install.Installer() {Me.ServiceInstaller1, Me.ServiceProcessInstaller1})
 
-    End Sub
+End Sub
 
     Friend WithEvents ServiceInstaller1 As ServiceProcess.ServiceInstaller
     Friend WithEvents ServiceProcessInstaller1 As ServiceProcess.ServiceProcessInstaller

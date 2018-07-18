@@ -1,5 +1,5 @@
 ﻿Imports System.Windows.Forms
-Imports BurnSoft.Universal
+'Imports BurnSoft.Universal
 Module modGlobal
     Public DO_DEBUG As Boolean
     Public DO_HEALTH_CHECK As Boolean

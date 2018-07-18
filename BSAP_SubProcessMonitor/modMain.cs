@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace BSAP_SubProcessMonitor
 {
-    class modMain
+    class ModMain
     {
         long SESSION_ID;
         long APP_PROJECT_MAIN_PROCESS_ID;
