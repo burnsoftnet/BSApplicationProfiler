@@ -4,39 +4,39 @@ Imports MySql.Data.MySqlClient
 Imports System.Data.SQLite
 Imports System.IO
 Module modMain
-    Dim SESSION_ID As Long
-    Dim APP_PROJECT_MAIN_PROCESS_ID As Long
-    Dim APP_PATH As String
-    Dim USELOCAL As Boolean
-    Dim OFFLINE as Boolean
-    Dim PARAM As string
-    Private _UPDATEDSESSION As Boolean
+    Dim _sessionId As Long
+    Dim _appProjectMainProcessId As Long
+    Dim _appPath As String
+    Dim _uselocal As Boolean
+    Dim _offline as Boolean
+    Dim _param As string
+    Private _updatedsession As Boolean
 #Region "SQLite Database Function and Sub"
     ''' <summary>
     ''' Get the Application Project Main Process ID and also return if the application has logs or not
     ''' </summary>
-    ''' <param name="process_name">process name</param>
-    ''' <param name="HasLogs">Pass to check for logs or not</param>
+    ''' <param name="processName">process name</param>
+    ''' <param name="hasLogs">Pass to check for logs or not</param>
     ''' <returns>id</returns>
-    Function getAppProjectMainProcessSQLIte(process_name As String, Optional ByRef HasLogs As Boolean = False) As Long
+    Function GetAppProjectMainProcessSqlIte(processName As String, Optional ByRef hasLogs As Boolean = False) As Long
         Dim lAns As Long = 0
         Try
-            Dim SQL As String = "Select id, haslogs from app_project_main_process where process_name='" & process_name & "' COLLATE NOCASE"
-            Dim Obj As New BurnSoft.BSSqliteDatabase
-            If Obj.ConnectDB = 0 Then
-                Dim CMD As New SQLiteCommand(SQL, Obj.Conn)
-                Dim RS As SQLiteDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    lAns = RS("id")
-                    HasLogs = Convert10ToBool(RS("haslogs"))
+            Dim sql As String = "Select id, haslogs from app_project_main_process where process_name='" & processName & "' COLLATE NOCASE"
+            Dim obj As New BurnSoft.BSSqliteDatabase
+            If obj.ConnectDB = 0 Then
+                Dim cmd As New SQLiteCommand(sql, obj.Conn)
+                Dim rs As SQLiteDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    lAns = rs("id")
+                    HasLogs = Convert10ToBool(rs("haslogs"))
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
+                rs.Close()
+                rs = Nothing
+                cmd = Nothing
+                obj.CloseDB()
             End If
-            Obj = Nothing
+            obj = Nothing
         Catch ex As Exception
             Call LogError("modMain.getAppProjectMainProcessSQLite", ex.Message.ToString)
         End Try
@@ -45,26 +45,26 @@ Module modMain
     ''' <summary>
     ''' Gets the Log file name and path from the database for this main process
     ''' </summary>
-    ''' <param name="APID">Application ID</param>
+    ''' <param name="apid">Application ID</param>
     ''' <returns>The Path of the logfile for that process</returns>
-    Function GetLogPathSQLite(APID As Long) As String
+    Function GetLogPathSqLite(apid As Long) As String
         Dim sAns As String = ""
         Try
-            Dim Obj As New BurnSoft.BSSqliteDatabase
-            If Obj.ConnectDB() = 0 Then
-                Dim SQL As String = "select * from app_project_main_log where apmid=" & APID
-                Dim CMD As New SQLiteCommand(SQL, Obj.Conn)
-                Dim RS As SQLiteDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    sAns = RS("logpath") & "\" & RS("logname")
+            Dim obj As New BurnSoft.BSSqliteDatabase
+            If obj.ConnectDB() = 0 Then
+                Dim sql As String = "select * from app_project_main_log where apmid=" & APID
+                Dim cmd As New SQLiteCommand(sql, obj.Conn)
+                Dim rs As SQLiteDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    sAns = rs("logpath") & "\" & rs("logname")
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
+                rs.Close()
+                rs = Nothing
+                cmd = Nothing
+                obj.CloseDB()
             End If
-            Obj = Nothing
+            obj = Nothing
         Catch ex As Exception
             Call LogError("modMain.GetLogPathSQLite", ex.Message.ToString)
         End Try
@@ -74,24 +74,24 @@ Module modMain
     ''' Get the latest session that was just entered into the database
     ''' </summary>
     ''' <returns>id</returns>
-    Function getSessionIDSQLite() As Long
+    Function GetSessionIdsqLite() As Long
         Dim lAns As Long = 0
         Try
-            Dim SQL As String = "SELECT id from monitoring_session where APNID=" & PROCESS_ID & " and AID=" & AGENT_ID &
+            Dim sql As String = "SELECT id from monitoring_session where APNID=" & PROCESS_ID & " and AID=" & AGENT_ID &
                                 " order by id desc limit 1"
-            Dim Obj As New BurnSoft.BSSqliteDatabase
-            If Obj.ConnectDB = 0 Then
-                Dim CMD As New SQLiteCommand(SQL, Obj.Conn)
-                Dim RS As SQLiteDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    lAns = RS("id")
+            Dim obj As New BurnSoft.BSSqliteDatabase
+            If obj.ConnectDB = 0 Then
+                Dim cmd As New SQLiteCommand(sql, obj.Conn)
+                Dim rs As SQLiteDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    lAns = rs("id")
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
-                Obj = Nothing
+                rs.Close()
+                rs = Nothing
+                cmd = Nothing
+                obj.CloseDB()
+                obj = Nothing
             End If
         Catch ex As Exception
             Call LogError("modmain.getSessionIDSQLite", ex.Message.ToString)
@@ -103,28 +103,28 @@ Module modMain
     ''' <summary>
     ''' Get the Application Project Main Process ID and also return if the application has logs or not
     ''' </summary>
-    ''' <param name="process_name"></param>
-    ''' <param name="HasLogs"></param>
+    ''' <param name="processName"></param>
+    ''' <param name="hasLogs"></param>
     ''' <returns>id</returns>
-    Function getAppProjectMainProcessMySQL(process_name As String, Optional ByRef HasLogs As Boolean = False) As Long
+    Function GetAppProjectMainProcessMySql(processName As String, Optional ByRef hasLogs As Boolean = False) As Long
         Dim lAns As Long = 0
         Try
-            Dim SQL As String = "Select id, haslogs from app_project_main_process where process_name='" & process_name & "'"
-            Dim Obj As New BurnSoft.BSDatabase
-            If Obj.ConnectDB = 0 Then
-                Dim CMD As New MySqlCommand(SQL, Obj.Conn)
-                Dim RS As MySqlDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    lAns = RS("id")
-                    HasLogs = Convert10ToBool(RS("haslogs"))
+            Dim sql As String = "Select id, haslogs from app_project_main_process where process_name='" & processName & "'"
+            Dim obj As New BurnSoft.BSDatabase
+            If obj.ConnectDB = 0 Then
+                Dim cmd As New MySqlCommand(sql, obj.Conn)
+                Dim rs As MySqlDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    lAns = rs("id")
+                    hasLogs = Convert10ToBool(rs("haslogs"))
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
+                rs.Close()
+                rs = Nothing
+                cmd = Nothing
+                obj.CloseDB()
             End If
-            Obj = Nothing
+            obj = Nothing
         Catch ex As Exception
             Call LogError("modMain.getAppProjectMainProcessMySQL", ex.Message.ToString)
         End Try
@@ -133,26 +133,26 @@ Module modMain
     ''' <summary>
     ''' Gets the Log file name and path from the database for this main process
     ''' </summary>
-    ''' <param name="APID"></param>
+    ''' <param name="apid"></param>
     ''' <returns></returns>
-    Function GetLogPathMySQL(APID As Long) As String
+    Function GetLogPathMySql(apid As Long) As String
         Dim sAns As String = ""
         Try
-            Dim Obj As New BurnSoft.BSDatabase
-            If Obj.ConnectDB() = 0 Then
-                Dim SQL As String = "select * from app_project_main_log where apmid=" & APID
-                Dim CMD As New MySqlCommand(SQL, Obj.Conn)
-                Dim RS As MySqlDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    sAns = RS("logpath") & "\" & RS("logname")
+            Dim obj As New BurnSoft.BSDatabase
+            If obj.ConnectDB() = 0 Then
+                Dim sql As String = "select * from app_project_main_log where apmid=" & APID
+                Dim cmd As New MySqlCommand(sql, obj.Conn)
+                Dim rs As MySqlDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    sAns = rs("logpath") & "\" & rs("logname")
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
+                rs.Close()
+                rs = Nothing
+                cmd = Nothing
+                obj.CloseDB()
             End If
-            Obj = Nothing
+            obj = Nothing
         Catch ex As Exception
             Call LogError("modMain.GetLogPathMySQL", ex.Message.ToString)
         End Try
@@ -162,24 +162,24 @@ Module modMain
     ''' Get the latest session that was just entered into the database
     ''' </summary>
     ''' <returns>id</returns>
-    Function getSessionIDMySQL() As Long
+    Function GetSessionIdmySql() As Long
         Dim lAns As Long = 0
         Try
-            Dim SQL As String = "SELECT id from monitoring_session where APNID=" & PROCESS_ID & " and AID=" & AGENT_ID &
+            Dim sql As String = "SELECT id from monitoring_session where APNID=" & PROCESS_ID & " and AID=" & AGENT_ID &
                                 " order by id desc limit 1"
-            Dim Obj As New BurnSoft.BSDatabase
-            If Obj.ConnectDB = 0 Then
-                Dim CMD As New MySqlCommand(SQL, Obj.Conn)
-                Dim RS As MySqlDataReader
-                RS = CMD.ExecuteReader
-                While RS.Read
-                    lAns = RS("id")
+            Dim obj As New BurnSoft.BSDatabase
+            If obj.ConnectDB = 0 Then
+                Dim cmd As New MySqlCommand(sql, obj.Conn)
+                Dim rs As MySqlDataReader
+                rs = cmd.ExecuteReader
+                While rs.Read
+                    lAns = rs("id")
                 End While
-                RS.Close()
-                RS = Nothing
-                CMD = Nothing
-                Obj.CloseDB()
-                Obj = Nothing
+                rs.Close()
+                rs = Nothing
+                cmd = Nothing
+                obj.CloseDB()
+                obj = Nothing
             End If
         Catch ex As Exception
             Call LogError("modmain.getSessionIDMySQL", ex.Message.ToString)
@@ -195,41 +195,41 @@ Module modMain
     Sub StartSessionDetails()
         Call CreateNewSession()
         _UPDATEDSESSION = False
-        SESSION_ID = getSessionID()
+        _sessionId = getSessionID()
     End Sub
     ''' <summary>
     ''' Mark the database that the process has exist the system to close to capture project
     ''' </summary>
     Sub EndSession()
-        Dim SQL As String = "UPDATE monitoring_session set sessionend=CURRENT_TIMESTAMP where ID=" & SESSION_ID
-        Call ConnExec(SQL)
+        Dim sql As String = "UPDATE monitoring_session set sessionend=CURRENT_TIMESTAMP where ID=" & _sessionId
+        Call ConnExec(sql)
     End Sub
     ''' <summary>
     ''' Get the main application ID doem the database based on the name of the process
     ''' </summary>
-    ''' <param name="process_name"></param>
-    ''' <param name="HasLogs"></param>
+    ''' <param name="processName"></param>
+    ''' <param name="hasLogs"></param>
     ''' <returns></returns>
-    Function getAppProjectMainProcess(process_name As String, Optional ByRef HasLogs As Boolean = False) As Long
+    Function GetAppProjectMainProcess(processName As String, Optional ByRef hasLogs As Boolean = False) As Long
         Dim lAns As Long = 0
-        If Not USELOCAL Then
-            lAns = getAppProjectMainProcessMySQL(process_name, HasLogs)
+        If Not _uselocal Then
+            lAns = getAppProjectMainProcessMySQL(processName, hasLogs)
         Else
-            lAns = getAppProjectMainProcessSQLIte(process_name, HasLogs)
+            lAns = GetAppProjectMainProcessSqlIte(processName, hasLogs)
         End If
         Return lAns
     End Function
     ''' <summary>
     ''' Get the Log Path and details based on the main application ID
     ''' </summary>
-    ''' <param name="APID"></param>
+    ''' <param name="apid"></param>
     ''' <returns></returns>
-    Function GetLogPath(APID As Long) As String
+    Function GetLogPath(apid As Long) As String
         Dim sAns As String = ""
-        If Not USELOCAL Then
-            sAns = GetLogPathMySQL(APID)
+        If Not _uselocal Then
+            sAns = GetLogPathMySQL(apid)
         Else
-            sAns = GetLogPathSQLite(APID)
+            sAns = GetLogPathSQLite(apid)
         End If
         Return sAns
     End Function
@@ -238,7 +238,7 @@ Module modMain
     ''' </summary>
     ''' <param name="SQL"></param>
     Sub ConnExec(SQL As String)
-        If Not USELOCAL Then
+        If Not _uselocal Then
             Dim Obj As New BurnSoft.BSDatabase
             Obj.ConnExe(SQL)
             Obj = Nothing
@@ -254,7 +254,7 @@ Module modMain
     ''' <returns>id</returns>
     Function getSessionID() As Long
         Dim lAns As Long = 0
-        If Not USELOCAL Then
+        If Not _uselocal Then
             lAns = getSessionIDMySQL()
         Else
             lAns = getSessionIDSQLite()
@@ -364,31 +364,31 @@ Module modMain
     ''' <summary>
     ''' Set Global Vars
     ''' </summary>
-    Sub INIT()
+    Sub Init()
         If Not USE_TEST_INIT Then
-            Dim ObjO As New BSOtherObjects
-            PROCESS_NAME = ObjO.GetCommand("name", "")
-            PROCESS_ID = ObjO.GetCommand("pid", 0)
-            AGENT_ID = ObjO.GetCommand("aid", 0)
-            PARAM = ObjO.GetCommand("param","")
-            OFFLINE = ObjO.GetCommand("offline",False)
+            Dim objO As New BSOtherObjects
+            PROCESS_NAME = objO.GetCommand("name", "")
+            PROCESS_ID = objO.GetCommand("pid", 0)
+            AGENT_ID = objO.GetCommand("aid", 0)
+            _param = objO.GetCommand("param","")
+            _offline = objO.GetCommand("offline",False)
 
-            TIMER_INTERVAL = ObjO.GetCommand("interval", 0) * 60000
+            TIMER_INTERVAL = objO.GetCommand("interval", 0) * 60000
             If TIMER_INTERVAL = 0 Then
                 TIMER_INTERVAL = System.Configuration.ConfigurationManager.AppSettings("TIMER_INTERVAL")
             End If
-            ObjO = Nothing
+            objO = Nothing
 
             If Len(System.Configuration.ConfigurationManager.AppSettings("APP_PATH")) = 0 Then
-                APP_PATH = Application.StartupPath
+                _appPath = Application.StartupPath
             Else
-                APP_PATH = System.Configuration.ConfigurationManager.AppSettings("APP_PATH")
+                _appPath = System.Configuration.ConfigurationManager.AppSettings("APP_PATH")
             End If
 
             BUGFILE_LEVEL = System.Configuration.ConfigurationManager.AppSettings("BUGFILE_LEVEL")
             DO_DEBUG = CBool(System.Configuration.ConfigurationManager.AppSettings("DEBUG"))
-            DEBUG_LOGFILE = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("BUGFILE")
-            MyLogFile = APP_PATH & "\" & System.Configuration.ConfigurationManager.AppSettings("LOGFILE")
+            DEBUG_LOGFILE = _appPath & "\" & System.Configuration.ConfigurationManager.AppSettings("BUGFILE")
+            MyLogFile = _appPath & "\" & System.Configuration.ConfigurationManager.AppSettings("LOGFILE")
             CONSOLEMODE = CBool(System.Configuration.ConfigurationManager.AppSettings("CONSOLE"))
             USE_LOGFILE = CBool(System.Configuration.ConfigurationManager.AppSettings("USE_LOGFILE"))
             DBHOST = System.Configuration.ConfigurationManager.AppSettings("DB_HOST")
@@ -398,7 +398,7 @@ Module modMain
             AGENT_ID = 1
             TIMER_INTERVAL = 1 * 60000
         End If
-        If (Not OFFLINE) Then
+        If (Not _offline) Then
             If PROCESS_ID = 0 Or AGENT_ID = 0 Then
                 LogError("modMail.Init", "Missing Agent ID or Process ID")
                 Call ExitApp()
@@ -414,28 +414,28 @@ Module modMain
     ''' <summary>
     ''' Properly exit the application
     ''' </summary>
-    ''' <param name="ExitValue"></param>
-    Sub ExitApp(Optional ByVal ExitValue As Integer = 0)
+    ''' <param name="exitValue"></param>
+    Sub ExitApp(Optional ByVal exitValue As Integer = 0)
         Application.Exit()
         Environment.Exit(ExitValue)
     End Sub
 
-    Sub GetExeDetails(FullAppPath As String)
+    Sub GetExeDetails(fullAppPath As String)
         Try
             If Not _UPDATEDSESSION Then
-                Dim ObjFS As New FileIO
-                Dim AppVersion As String = ObjFS.GetFileVersion(FullAppPath)
-                Dim AppComp As String = ObjFS.GetFileCompany(FullAppPath)
-                Dim AppLastAccess As String = ObjFS.GetLastAccessDateTime(FullAppPath)
-                Dim AppGetLastWrite As String = ObjFS.GetLastWriteDateTime(FullAppPath)
-                Dim CreatedDateTime As String = ObjFS.GetCreationDateTime(FullAppPath)
+                Dim objFs As New FileIO
+                Dim appVersion As String = objFs.GetFileVersion(FullAppPath)
+                Dim appComp As String = objFs.GetFileCompany(FullAppPath)
+                Dim appLastAccess As String = objFs.GetLastAccessDateTime(FullAppPath)
+                Dim appGetLastWrite As String = objFs.GetLastWriteDateTime(FullAppPath)
+                Dim createdDateTime As String = objFs.GetCreationDateTime(FullAppPath)
 
-                Call UpdateSessionWithAppDetails(SESSION_ID, AppVersion, AppComp, AppLastAccess, AppGetLastWrite, CreatedDateTime)
+                Call UpdateSessionWithAppDetails(_sessionId, appVersion, appComp, appLastAccess, appGetLastWrite, createdDateTime)
             End If
         Catch ex As Exception
             Dim sMsg As String = ex.Message.ToString
-            Dim ErrorNum As Long = Err.Number
-            Select Case ErrorNum
+            Dim errorNum As Long = Err.Number
+            Select Case errorNum
                 Case 5
                     sMsg &= " ( " & FullAppPath & " )"
             End Select
@@ -448,43 +448,42 @@ Module modMain
     ''' <summary>
     ''' Collect the information needed to monitor the process
     ''' </summary>
-    ''' <param name="MyProcess"></param>
-    ''' <param name="username"></param>
-    ''' <param name="ProcessActive"></param>
-    Sub CollectData(MyProcess As String, ByRef ProcessActive As Boolean)
+    ''' <param name="myProcess"></param>
+    ''' <param name="processActive"></param>
+    Sub CollectData(myProcess As String, ByRef processActive As Boolean)
         Try
-            Dim MyPID As String = ""
-            Dim ProcessCount As Integer = 0
-            Dim CPU As Double = 0
-            Dim ObjP As New BurnSoft.BSProcessInfo
-            Dim Username As String = ObjP.GetProcessOwner(MyProcess)
-            BuggerMe("username=" & Username)
-            ProcessActive = ObjP.ProcessExists(MyProcess, MyPID, ProcessCount)
+            Dim myPid As String = ""
+            Dim processCount As Integer = 0
+            Dim cpu As Double = 0
+            Dim objP As New BurnSoft.BSProcessInfo
+            Dim username As String = objP.GetProcessOwner(MyProcess)
+            BuggerMe("username=" & username)
+            ProcessActive = objP.ProcessExists(MyProcess, myPid, processCount)
             If ProcessActive Then
-                Dim ActivePath As String = Replace(ObjP.GetProcessCommandLine(MyPID), "\", "//")
-                BuggerMe("Full Active Path: " & ActivePath)
-                Dim FullAppPath As String = ""
-                If IsDBNull(ActivePath) Then
-                    FullAppPath = ActivePath.Replace(Chr(34), "")
+                Dim activePath As String = Replace(objP.GetProcessCommandLine(myPid), "\", "//")
+                BuggerMe("Full Active Path: " & activePath)
+                Dim fullAppPath As String = ""
+                If IsDBNull(activePath) Then
+                    fullAppPath = activePath.Replace(Chr(34), "")
                 End If
-                BuggerMe("FullPath Formated: " & FullAppPath)
+                BuggerMe("FullPath Formated: " & fullAppPath)
 
-                If not OFFLINE Then If Not _UPDATEDSESSION Then Call GetExeDetails(FullAppPath)
+                If not _offline Then If Not _UPDATEDSESSION Then Call GetExeDetails(fullAppPath)
 
 
                 If LAST_CPU_VALUE = 0 Then
-                    CPU = ObjP.GetCPUProcessStarting(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE)
+                    cpu = objP.GetCPUProcessStarting(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE)
                 Else
-                    CPU = ObjP.GetProcessCPUTime(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE, LAST_CPU_VALUE)
+                    cpu = objP.GetProcessCPUTime(Replace(MyProcess, ".exe", ""), LAST_CPU_VALUE, LAST_CPU_VALUE)
                 End If
-                If not OFFLINE Then
-                    Call InsertIntoProcessStats(SESSION_ID, PROCESS_ID, APP_PROJECT_MAIN_PROCESS_ID, AGENT_ID, MyProcess, Username,
-                                                CPU, ObjP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
-                                                ObjP.GetProccessHandleCount(MyPID), ObjP.GetProcessThreadCount(MyPID), ActivePath)
+                If not _offline Then
+                    Call InsertIntoProcessStats(_sessionId, PROCESS_ID, _appProjectMainProcessId, AGENT_ID, MyProcess, username,
+                                                cpu, objP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
+                                                objP.GetProccessHandleCount(myPid), objP.GetProcessThreadCount(myPid), activePath)
                 Else 
-                    Call InsertIntoFile( MyProcess, Username,
-                                         CPU, ObjP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
-                                         ObjP.GetProccessHandleCount(MyPID), ObjP.GetProcessThreadCount(MyPID), ActivePath)
+                    Call InsertIntoFile( MyProcess, username,
+                                         cpu, objP.GetProcessMemoryUseage(Replace(MyProcess, ".exe", "")),
+                                         objP.GetProccessHandleCount(myPid), objP.GetProcessThreadCount(myPid), activePath)
                 End If
 
             End If
@@ -496,17 +495,19 @@ Module modMain
                         username As String, cpu As String, memoryused As String, ihandles As String, threads As String,
                         commandline As String)
         Try
-            Dim LogName as String = String.Format("{0}-{1}.log",imagename,DateTime.Now.ToString("yyyMMdd"))
+            Dim logName as String = String.Format("{0}-{1}.csv",imagename,DateTime.Now.ToString("yyyMMdd"))
         
             Dim obj as New FileIO
-            Dim fullPath as String = APP_PATH & "\logs\" & LogName
+            Dim fullPath as String = _appPath & "\logs\" & logName
 
             If ( Not obj.FileExists(fullPath))
-                Dim sHeader = "User Name" & vbTab & "CPU" & vbTab & "Memory Used" & vbTab & "Handles" & vbTab & "Threads" & vbTab & "Command Line"
+                'Dim sHeader = "User Name" & vbTab & "CPU" & vbTab & "Memory Used" & vbTab & "Handles" & vbTab & "Threads" & vbTab & "Command Line"
+                Dim sHeader = "," & "User Name" & "," & "CPU" & "," & "Memory Used" & "," & "Handles" & "," & "Threads" & "," & "Command Line"
                 obj.LogFile(fullPath,sHeader)
             End If
 
-            Dim sLine as String = username & vbTab & cpu & vbTab & memoryused & vbTab & ihandles & vbTab & threads & vbTab & commandline
+            'Dim sLine as String = username & vbTab & cpu & vbTab & memoryused & vbTab & ihandles & vbTab & threads & vbTab & commandline
+            Dim sLine as String = "," & username & "," & cpu & "," & memoryused & "," & ihandles & "," & threads & "," & commandline
             obj.LogFile(fullPath,sLine)
         Catch ex As Exception
             LogError("modMain.InsertIntoFile", ex.Message.ToString)
@@ -520,52 +521,50 @@ Module modMain
     Sub Main()
         Try
             Call INIT()
-            if Not OFFLINE Then
-                Dim ObjN As New BSNetwork
-                If ObjN.DeviceIsUp(DBHOST) Then
-                    USELOCAL = False
+            if Not _offline Then
+                Dim objN As New BSNetwork
+                If objN.DeviceIsUp(DBHOST) Then
+                    _uselocal = False
                 Else
-                    USELOCAL = True
+                    _uselocal = True
                 End If
-                ObjN = Nothing
-                If USELOCAL Then
+                objN = Nothing
+                If _uselocal Then
                     Call LogError("modMain.Main", "Unabled to connnect to database host " & DBHOST)
                     Call BuggerMe("Using Local Database", "modMain.Main")
                 Else
                     Call BuggerMe("Using Remote Database " & DBHOST, "modMain.Main")
                 End If
 
-                Dim HasLogs As Boolean = False
-                APP_PROJECT_MAIN_PROCESS_ID = getAppProjectMainProcess(PROCESS_NAME, HasLogs)
-                BuggerMe("APP_PROJECT_MAIN_PROCESS_ID=" & APP_PROJECT_MAIN_PROCESS_ID)
-                'REFACTOR: This might not be needed anymore
-                Dim ObjS As New BSOtherObjects
-                ObjS = Nothing
+                Dim hasLogs As Boolean = False
+                _appProjectMainProcessId = GetAppProjectMainProcess(PROCESS_NAME, hasLogs)
+                BuggerMe("_appProjectMainProcessId=" & _appProjectMainProcessId)
+
                 'Start up a session in the database
                 Call StartSessionDetails()
                 'Start Watching the process for details
                 LAST_CPU_VALUE = 0
-                Dim ProcessActive As Boolean = True
-                Do While ProcessActive
+                Dim processActive As Boolean = True
+                Do While processActive
                     Call BuggerMe("Starting Data Collection at " & Now, "modMain.Main", "medium")
-                    Call CollectData(PROCESS_NAME, ProcessActive)
+                    Call CollectData(PROCESS_NAME, processActive)
                     Call BuggerMe("Ending Data Collection at " & Now, "modMain.Main", "medium")
-                    If ProcessActive Then System.Threading.Thread.Sleep(TIMER_INTERVAL)
+                    If processActive Then Threading.Thread.Sleep(TIMER_INTERVAL)
                 Loop
 
                 'Check to see if there was any log files left by the application after it exit the system
-                If HasLogs Then
+                If hasLogs Then
                     BuggerMe("Looking for Logs!", "modMain.Main", "medium")
-                    Dim LogLocation As String = GetLogPath(APP_PROJECT_MAIN_PROCESS_ID)
-                    BuggerMe("LogFile: " & LogLocation)
-                    Dim ObjF As New FileIO
-                    If ObjF.FileExists(LogLocation) Then
+                    Dim logLocation As String = GetLogPath(_appProjectMainProcessId)
+                    BuggerMe("LogFile: " & logLocation)
+                    Dim objF As New FileIO
+                    If objF.FileExists(logLocation) Then
                         BuggerMe("Processing Logs!", "modMain.Main", "medium")
-                        Call ProcessLogFile(LogLocation, ObjF.GetNameOfFile(LogLocation), PROCESS_ID, SESSION_ID)
+                        Call ProcessLogFile(logLocation, objF.GetNameOfFile(logLocation), PROCESS_ID, _sessionId)
                         BuggerMe("Deleting log file!")
-                        ObjF.DeleteFile(LogLocation)
+                        objF.DeleteFile(logLocation)
                     Else
-                        BuggerMe(LogLocation & " not found!", "modMain.Main", "medium")
+                        BuggerMe(logLocation & " not found!", "modMain.Main", "medium")
                     End If
                     BuggerMe("End of looking for Logs!", "modMain.Main", "medium")
                 End If
@@ -574,12 +573,12 @@ Module modMain
             Else 
                 Call BuggerMe("OFFLINE MODE WRITING TO FLAT FILES", "modMain.Main")
                 LAST_CPU_VALUE = 0
-                Dim ProcessActive As Boolean = True
-                Do While ProcessActive
+                Dim processActive As Boolean = True
+                Do While processActive
                     Call BuggerMe("Starting Data Collection at " & Now, "modMain.Main", "medium")
-                    Call CollectData(PROCESS_NAME, ProcessActive)
+                    Call CollectData(PROCESS_NAME, processActive)
                     Call BuggerMe("Ending Data Collection at " & Now, "modMain.Main", "medium")
-                    If ProcessActive Then System.Threading.Thread.Sleep(TIMER_INTERVAL)
+                    If processActive Then Threading.Thread.Sleep(TIMER_INTERVAL)
                 Loop
             End If
         Catch ex As Exception
