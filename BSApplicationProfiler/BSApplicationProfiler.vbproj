@@ -58,10 +58,6 @@
     <ApplicationIcon>Resources\100Sampleicons_81-100_26.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BurnSoft.Universal, Version=4.0.23.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Libraries\Net45\BurnSoft.Universal.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -177,6 +173,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documents\BurnSoft - Application Profiler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BurnSoft.Universal\BurnSoft.Universal\BurnSoft.Universal.vbproj">
+      <Project>{fea68f73-aed1-4af3-a5c9-7541c70f886f}</Project>
+      <Name>BurnSoft.Universal</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets')" />
