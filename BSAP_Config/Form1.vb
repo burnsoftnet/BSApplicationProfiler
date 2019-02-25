@@ -1,8 +1,20 @@
 ﻿Imports System.Configuration
 Public Class Form1
+    ''' <summary>
+    ''' AppProfiler application name
+    ''' </summary>
     Const AppProfiler = "\BSApplicationProfiler.exe"
+    ''' <summary>
+    ''' AppMonitor application name
+    ''' </summary>
     Const AppMonitor = "\BSAP_AppMonitor.exe"
+    ''' <summary>
+    '''  AppDataDump Application Name
+    ''' </summary>
     Const AppDatadump = "\BSAP_DataDump.exe"
+    ''' <summary>
+    '''  AppService Name Application Name
+    ''' </summary>
     Const AppService = "\BSAP_Service.exe"
     ''' <summary>
     ''' Load Values into the fields when the form starts up
