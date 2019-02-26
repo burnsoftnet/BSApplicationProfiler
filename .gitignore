@@ -113,3 +113,5 @@ BSAP_SubAppMonitor/obj/
 BSApplicationProfilerOffline/obj/
 .vs/
 BSApplicationProfiler/bin/
+BSAP_MonitorService/bin/
+BSAP_ProjectMonitor/bin/
