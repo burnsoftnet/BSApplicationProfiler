@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System;
+Imports System
 Namespace BurnSoft
     Public Class BSDatabase
         Public conn As MySqlConnection
@@ -9,7 +9,7 @@ Namespace BurnSoft
         ''' </summary>
         ''' <returns></returns>
         Function ConnectString() As String
-            Return System.Configuration.ConfigurationManager.ConnectionStrings("bsap").ToString
+            Return Configuration.ConfigurationManager.ConnectionStrings("bsap").ToString
         End Function
         ''' <summary>
         ''' Connect to a MySQL Database

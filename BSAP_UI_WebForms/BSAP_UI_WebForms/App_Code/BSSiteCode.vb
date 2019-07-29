@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports BurnSoft
 Imports System
+Imports System.String
 
 Namespace BurnSoft.BSAP
     Public Class ProjectSessions
