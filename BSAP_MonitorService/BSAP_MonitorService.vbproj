@@ -77,6 +77,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="modGlobal.vb" />
     <Compile Include="MonitorService.Designer.vb">
       <DependentUpon>MonitorService.vb</DependentUpon>

@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BSGlobalClass.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="modGlobal.vb" />
     <Compile Include="modMain.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
