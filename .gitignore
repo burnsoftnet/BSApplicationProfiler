@@ -115,3 +115,6 @@ BSApplicationProfilerOffline/obj/
 BSApplicationProfiler/bin/
 BSAP_MonitorService/bin/
 BSAP_ProjectMonitor/bin/
+BSAP_DataDump/obj/
+BSAP_UI_WebForms/BSAP_UI_WebForms/obj/
+BSAP_UI_WebForms/BSAP_UI_WebForms/obj/
