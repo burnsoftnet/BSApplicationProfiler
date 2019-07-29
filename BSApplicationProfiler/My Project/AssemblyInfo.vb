@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("This is the main process that will look to see if any of the applications are running on the system.  If they are it will launch the AppMonitor to gather the information from that process")>
 <Assembly: AssemblyCompany("BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyProduct("BurnSoft Application Profiler")>
-<Assembly: AssemblyCopyright("Copyright ©  2017 BurnSoft, www.burnsoft.net")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2019 BurnSoft, www.burnsoft.net")>
 <Assembly: AssemblyTrademark("BurnSoft, www.burnsoft.net")>
 
 <Assembly: ComVisible(False)>
