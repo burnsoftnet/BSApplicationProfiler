@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("This site is the dedicated Web Interface to view the information that is collected from the BSAP agents and this is also where you would configure your projects to be monitored")>
 <Assembly: AssemblyCompany("www.burnsoft.net")>
 <Assembly: AssemblyProduct("BurnSoft Application Profiler WebUI")>
-<Assembly: AssemblyCopyright("Copyright ©  2017 BurnSoft")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2019 BurnSoft")>
 <Assembly: AssemblyTrademark("BurnSoft, www.burnsoftn.et")>
 
 <Assembly: ComVisible(False)>
@@ -31,4 +31,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("1.0.0.*")>
-<Assembly: AssemblyFileVersion("1.0.0.13")>
+<Assembly: AssemblyFileVersion("1.0.0.16")>
