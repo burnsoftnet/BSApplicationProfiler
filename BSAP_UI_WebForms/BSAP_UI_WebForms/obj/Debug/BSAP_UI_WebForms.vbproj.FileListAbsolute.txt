@@ -312,7 +312,8 @@ C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_We
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AjaxMin.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Data.xml
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Web.xml
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Newtonsoft.Json.pdb
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.vbprojAssemblyReference.cache
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.vbproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.vbproj.CopyComplete
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BurnSoft.Universal.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BurnSoft.Universal.xml

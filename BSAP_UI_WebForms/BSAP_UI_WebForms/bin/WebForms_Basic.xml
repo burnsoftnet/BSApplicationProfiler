@@ -853,6 +853,22 @@ To modify move field declaration from designer file to code-behind file.
  Returns the Asp log object.
  </summary>
 </member>
+<member name="T:BSAP_UI_WebForms.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:BSAP_UI_WebForms.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:BSAP_UI_WebForms.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
 <member name="F:BSAP_UI_WebForms.Project_List._Image2">
 <summary>
 Image2 control.
