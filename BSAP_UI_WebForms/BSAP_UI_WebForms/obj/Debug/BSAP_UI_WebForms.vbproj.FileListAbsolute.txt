@@ -310,10 +310,15 @@ C:\Users\jmireles\Source\Repos\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_We
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\roslyn\vbc.rsp
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AjaxControlToolkit.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\AjaxMin.dll
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Data.xml
-\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Web.xml
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.vbprojAssemblyReference.cache
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.vbproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\obj\Debug\BSAP_UI_WebForms.vbproj.CopyComplete
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BurnSoft.Universal.dll
 \\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BurnSoft.Universal.xml
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Data.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Web.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Google.Protobuf.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\Renci.SshNet.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\BouncyCastle.Crypto.dll
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Data.xml
+\\Mac\Home\Documents\Source_Code\Visual Studio 2015\Projects\GitHub\BSApplicationProfiler\BSAP_UI_WebForms\BSAP_UI_WebForms\bin\MySql.Web.xml
