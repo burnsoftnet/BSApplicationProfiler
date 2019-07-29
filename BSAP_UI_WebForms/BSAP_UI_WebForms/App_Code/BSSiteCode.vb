@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports BurnSoft
+Imports System
+
 Namespace BurnSoft.BSAP
     Public Class ProjectSessions
         ''' <summary>
@@ -27,7 +29,7 @@ Namespace BurnSoft.BSAP
                     Obj.CloseDB()
                 End If
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
             Obj = Nothing
@@ -60,7 +62,7 @@ Namespace BurnSoft.BSAP
                     sAns = "Unable to Connect to Database"
                 End If
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
             Obj = Nothing
@@ -83,33 +85,33 @@ Namespace BurnSoft.BSAP
                     Dim RS As MySqlDataReader
                     RS = CMD.ExecuteReader
                     While RS.Read
-                        If Not IsDBNull(RS("sessiondt")) Then SessionStart = RS("sessiondt")
-                        If Not IsDBNull(RS("sessionend")) Then
+                        If Not Convert.IsDBNull(RS("sessiondt")) Then SessionStart = RS("sessiondt")
+                        If Not Convert.IsDBNull(RS("sessionend")) Then
                             SessionEnd = RS("sessionend")
                         Else
                             SessionEnd = "In Progress"
                         End If
-                        If Not IsDBNull(RS("appversion")) Then
+                        If Not Convert.IsDBNull(RS("appversion")) Then
                             appversion = RS("appversion")
                         Else
                             appversion = "N/A"
                         End If
-                        If Not IsDBNull(RS("appcomany")) Then
+                        If Not Convert.IsDBNull(RS("appcomany")) Then
                             appcomany = RS("appcomany")
                         Else
                             appcomany = "N/A"
                         End If
-                        If Not IsDBNull(RS("applastaccess")) Then
+                        If Not Convert.IsDBNull(RS("applastaccess")) Then
                             applastaccess = RS("applastaccess")
                         Else
                             applastaccess = "N/A"
                         End If
-                        If Not IsDBNull(RS("applastwrite")) Then
+                        If Not Convert.IsDBNull(RS("applastwrite")) Then
                             applastwrite = RS("applastwrite")
                         Else
                             applastwrite = "N/A"
                         End If
-                        If Not IsDBNull(RS("createddatetime")) Then
+                        If Not Convert.IsDBNull(RS("createddatetime")) Then
                             createddatetime = RS("createddatetime")
                         Else
                             createddatetime = "N/A"
@@ -124,7 +126,7 @@ Namespace BurnSoft.BSAP
                     SessionEnd = "N/A"
                 End If
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
         End Sub
@@ -155,7 +157,7 @@ Namespace BurnSoft.BSAP
                     Call Obj.CloseDB()
                 End If
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
             Return sAns
@@ -203,7 +205,7 @@ Namespace BurnSoft.BSAP
                 End If
                 Obj = Nothing
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
             Return sAns
@@ -241,7 +243,7 @@ Namespace BurnSoft.BSAP
                 End If
                 Obj = Nothing
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
         End Sub

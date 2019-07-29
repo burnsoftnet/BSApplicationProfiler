@@ -23,7 +23,7 @@ Namespace BurnSoft
                 conn.Open()
                 bAns = True
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = Err.Number
                 errMsg = ex.Message.ToString
             End Try
             Return bAns
@@ -64,7 +64,7 @@ Namespace BurnSoft
                 End If
 
             Catch ex As Exception
-                errorID = Err.Number
+                ''errorID = 'Err.Number
                 errMsg = ex.Message.ToString
             End Try
         End Sub
