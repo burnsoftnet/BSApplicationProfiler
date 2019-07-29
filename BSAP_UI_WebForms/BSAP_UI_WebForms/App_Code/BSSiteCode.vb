@@ -149,7 +149,7 @@ Namespace BurnSoft.BSAP
                     Dim RS As MySqlDataReader
                     RS = CMD.ExecuteReader
                     While RS.Read
-                        If Not IsDBNull(RS("myvalue")) Then sAns = RS("myvalue")
+                        If Not Convert.IsDBNull(RS("myvalue")) Then sAns = RS("myvalue")
                     End While
                     RS.Close()
                     RS = Nothing

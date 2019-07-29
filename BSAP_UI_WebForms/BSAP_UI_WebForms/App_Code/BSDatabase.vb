@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System;
 Namespace BurnSoft
     Public Class BSDatabase
         Public conn As MySqlConnection
