@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/User_Add.aspx" hash="fffffff60a2c39a2" filehash="99822975adb8de2a" flags="110000" assembly="App_Web_4afrvtw3" type="ASP.user_add_aspx">
+    <filedeps>
+        <filedep name="/Site.Master" />
+        <filedep name="/User_Add.aspx" />
+    </filedeps>
+</preserve>

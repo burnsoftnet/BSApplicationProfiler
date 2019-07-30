@@ -70,9 +70,6 @@
     <Reference Include="AspNet.ScriptManager.jQuery, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
-    <Reference Include="BurnSoft.Universal, Version=4.0.31.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BurnSoft.Universal.4.0.31\lib\net45\BurnSoft.Universal.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -430,6 +427,7 @@
     <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="GlobalSuppressions1.vb" />
     <Compile Include="GlobalSuppressions2.vb" />
+    <Compile Include="GlobalSuppressions3.vb" />
     <Compile Include="Login.aspx.designer.vb">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
@@ -566,6 +564,12 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BurnSoft.Universal\BurnSoft.Universal\BurnSoft.Universal.vbproj">
+      <Project>{fea68f73-aed1-4af3-a5c9-7541c70f886f}</Project>
+      <Name>BurnSoft.Universal</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

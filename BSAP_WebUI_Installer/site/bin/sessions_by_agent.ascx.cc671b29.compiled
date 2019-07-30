@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/controls/Sessions_by_Agent.ascx" hash="fffffff60a2c39a2" filehash="ffffe38e46513962" flags="110000" assembly="App_Web_hmin2htg" type="ASP.controls_sessions_by_agent_ascx">
+    <filedeps>
+        <filedep name="/controls/Sessions_by_Agent.ascx" />
+    </filedeps>
+</preserve>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/User_List.aspx" hash="fffffff60a2c39a2" filehash="99821325b87aa2a7" flags="110000" assembly="App_Web_4afrvtw3" type="ASP.user_list_aspx">
+    <filedeps>
+        <filedep name="/Site.Master" />
+        <filedep name="/User_List.aspx" />
+    </filedeps>
+</preserve>

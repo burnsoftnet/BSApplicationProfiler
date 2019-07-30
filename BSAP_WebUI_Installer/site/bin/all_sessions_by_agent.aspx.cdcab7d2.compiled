@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/All_Sessions_By_Agent.aspx" hash="fffffff60a2c39a2" filehash="8f1e6b98867fe84b" flags="110000" assembly="App_Web_4afrvtw3" type="ASP.all_sessions_by_agent_aspx">
+    <filedeps>
+        <filedep name="/All_Sessions_By_Agent.aspx" />
+        <filedep name="/controls/Sessions_by_Agent.ascx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

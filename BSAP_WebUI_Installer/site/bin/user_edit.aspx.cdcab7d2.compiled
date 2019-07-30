@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/User_Edit.aspx" hash="fffffff60a2c39a2" filehash="998241ef0d4f45da" flags="110000" assembly="App_Web_4afrvtw3" type="ASP.user_edit_aspx">
+    <filedeps>
+        <filedep name="/Site.Master" />
+        <filedep name="/User_Edit.aspx" />
+    </filedeps>
+</preserve>
