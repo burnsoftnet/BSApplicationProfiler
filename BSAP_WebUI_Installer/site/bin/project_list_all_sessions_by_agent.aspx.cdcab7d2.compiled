@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Project_list_all_sessions_by_agent.aspx" hash="fffffff60a2c39a2" filehash="888abb42550e54f1" flags="110000" assembly="App_Web_4afrvtw3" type="ASP.project_list_all_sessions_by_agent_aspx">
-    <filedeps>
-        <filedep name="/Project_list_all_sessions_by_agent.aspx" />
-        <filedep name="/Site.Master" />
-    </filedeps>
-</preserve>

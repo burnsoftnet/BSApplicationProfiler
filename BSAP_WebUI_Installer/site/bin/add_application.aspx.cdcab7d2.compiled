@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Add_Application.aspx" hash="fffffff60a2c39a2" filehash="6fd6cd6c55f1a3b3" flags="110000" assembly="App_Web_4afrvtw3" type="ASP.add_application_aspx">
-    <filedeps>
-        <filedep name="/Add_Application.aspx" />
-        <filedep name="/controls/AddEdit_Project.ascx" />
-        <filedep name="/Site.Master" />
-    </filedeps>
-</preserve>
